@@ -1,0 +1,5 @@
+collective.checkout
+===================
+
+Write me
+
