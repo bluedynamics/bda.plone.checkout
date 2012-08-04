@@ -1,5 +1,4 @@
-collective.checkout
-===================
+bda.plone.checkout
+==================
 
 Write me
-
