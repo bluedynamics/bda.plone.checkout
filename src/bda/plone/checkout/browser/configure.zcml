@@ -7,5 +7,12 @@
     template="view.pt"
     permission="zope2.View"
     layer="..interfaces.ICheckoutExtensionLayer" />
+  
+  <browser:page
+    for="*"
+    name="checkoutform"
+    class=".views.CheckoutForm"
+    permission="zope2.View"
+    layer="..interfaces.ICheckoutExtensionLayer" />
 
 </configure>

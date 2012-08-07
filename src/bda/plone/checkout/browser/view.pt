@@ -19,7 +19,7 @@
     
     <h1 class="documentFirstHeading" i18n:translate="checkout">Checkout</h1>
     
-    Checkout
+    <tal:checkout replace="structure context/@@checkoutform" />
 
   </tal:main-macro>
 </metal:main>
