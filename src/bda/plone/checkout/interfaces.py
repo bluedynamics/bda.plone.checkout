@@ -6,10 +6,10 @@ class ICheckoutExtensionLayer(Interface):
     """
 
 
-class ICheckoutDataAdapter(Interface):
-    """Called for persisting checkout.
+class IFieldsHandler(Interface):
+    """Fields provider persistence adapter.
     """
     
-    def save(self, widget, data):
-        """Save checkout specific data.
+    def save(widget, data):
+        """Save fields specific data.
         """

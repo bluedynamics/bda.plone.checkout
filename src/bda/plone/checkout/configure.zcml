@@ -3,5 +3,7 @@
 
   <include file="profiles.zcml" />
   <include package=".browser" />
+  
+  <adapter factory=".NullFieldsHandler" />
 
 </configure>

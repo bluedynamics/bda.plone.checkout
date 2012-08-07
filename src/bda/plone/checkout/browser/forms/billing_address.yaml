@@ -1,0 +1,8 @@
+factory: compound
+name: context.fields_name
+widgets:
+- gender:
+    factory: "#field:select"
+    props:
+        label: i18n:label_gender
+        vocabulary: expr:context.gender_vocabulary
