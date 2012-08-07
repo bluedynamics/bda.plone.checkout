@@ -27,6 +27,7 @@ setup(name='bda.plone.checkout',
       install_requires=[
           'setuptools',
           'Plone',
+          'yafowil.plone',
       ],
       entry_points="""
       [z3c.autoinclude.plugin]

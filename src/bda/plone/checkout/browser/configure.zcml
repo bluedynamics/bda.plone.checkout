@@ -1,0 +1,11 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+           xmlns:browser="http://namespaces.zope.org/browser">
+
+  <browser:page
+    for="*"
+    name="checkout"
+    template="view.pt"
+    permission="zope2.View"
+    layer="..interfaces.ICheckoutExtensionLayer" />
+
+</configure>
