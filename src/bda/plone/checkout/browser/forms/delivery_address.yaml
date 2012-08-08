@@ -22,6 +22,7 @@ widgets:
         props:
             label: i18n:label_name
             conditional_required: i18n:name_is_required
+            required_bullet_trigger: conditional_required
         custom:
             conditional_required:
                 extractors:
@@ -31,6 +32,7 @@ widgets:
         props:
             label: i18n:label_surname
             conditional_required: i18n:surname_is_required
+            required_bullet_trigger: conditional_required
         custom:
             conditional_required:
                 extractors:
@@ -44,6 +46,7 @@ widgets:
         props:
             label: i18n:label_street
             conditional_required: i18n:street_is_required
+            required_bullet_trigger: conditional_required
         custom:
             conditional_required:
                 extractors:
@@ -53,6 +56,7 @@ widgets:
         props:
             label: i18n:label_zip
             conditional_required: i18n:zip_is_required
+            required_bullet_trigger: conditional_required
         custom:
             conditional_required:
                 extractors:
@@ -62,6 +66,7 @@ widgets:
         props:
             label: i18n:label_city
             conditional_required: i18n:city_is_required
+            required_bullet_trigger: conditional_required
         custom:
             conditional_required:
                 extractors:
@@ -71,6 +76,7 @@ widgets:
         props:
             label: i18n:label_country
             conditional_required: i18n:country_is_required
+            required_bullet_trigger: conditional_required
         custom:
             conditional_required:
                 extractors:

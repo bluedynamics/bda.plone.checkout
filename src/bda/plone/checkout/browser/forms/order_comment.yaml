@@ -1,0 +1,15 @@
+factory: compound
+name: context.fields_name
+widgets:
+- heading:
+    factory: tag
+    props:
+        structural: True
+        tag: h2
+        text: i18n:heading_order_comment
+- comment:
+    factory: "#field:textarea"
+    props:
+        label: i18n:label_comment
+        rows: 8
+        columns: 20
