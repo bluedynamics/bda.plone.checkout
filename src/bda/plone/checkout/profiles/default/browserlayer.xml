@@ -2,5 +2,5 @@
 <layers>
   <layer
     name="bda.plone.checkout"
-    interface="bda.plone.checkout.interfaces.ICheckoutExtensionLayer"/>
+    interface="bda.plone.checkout.interfaces.ICheckoutExtensionLayer" />
 </layers>
