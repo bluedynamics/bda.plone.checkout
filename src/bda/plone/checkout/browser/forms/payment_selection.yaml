@@ -1,0 +1,16 @@
+factory: compound
+name: context.fields_name
+widgets:
+- heading:
+    factory: tag
+    props:
+        structural: True
+        tag: h2
+        text: i18n:heading_payment_selection
+- payment:
+    factory: "#field:select"
+    value: invoice
+    props:
+        label: i18n:label_payment
+        format: radio
+        vocabulary: expr:context.payment_vocabulary

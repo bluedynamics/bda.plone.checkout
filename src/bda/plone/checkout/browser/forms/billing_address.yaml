@@ -1,6 +1,12 @@
 factory: compound
 name: context.fields_name
 widgets:
+- heading:
+    factory: tag
+    props:
+        structural: True
+        tag: h2
+        text: i18n:heading_billing_address
 - street:
     factory: "#field:text"
     props:

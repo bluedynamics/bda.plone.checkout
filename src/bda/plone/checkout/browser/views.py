@@ -58,11 +58,23 @@ class DeliveryAddress(FieldsProvider):
 fields_provider.append(DeliveryAddress)
 
 
-#class PaymentSelection(FieldsProvider):
-#    fields_template = 'bda.plone.checkout.browser:forms/payment_selection.yaml'
-#    fields_name = 'payment_selection'
+class PaymentSelection(FieldsProvider):
+    fields_template = 'bda.plone.checkout.browser:forms/payment_selection.yaml'
+    fields_name = 'payment_selection'
+    
+    @property
+    def payment_vocabulary(self):
+        return [('invoice', _('invoice', 'Invoice')),
+                ('credit_card', _('credit_card', 'Credit card'))]
 
-#fields_provider.append(PaymentSelection)
+fields_provider.append(PaymentSelection)
+
+
+class OrderComment(FieldsProvider):
+    fields_template = 'bda.plone.checkout.browser:forms/order_comment.yaml'
+    fields_name = 'order_comment'
+
+fields_provider.append(OrderComment)
 
 
 class CheckoutForm(Form):

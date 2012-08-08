@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-08-08 10:53+0000\n"
+"POT-Creation-Date: 2012-08-08 11:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,14 +27,44 @@ msgstr "Ort ist erforderlich"
 msgid "country_is_required"
 msgstr "Land ist erforderlich"
 
+#. Default: "Credit card"
+#: ./browser/views.py:68
+msgid "credit_card"
+msgstr "Kreditkarte"
+
 # Email is required
 msgid "email_is_required"
 msgstr "Email ist erforderlich"
 
 #. Default: "Female"
-#: ./browser/views.py:34
+#: ./browser/views.py:37
 msgid "female"
 msgstr "Frau"
+
+# Billing Address
+msgid "heading_billing_address"
+msgstr "Rechnungsadresse"
+
+# Delivery Address
+msgid "heading_delivery_address"
+msgstr "Lieferadresse"
+
+# Additional information
+msgid "heading_order_comment"
+msgstr "Zusätzliche Informationen"
+
+# Payment Selection
+msgid "heading_payment_selection"
+msgstr "Zahlungsart"
+
+# Personal Data
+msgid "heading_personal_data"
+msgstr "Persönliche Angaben"
+
+#. Default: "Invoice"
+#: ./browser/views.py:67
+msgid "invoice"
+msgstr "Rechnung"
 
 # Delivery address differs from shipping address?
 msgid "label_alternative_delivery"
@@ -43,6 +73,10 @@ msgstr "Lieferadresse weicht von Rechnungsadresse ab?"
 # City
 msgid "label_city"
 msgstr "Ort"
+
+# Comment
+msgid "label_comment"
+msgstr "Kommentar"
 
 # Company
 msgid "label_company"
@@ -64,6 +98,10 @@ msgstr "Anrede"
 msgid "label_name"
 msgstr "Name"
 
+# Payment
+msgid "label_payment"
+msgstr "Zahlungsart"
+
 # Phone
 msgid "label_phone"
 msgstr "Telefon"
@@ -81,7 +119,7 @@ msgid "label_zip"
 msgstr "Postleitzahl"
 
 #. Default: "Male"
-#: ./browser/views.py:33
+#: ./browser/views.py:36
 msgid "male"
 msgstr "Herr"
 
@@ -94,7 +132,7 @@ msgid "phone_is_required"
 msgstr "Telefonnummer ist erforderlich"
 
 #. Default: "Save"
-#: ./browser/views.py:68
+#: ./browser/views.py:88
 msgid "save"
 msgstr "Speichern"
 

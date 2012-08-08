@@ -89,3 +89,31 @@ msgstr ""
 # Delivery address differs from shipping address?
 msgid "label_alternative_delivery"
 msgstr ""
+
+# Personal Data
+msgid "heading_personal_data"
+msgstr ""
+
+# Billing Address
+msgid "heading_billing_address"
+msgstr ""
+
+# Delivery Address
+msgid "heading_delivery_address"
+msgstr ""
+
+# Payment Selection
+msgid "heading_payment_selection"
+msgstr ""
+
+# Additional information
+msgid "heading_order_comment"
+msgstr ""
+
+# Payment
+msgid "label_payment"
+msgstr ""
+
+# Comment
+msgid "label_comment"
+msgstr ""
