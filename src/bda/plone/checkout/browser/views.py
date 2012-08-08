@@ -1,3 +1,4 @@
+from zExceptions import Redirect
 from yafowil.base import (
     factory,
     ExtractionError,
@@ -107,18 +108,49 @@ class CheckoutForm(Form, FormContext):
         for fields_factory in fields_provider:
             fields_factory(self.context, self.request).extend(self.form)
         
-        self.form['submit'] = factory('submit', props={
-            'label': _('save', 'Save'),
-            'action': 'save',
-            'handler': self.save,
-            'next': self.next})
+        # checkout data input
+        if not self.request.get('checkout_confirm') \
+          and not self.request.get('action.checkout.finish'):
+            self.form['checkout_back'] = factory('submit', props={
+                'label': _('back', 'Back'),
+                'action': 'checkout_back',
+                'handler': None,
+                'next': self.checkout_back,
+                'skip': True})
+            self.form['next'] = factory('submit', props={
+                'label': _('next', 'Next'),
+                'action': 'next',
+                'handler': None,
+                'next': self.checkout_summary})
+        # checkout confirmation
+        else:
+            self.form['confirm_back'] = factory('submit', props={
+                'label': _('back', 'Back'),
+                'action': 'confirm_back',
+                'handler': None,
+                'next': self.confirm_back})
+            self.form['finish'] = factory('submit', props={
+                'label': _('finish', 'Finish'),
+                'action': 'finish',
+                'handler': self.finish,
+                'next': self.checkout_done})
     
-    def save(self, widget, data):
-        for fields_factory in fields_provider:
-            provider = fields_factory(self.context, self.request)
-            IFieldsHandler(provider).save(widget, data)
+    def checkout_back(self, request):
+        raise Redirect('%s/@@cart' % self.context.absolute_url())
     
-    def next(self, request):
+    def confirm_back(self, request):
+        self.prepare()
+        return self.form(request=request)
+    
+    def checkout_summary(self, request):
         self.request['checkout_confirm'] = '1'
         self.prepare()
         return self.form(request=request)
+    
+    def checkout_done(self, request):
+        return '<h1>finished</h1>'
+    
+    def finish(self, widget, data):
+        for fields_factory in fields_provider:
+            provider = fields_factory(self.context, self.request)
+            IFieldsHandler(provider).save(widget, data)
