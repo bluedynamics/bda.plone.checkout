@@ -17,3 +17,75 @@ msgstr ""
 # Gender 
 msgid "label_gender"
 msgstr ""
+
+# Name
+msgid "label_name"
+msgstr ""
+
+# Name is required
+msgid "name_is_required"
+msgstr ""
+
+# Name
+msgid "label_surname"
+msgstr ""
+
+# Surname is required
+msgid "surname_is_required"
+msgstr ""
+
+# Email
+msgid "label_email"
+msgstr ""
+
+# Email is required
+msgid "email_is_required"
+msgstr ""
+
+# Company
+msgid "label_company"
+msgstr ""
+
+# Phone
+msgid "label_phone"
+msgstr ""
+
+# Phone is required
+msgid "phone_is_required"
+msgstr ""
+
+# Street
+msgid "label_street"
+msgstr ""
+
+# Street is required
+msgid "street_is_required"
+msgstr ""
+
+# ZIP
+msgid "label_zip"
+msgstr ""
+
+# ZIP is required
+msgid "zip_is_required"
+msgstr ""
+
+# City
+msgid "label_city"
+msgstr ""
+
+# City is required
+msgid "city_is_required"
+msgstr ""
+
+# Country
+msgid "label_country"
+msgstr ""
+
+# Country is required
+msgid "country_is_required"
+msgstr ""
+
+# Delivery address differs from shipping address?
+msgid "label_alternative_delivery"
+msgstr ""

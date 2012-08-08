@@ -1,8 +1,71 @@
 factory: compound
 name: context.fields_name
 widgets:
-- gender:
-    factory: "#field:select"
+- alternative_delivery:
+    factory: '#field:checkbox'
     props:
-        label: i18n:label_gender
-        vocabulary: expr:context.gender_vocabulary
+        label: i18n:label_alternative_delivery
+- container:
+    factory: div
+    props:
+        class: delivery_address
+        structural: True
+    widgets:
+    - name:
+        factory: "#field:*conditional_required:text"
+        props:
+            label: i18n:label_name
+            conditional_required: i18n:name_is_required
+        custom:
+            conditional_required:
+                extractors:
+                    - context.conditional_required
+    - surname:
+        factory: "#field:*conditional_required:text"
+        props:
+            label: i18n:label_surname
+            conditional_required: i18n:surname_is_required
+        custom:
+            conditional_required:
+                extractors:
+                    - context.conditional_required
+    - company:
+        factory: "#field:text"
+        props:
+            label: i18n:label_company
+    - street:
+        factory: "#field:*conditional_required:text"
+        props:
+            label: i18n:label_street
+            conditional_required: i18n:street_is_required
+        custom:
+            conditional_required:
+                extractors:
+                    - context.conditional_required
+    - zip:
+        factory: "#field:*conditional_required:text"
+        props:
+            label: i18n:label_zip
+            conditional_required: i18n:zip_is_required
+        custom:
+            conditional_required:
+                extractors:
+                    - context.conditional_required
+    - city:
+        factory: "#field:*conditional_required:text"
+        props:
+            label: i18n:label_city
+            conditional_required: i18n:city_is_required
+        custom:
+            conditional_required:
+                extractors:
+                    - context.conditional_required
+    - country:
+        factory: "#field:*conditional_required:text"
+        props:
+            label: i18n:label_country
+            conditional_required: i18n:country_is_required
+        custom:
+            conditional_required:
+                extractors:
+                    - context.conditional_required

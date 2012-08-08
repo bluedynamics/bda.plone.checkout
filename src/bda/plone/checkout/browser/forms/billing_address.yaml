@@ -1,8 +1,23 @@
 factory: compound
 name: context.fields_name
 widgets:
-- gender:
-    factory: "#field:select"
+- street:
+    factory: "#field:text"
     props:
-        label: i18n:label_gender
-        vocabulary: expr:context.gender_vocabulary
+        label: i18n:label_street
+        required: i18n:street_is_required
+- zip:
+    factory: "#field:text"
+    props:
+        label: i18n:label_zip
+        required: i18n:zip_is_required
+- city:
+    factory: "#field:text"
+    props:
+        label: i18n:label_city
+        required: i18n:city_is_required
+- country:
+    factory: "#field:text"
+    props:
+        label: i18n:label_country
+        required: i18n:country_is_required

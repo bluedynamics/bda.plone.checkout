@@ -1,0 +1,32 @@
+factory: compound
+name: context.fields_name
+widgets:
+- gender:
+    factory: "#field:select"
+    props:
+        label: i18n:label_gender
+        vocabulary: expr:context.gender_vocabulary
+- name:
+    factory: "#field:text"
+    props:
+        label: i18n:label_name
+        required: i18n:name_is_required
+- surname:
+    factory: "#field:text"
+    props:
+        label: i18n:label_surname
+        required: i18n:surname_is_required
+- email:
+    factory: "#field:email"
+    props:
+        label: i18n:label_email
+        required: i18n:email_is_required
+- company:
+    factory: "#field:text"
+    props:
+        label: i18n:label_company
+- phone:
+    factory: "#field:text"
+    props:
+        label: i18n:label_phone
+        required: i18n:phone_is_required

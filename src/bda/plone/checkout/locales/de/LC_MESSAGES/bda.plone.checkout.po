@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-08-08 09:39+0000\n"
+"POT-Creation-Date: 2012-08-08 10:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,22 +19,94 @@ msgstr ""
 msgid "checkout"
 msgstr "Kassa"
 
+# City is required
+msgid "city_is_required"
+msgstr "Ort ist erforderlich"
+
+# Country is required
+msgid "country_is_required"
+msgstr "Land ist erforderlich"
+
+# Email is required
+msgid "email_is_required"
+msgstr "Email ist erforderlich"
+
 #. Default: "Female"
-#: ./browser/views.py:32
+#: ./browser/views.py:34
 msgid "female"
 msgstr "Frau"
+
+# Delivery address differs from shipping address?
+msgid "label_alternative_delivery"
+msgstr "Lieferadresse weicht von Rechnungsadresse ab?"
+
+# City
+msgid "label_city"
+msgstr "Ort"
+
+# Company
+msgid "label_company"
+msgstr "Firma"
+
+# Country
+msgid "label_country"
+msgstr "Land"
+
+# Email
+msgid "label_email"
+msgstr "E-Mail"
 
 # Gender
 msgid "label_gender"
 msgstr "Anrede"
 
+# Name
+msgid "label_name"
+msgstr "Name"
+
+# Phone
+msgid "label_phone"
+msgstr "Telefon"
+
+# Street
+msgid "label_street"
+msgstr "Straße"
+
+# Name
+msgid "label_surname"
+msgstr "Nachname"
+
+# ZIP
+msgid "label_zip"
+msgstr "Postleitzahl"
+
 #. Default: "Male"
-#: ./browser/views.py:31
+#: ./browser/views.py:33
 msgid "male"
 msgstr "Herr"
 
+# Name is required
+msgid "name_is_required"
+msgstr "Name ist erforderlich"
+
+# Phone is required
+msgid "phone_is_required"
+msgstr "Telefonnummer ist erforderlich"
+
 #. Default: "Save"
-#: ./browser/views.py:64
+#: ./browser/views.py:68
 msgid "save"
 msgstr "Speichern"
+
+# Street is required
+msgid "street_is_required"
+msgstr "Straße ist erforderlich"
+
+# Surname is required
+msgid "surname_is_required"
+msgstr "Nachname ist erforderlich"
+
+# ZIP is required
+msgid "zip_is_required"
+msgstr "Postleitzahl ist erforderlich"
 

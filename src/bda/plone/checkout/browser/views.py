@@ -1,4 +1,7 @@
-from yafowil.base import factory
+from yafowil.base import (
+    factory,
+    ExtractionError,
+)
 from yafowil.yaml import parse_from_YAML
 from yafowil.plone.form import Form
 from zope.i18nmessageid import MessageFactory
@@ -23,7 +26,9 @@ class FieldsProvider(object):
         form[self.fields_name] = fields
 
 
-class Address(FieldsProvider):
+class PersonalData(FieldsProvider):
+    fields_template = 'bda.plone.checkout.browser:forms/personal_data.yaml'
+    fields_name = 'personal_data'
     
     @property
     def gender_vocabulary(self):
@@ -31,17 +36,24 @@ class Address(FieldsProvider):
                 ('male', _('male', 'Male')),
                 ('female', _('female', 'Female'))]
 
+fields_provider.append(PersonalData)
 
-class BillingAddress(Address):
+
+class BillingAddress(FieldsProvider):
     fields_template = 'bda.plone.checkout.browser:forms/billing_address.yaml'
     fields_name = 'billing_address'
 
 fields_provider.append(BillingAddress)
 
 
-class DeliveryAddress(Address):
+class DeliveryAddress(FieldsProvider):
     fields_template = 'bda.plone.checkout.browser:forms/delivery_address.yaml'
     fields_name = 'delivery_address'
+    
+    def conditional_required(self, widget, data):
+        if data.parent['alternative_delivery'].extracted and not data.extracted:
+            raise ExtractionError(widget.attrs['conditional_required'])
+        return data.extracted
 
 fields_provider.append(DeliveryAddress)
 
