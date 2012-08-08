@@ -28,6 +28,7 @@ setup(name='bda.plone.checkout',
           'setuptools',
           'Plone',
           'yafowil.plone',
+          'bda.plone.cart',
       ],
       entry_points="""
       [z3c.autoinclude.plugin]

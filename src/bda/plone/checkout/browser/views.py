@@ -46,6 +46,27 @@ class FieldsProvider(FormContext):
         form[self.fields_name] = fields
 
 
+class CartSummary(FieldsProvider):
+    fields_name = 'cart_summary'
+    
+    def extend(self, form):
+        if not self.form_context == CONFIRM:
+            return
+        compound = form[self.fields_name] = factory('compound', props={
+            'structural': True})
+        compound['heading'] = factory('tag', props={
+            'structural': True,
+            'tag': 'h2',
+            'text': _('heading_cart_summary', 'Cart Summary')})
+        compound['overview'] = factory('tag', props={
+            'structural': True,
+            'class': 'cart_overview',
+            'tag': 'div',
+            'text': self.context.restrictedTraverse('@@cart_overview')()})
+
+fields_provider.append(CartSummary)
+
+
 class PersonalData(FieldsProvider):
     fields_template = 'bda.plone.checkout.browser:forms/personal_data.yaml'
     fields_name = 'personal_data'

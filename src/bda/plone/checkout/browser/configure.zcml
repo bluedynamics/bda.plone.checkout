@@ -1,6 +1,14 @@
 <configure xmlns="http://namespaces.zope.org/zope"
            xmlns:browser="http://namespaces.zope.org/browser">
 
+  <browser:resource
+    name="bda.plone.checkout.js"
+    file="checkout.js" />
+
+  <browser:resource
+    name="bda.plone.checkout.css"
+    file="checkout.css" />
+  
   <browser:page
     for="*"
     name="checkout"
@@ -14,5 +22,12 @@
     class=".views.CheckoutForm"
     permission="zope2.View"
     layer="..interfaces.ICheckoutExtensionLayer" />
+  
+  <browser:page
+    for="*"
+    name="cart_overview"
+    class="bda.plone.cart.browser.CartView"
+    template="cart_overview.pt"
+    permission="zope2.View" />
 
 </configure>
