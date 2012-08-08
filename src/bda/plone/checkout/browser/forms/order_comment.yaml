@@ -9,7 +9,10 @@ widgets:
         text: i18n:heading_order_comment
 - comment:
     factory: "#field:textarea"
+    value: context.get_value
     props:
         label: i18n:label_comment
         rows: 8
         columns: 20
+        display_proxy: True
+    mode: expr:context.mode

@@ -9,8 +9,10 @@ widgets:
         text: i18n:heading_payment_selection
 - payment:
     factory: "#field:select"
-    value: invoice
+    value: context.get_value
     props:
         label: i18n:label_payment
         format: radio
         vocabulary: expr:context.payment_vocabulary
+        display_proxy: True
+    mode: expr:context.mode

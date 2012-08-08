@@ -9,30 +9,48 @@ widgets:
         text: i18n:heading_personal_data
 - gender:
     factory: "#field:select"
+    value: context.get_value
     props:
         label: i18n:label_gender
         vocabulary: expr:context.gender_vocabulary
+        display_proxy: True
+    mode: expr:context.mode
 - name:
     factory: "#field:text"
+    value: context.get_value
     props:
         label: i18n:label_name
         required: i18n:name_is_required
+        display_proxy: True
+    mode: expr:context.mode
 - surname:
     factory: "#field:text"
+    value: context.get_value
     props:
         label: i18n:label_surname
         required: i18n:surname_is_required
+        display_proxy: True
+    mode: expr:context.mode
 - email:
     factory: "#field:email"
+    value: context.get_value
     props:
         label: i18n:label_email
         required: i18n:email_is_required
+        display_proxy: True
+    mode: expr:context.mode
 - company:
     factory: "#field:text"
+    value: context.get_value
     props:
         label: i18n:label_company
+        display_proxy: True
+    mode: expr:context.mode
 - phone:
     factory: "#field:text"
+    value: context.get_value
     props:
         label: i18n:label_phone
         required: i18n:phone_is_required
+        display_proxy: True
+    mode: expr:context.mode

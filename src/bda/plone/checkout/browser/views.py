@@ -1,6 +1,7 @@
 from yafowil.base import (
     factory,
     ExtractionError,
+    UNSET,
 )
 from yafowil.yaml import parse_from_YAML
 from yafowil.plone.form import Form
@@ -12,13 +13,31 @@ _ = MessageFactory('bda.plone.checkout')
 fields_provider = list()
 
 
-class FieldsProvider(object):
+CHECKOUT = 0
+CONFIRM = 1
+
+class FormContext(object):
+    
+    @property
+    def form_context(self):
+        return self.request.get('checkout_confirm') and CONFIRM or CHECKOUT
+    
+    @property
+    def mode(self):
+        return self.form_context is CONFIRM and 'display' or 'edit'
+    
+    def get_value(self, widget, data):
+        return self.request.get(widget.dottedpath, UNSET)
+
+
+class FieldsProvider(FormContext):
     fields_template = None
     fields_name = ''
     message_factory = _
     
-    def __init__(self, context):
+    def __init__(self, context, request):
         self.context = context
+        self.request = request
     
     def extend(self, form):
         fields = parse_from_YAML(self.fields_template, 
@@ -77,18 +96,29 @@ class OrderComment(FieldsProvider):
 fields_provider.append(OrderComment)
 
 
-class CheckoutForm(Form):
+class CheckoutForm(Form, FormContext):
+    
+    action_resource = '@@checkout'
     
     def prepare(self):
-        action = self.context.absolute_url() + '/@@checkout'
-        self.form = factory('#form', name='checkout', props={'action': action})
-        for provider in fields_provider:
-            provider(self.context).extend(self.form)
+        self.form = factory('#form', name='checkout', props={
+            'action': self.form_action})
+        
+        for fields_factory in fields_provider:
+            fields_factory(self.context, self.request).extend(self.form)
+        
         self.form['submit'] = factory('submit', props={
             'label': _('save', 'Save'),
             'action': 'save',
-            'handler': self.save})
+            'handler': self.save,
+            'next': self.next})
     
     def save(self, widget, data):
-        for provider in fields_provider:
-            IFieldsHandler(provider(self.context)).save(widget, data)
+        for fields_factory in fields_provider:
+            provider = fields_factory(self.context, self.request)
+            IFieldsHandler(provider).save(widget, data)
+    
+    def next(self, request):
+        self.request['checkout_confirm'] = '1'
+        self.prepare()
+        return self.form(request=request)
