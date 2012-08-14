@@ -189,5 +189,5 @@ class CheckoutForm(Form, FormContext):
     def finish(self, widget, data):
         providers = [fields_factory(self.context, self.request) \
                      for fields_factory in provider_registry]
-        checkout_adapter = ICheckoutAdapter(self.context)
+        checkout_adapter = ICheckoutAdapter(self.context, self.request)
         checkout_adapter.save(providers, widget, data)

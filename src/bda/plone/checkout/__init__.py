@@ -4,6 +4,7 @@ from zope.interface import (
     implementer,
 )
 from zope.component import adapter
+from zope.publisher.interfaces.browser import IBrowserRequest
 from node.utils import instance_property
 from .interfaces import ICheckoutAdapter
 
@@ -12,11 +13,12 @@ logger = logging.getLogger('bda.plone.checkout')
 
 
 @implementer(ICheckoutAdapter)
-@adapter(Interface)
+@adapter(Interface, IBrowserRequest)
 class CheckoutAdapter(object):
     
-    def __init__(self, context):
+    def __init__(self, context, request):
         self.context = context
+        self.request = request
     
     def save(self, providers, widget, data):
         vessel = self.vessel
