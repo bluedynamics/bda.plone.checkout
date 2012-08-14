@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-08-08 11:43+0000\n"
+"POT-Creation-Date: 2012-08-14 14:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,6 +13,11 @@ msgstr ""
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
+
+#. Default: "Back"
+#: ./browser/form.py:159
+msgid "back"
+msgstr "Zurück"
 
 #. Default: "Checkout"
 #: ./browser/view.pt:20
@@ -27,23 +32,28 @@ msgstr "Ort ist erforderlich"
 msgid "country_is_required"
 msgstr "Land ist erforderlich"
 
-#. Default: "Credit card"
-#: ./browser/views.py:68
-msgid "credit_card"
-msgstr "Kreditkarte"
-
 # Email is required
 msgid "email_is_required"
 msgstr "Email ist erforderlich"
 
 #. Default: "Female"
-#: ./browser/views.py:37
+#: ./browser/form.py:97
 msgid "female"
 msgstr "Frau"
+
+#. Default: "Finish"
+#: ./browser/form.py:177
+msgid "finish"
+msgstr "Fertigstellen"
 
 # Billing Address
 msgid "heading_billing_address"
 msgstr "Rechnungsadresse"
+
+#. Default: "Cart Summary"
+#: ./browser/form.py:79
+msgid "heading_cart_summary"
+msgstr "Warenkorb Übersicht"
 
 # Delivery Address
 msgid "heading_delivery_address"
@@ -60,11 +70,6 @@ msgstr "Zahlungsart"
 # Personal Data
 msgid "heading_personal_data"
 msgstr "Persönliche Angaben"
-
-#. Default: "Invoice"
-#: ./browser/views.py:67
-msgid "invoice"
-msgstr "Rechnung"
 
 # Delivery address differs from shipping address?
 msgid "label_alternative_delivery"
@@ -119,7 +124,7 @@ msgid "label_zip"
 msgstr "Postleitzahl"
 
 #. Default: "Male"
-#: ./browser/views.py:36
+#: ./browser/form.py:96
 msgid "male"
 msgstr "Herr"
 
@@ -127,14 +132,14 @@ msgstr "Herr"
 msgid "name_is_required"
 msgstr "Name ist erforderlich"
 
+#. Default: "Next"
+#: ./browser/form.py:165
+msgid "next"
+msgstr "Weiter"
+
 # Phone is required
 msgid "phone_is_required"
 msgstr "Telefonnummer ist erforderlich"
-
-#. Default: "Save"
-#: ./browser/views.py:88
-msgid "save"
-msgstr "Speichern"
 
 # Street is required
 msgid "street_is_required"

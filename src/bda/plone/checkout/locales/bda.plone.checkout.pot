@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-08-08 11:43+0000\n"
+"POT-Creation-Date: 2012-08-14 14:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,6 +13,11 @@ msgstr ""
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
+
+#. Default: "Back"
+#: ./browser/form.py:159
+msgid "back"
+msgstr ""
 
 #. Default: "Checkout"
 #: ./browser/view.pt:20
@@ -27,22 +32,27 @@ msgstr ""
 msgid "country_is_required"
 msgstr ""
 
-#. Default: "Credit card"
-#: ./browser/views.py:68
-msgid "credit_card"
-msgstr ""
-
 # Email is required
 msgid "email_is_required"
 msgstr ""
 
 #. Default: "Female"
-#: ./browser/views.py:37
+#: ./browser/form.py:97
 msgid "female"
+msgstr ""
+
+#. Default: "Finish"
+#: ./browser/form.py:177
+msgid "finish"
 msgstr ""
 
 # Billing Address
 msgid "heading_billing_address"
+msgstr ""
+
+#. Default: "Cart Summary"
+#: ./browser/form.py:79
+msgid "heading_cart_summary"
 msgstr ""
 
 # Delivery Address
@@ -59,11 +69,6 @@ msgstr ""
 
 # Personal Data
 msgid "heading_personal_data"
-msgstr ""
-
-#. Default: "Invoice"
-#: ./browser/views.py:67
-msgid "invoice"
 msgstr ""
 
 # Delivery address differs from shipping address?
@@ -119,7 +124,7 @@ msgid "label_zip"
 msgstr ""
 
 #. Default: "Male"
-#: ./browser/views.py:36
+#: ./browser/form.py:96
 msgid "male"
 msgstr ""
 
@@ -127,13 +132,13 @@ msgstr ""
 msgid "name_is_required"
 msgstr ""
 
-# Phone is required
-msgid "phone_is_required"
+#. Default: "Next"
+#: ./browser/form.py:165
+msgid "next"
 msgstr ""
 
-#. Default: "Save"
-#: ./browser/views.py:88
-msgid "save"
+# Phone is required
+msgid "phone_is_required"
 msgstr ""
 
 # Street is required
