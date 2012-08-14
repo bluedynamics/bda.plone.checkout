@@ -5,7 +5,7 @@ from zope.interface import (
 
 
 class ICheckoutExtensionLayer(Interface):
-    """Browser layer for bda.plone.checkout
+    """Browser layer for bda.plone.checkout.
     """
 
 

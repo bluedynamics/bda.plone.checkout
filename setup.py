@@ -29,6 +29,7 @@ setup(name='bda.plone.checkout',
           'Plone',
           'yafowil.plone',
           'bda.plone.cart',
+          'bda.plone.payment',
       ],
       entry_points="""
       [z3c.autoinclude.plugin]

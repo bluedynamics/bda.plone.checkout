@@ -125,6 +125,9 @@ class PaymentSelection(FieldsProvider):
     def payment_vocabulary(self):
         return [('invoice', _('invoice', 'Invoice')),
                 ('credit_card', _('credit_card', 'Credit card'))]
+    
+    def get_default_payment(self, widget, data):
+        return 'credit_card'
 
 provider_registry.add(PaymentSelection)
 
