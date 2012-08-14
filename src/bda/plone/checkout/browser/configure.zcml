@@ -19,7 +19,7 @@
   <browser:page
     for="*"
     name="checkoutform"
-    class=".views.CheckoutForm"
+    class=".form.CheckoutForm"
     permission="zope2.View"
     layer="..interfaces.ICheckoutExtensionLayer" />
   

@@ -1,30 +1,45 @@
 import logging
 from zope.interface import (
     Interface,
-    implements,
+    implementer,
 )
-from zope.component import adapts
-from .interfaces import IFieldsHandler
+from zope.component import adapter
+from node.utils import instance_property
+from .interfaces import ICheckoutAdapter
 
 
 logger = logging.getLogger('bda.plone.checkout')
 
 
-class FieldsHandler(object):
-    implements(IFieldsHandler)
-    adapts(Interface)
+@implementer(ICheckoutAdapter)
+@adapter(Interface)
+class CheckoutAdapter(object):
     
     def __init__(self, context):
         self.context = context
     
-    def save(self, widget, data):
-        raise NotImplementedError(u"Abstract FieldsHandler does not implement "
-                                  u"``save``.")
+    def save(self, providers, widget, data):
+        vessel = self.vessel
+        for provider in providers:
+            fields = data.get(provider.fields_name, dict())
+            for key in fields:
+                name = '%s.%s' % (key, provider.fields_name)
+                vessel[name] = fields[key].extracted
     
+    @property
+    def vessel(self):
+        """``zope.interface.mapping.IWriteMapping`` providing instance.
+        
+        Form data gets written to this object.
+        """
+        raise NotImplementedError(u"Abstract CheckoutAdapter does not "
+                                  u"implement ``vessel``.")
 
-class NullFieldsHandler(FieldsHandler):
-    """Dummy adapter. does nothing.
+
+class NullCheckoutAdapter(CheckoutAdapter):
+    """Dummy adapter. provides non persisting write mapping.
     """
     
-    def save(self, widget, data):
-        logger.info(data[self.context.fields_name].printtree())
+    @instance_property
+    def vessel(self):
+        return dict()

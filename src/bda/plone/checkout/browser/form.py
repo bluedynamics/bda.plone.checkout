@@ -6,12 +6,28 @@ from yafowil.base import (
 )
 from yafowil.yaml import parse_from_YAML
 from yafowil.plone.form import Form
+from zope.interface import implementer
 from zope.i18nmessageid import MessageFactory
-from ..interfaces import IFieldsHandler
-
+from ..interfaces import (
+    IFieldsProvider,
+    ICheckoutAdapter,
+)
 
 _ = MessageFactory('bda.plone.checkout')
-fields_provider = list()
+
+
+class ProviderRegistry(object):
+    
+    def __init__(self):
+        self.providers = list()
+    
+    def add(self, factory):
+        self.providers.append(factory)
+    
+    def __iter__(self):
+        return self.providers.__iter__()
+
+provider_registry = ProviderRegistry()
 
 
 CHECKOUT = 0
@@ -31,6 +47,7 @@ class FormContext(object):
         return self.request.get(widget.dottedpath, UNSET)
 
 
+@implementer(IFieldsProvider)
 class FieldsProvider(FormContext):
     fields_template = None
     fields_name = ''
@@ -64,7 +81,7 @@ class CartSummary(FieldsProvider):
             'tag': 'div',
             'text': self.context.restrictedTraverse('@@cart_overview')()})
 
-fields_provider.append(CartSummary)
+provider_registry.add(CartSummary)
 
 
 class PersonalData(FieldsProvider):
@@ -77,14 +94,14 @@ class PersonalData(FieldsProvider):
                 ('male', _('male', 'Male')),
                 ('female', _('female', 'Female'))]
 
-fields_provider.append(PersonalData)
+provider_registry.add(PersonalData)
 
 
 class BillingAddress(FieldsProvider):
     fields_template = 'bda.plone.checkout.browser:forms/billing_address.yaml'
     fields_name = 'billing_address'
 
-fields_provider.append(BillingAddress)
+provider_registry.add(BillingAddress)
 
 
 class DeliveryAddress(FieldsProvider):
@@ -96,7 +113,7 @@ class DeliveryAddress(FieldsProvider):
             raise ExtractionError(widget.attrs['conditional_required'])
         return data.extracted
 
-fields_provider.append(DeliveryAddress)
+provider_registry.add(DeliveryAddress)
 
 
 class PaymentSelection(FieldsProvider):
@@ -108,14 +125,14 @@ class PaymentSelection(FieldsProvider):
         return [('invoice', _('invoice', 'Invoice')),
                 ('credit_card', _('credit_card', 'Credit card'))]
 
-fields_provider.append(PaymentSelection)
+provider_registry.add(PaymentSelection)
 
 
 class OrderComment(FieldsProvider):
     fields_template = 'bda.plone.checkout.browser:forms/order_comment.yaml'
     fields_name = 'order_comment'
 
-fields_provider.append(OrderComment)
+provider_registry.add(OrderComment)
 
 
 class CheckoutForm(Form, FormContext):
@@ -125,10 +142,8 @@ class CheckoutForm(Form, FormContext):
     def prepare(self):
         self.form = factory('#form', name='checkout', props={
             'action': self.form_action})
-        
-        for fields_factory in fields_provider:
+        for fields_factory in provider_registry:
             fields_factory(self.context, self.request).extend(self.form)
-        
         # checkout data input
         if not self.request.get('checkout_confirm') \
           and not self.request.get('action.checkout.finish'):
@@ -172,6 +187,7 @@ class CheckoutForm(Form, FormContext):
         return '<h1>finished</h1>'
     
     def finish(self, widget, data):
-        for fields_factory in fields_provider:
-            provider = fields_factory(self.context, self.request)
-            IFieldsHandler(provider).save(widget, data)
+        providers = [fields_factory(self.context, self.request) \
+                     for fields_factory in provider_registry]
+        checkout_adapter = ICheckoutAdapter(self.context)
+        checkout_adapter.save(providers, widget, data)
