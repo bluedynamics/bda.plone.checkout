@@ -7,6 +7,7 @@ from yafowil.base import (
 from yafowil.yaml import parse_from_YAML
 from yafowil.plone.form import Form
 from zope.interface import implementer
+from zope.component import getMultiAdapter
 from zope.i18nmessageid import MessageFactory
 from ..interfaces import (
     IFieldsProvider,
@@ -189,5 +190,6 @@ class CheckoutForm(Form, FormContext):
     def finish(self, widget, data):
         providers = [fields_factory(self.context, self.request) \
                      for fields_factory in provider_registry]
-        checkout_adapter = ICheckoutAdapter(self.context, self.request)
+        checkout_adapter = getMultiAdapter((self.context, self.request),
+                                           ICheckoutAdapter)
         checkout_adapter.save(providers, widget, data)
