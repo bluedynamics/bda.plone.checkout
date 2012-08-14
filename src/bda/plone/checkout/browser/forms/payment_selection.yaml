@@ -9,7 +9,7 @@ widgets:
         text: i18n:heading_payment_selection
 - payment:
     factory: "#field:select"
-    value: context.get_value
+    value: context.get_payment
     props:
         label: i18n:label_payment
         format: radio

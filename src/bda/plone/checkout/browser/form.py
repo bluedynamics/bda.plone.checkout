@@ -9,6 +9,7 @@ from yafowil.plone.form import Form
 from zope.interface import implementer
 from zope.component import getMultiAdapter
 from zope.i18nmessageid import MessageFactory
+from bda.plone.payment import Payments
 from ..interfaces import (
     IFieldsProvider,
     ICheckoutAdapter,
@@ -122,12 +123,15 @@ class PaymentSelection(FieldsProvider):
     fields_name = 'payment_selection'
     
     @property
-    def payment_vocabulary(self):
-        return [('invoice', _('invoice', 'Invoice')),
-                ('credit_card', _('credit_card', 'Credit card'))]
+    def payments(self):
+        return Payments(self.context)
     
-    def get_default_payment(self, widget, data):
-        return 'credit_card'
+    @property
+    def payment_vocabulary(self):
+        return self.payments.vocab
+    
+    def get_payment(self, widget, data):
+        return self.request.get(widget.dottedpath, self.payments.default)
 
 provider_registry.add(PaymentSelection)
 
