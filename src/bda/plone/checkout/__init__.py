@@ -25,7 +25,7 @@ class CheckoutAdapter(object):
         for provider in providers:
             fields = data.get(provider.fields_name, dict())
             for key in fields:
-                name = '%s.%s' % (key, provider.fields_name)
+                name = '%s.%s' % (provider.fields_name, key)
                 vessel[name] = fields[key].extracted
     
     @property
