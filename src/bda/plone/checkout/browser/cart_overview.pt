@@ -5,7 +5,7 @@
     <div class="cart_item cart_overview">
       <h4 class="cart_item_title">Title</h4>
       <p class="cart_item_description">Description</p>
-      <p>
+      <p class="cart_item_comment_wrapper">
         <strong i18n:translate="comment">Comment</strong>:
         <span class="cart_item_comment">comment</span>
       </p>
