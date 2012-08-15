@@ -19,7 +19,7 @@ logger = logging.getLogger('bda.plone.checkout')
 @implementer(ICheckoutEvent)
 class CheckoutEvent(object):
     
-    def __init__(self, context, uids):
+    def __init__(self, context, vessel):
         self.context = context
         self.vessel = vessel
 
