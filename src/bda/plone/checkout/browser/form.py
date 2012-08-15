@@ -211,3 +211,4 @@ class CheckoutForm(Form, FormContext):
         checkout_adapter = getMultiAdapter((self.context, self.request),
                                            ICheckoutAdapter)
         checkout_adapter.save(providers, widget, data)
+        checkout_adapter.notify()

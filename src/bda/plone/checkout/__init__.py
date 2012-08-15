@@ -4,12 +4,24 @@ from zope.interface import (
     implementer,
 )
 from zope.component import adapter
+from zope.event import notify
 from zope.publisher.interfaces.browser import IBrowserRequest
 from node.utils import instance_property
-from .interfaces import ICheckoutAdapter
+from .interfaces import (
+    ICheckoutAdapter,
+    ICheckoutEvent,
+)
 
 
 logger = logging.getLogger('bda.plone.checkout')
+
+
+@implementer(ICheckoutEvent)
+class CheckoutEvent(object):
+    
+    def __init__(self, context, uids):
+        self.context = context
+        self.vessel = vessel
 
 
 @implementer(ICheckoutAdapter)
@@ -27,6 +39,9 @@ class CheckoutAdapter(object):
             for key in fields:
                 name = '%s.%s' % (provider.fields_name, key)
                 vessel[name] = fields[key].extracted
+    
+    def notify(self):
+        notify(CheckoutEvent(self.context, self.vessel))
     
     @property
     def vessel(self):
