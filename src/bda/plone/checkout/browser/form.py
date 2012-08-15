@@ -114,6 +114,17 @@ class DeliveryAddress(FieldsProvider):
         if data.parent['alternative_delivery'].extracted and not data.extracted:
             raise ExtractionError(widget.attrs['conditional_required'])
         return data.extracted
+    
+    def get_alternative_delivery(self, widget, data):
+        return widget.dottedpath in self.request
+    
+    @property
+    def alternative_delivery_vocab(self):
+        return {
+            True: _('yes', 'Yes'),
+            False: _('no', 'No'),
+            UNSET: _('not set', 'not set'),
+        }
 
 provider_registry.add(DeliveryAddress)
 

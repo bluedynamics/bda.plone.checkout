@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-08-14 14:13+0000\n"
+"POT-Creation-Date: 2012-08-15 10:19+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Domain: DOMAIN\n"
 
 #. Default: "Back"
-#: ./browser/form.py:159
+#: ./browser/form.py:170
 msgid "back"
 msgstr ""
 
@@ -42,7 +42,7 @@ msgid "female"
 msgstr ""
 
 #. Default: "Finish"
-#: ./browser/form.py:177
+#: ./browser/form.py:188
 msgid "finish"
 msgstr ""
 
@@ -133,8 +133,18 @@ msgid "name_is_required"
 msgstr ""
 
 #. Default: "Next"
-#: ./browser/form.py:165
+#: ./browser/form.py:176
 msgid "next"
+msgstr ""
+
+#. Default: "No"
+#: ./browser/form.py:125
+msgid "no"
+msgstr ""
+
+#. Default: "not set"
+#: ./browser/form.py:126
+msgid "not set"
 msgstr ""
 
 # Phone is required
@@ -147,6 +157,11 @@ msgstr ""
 
 # Surname is required
 msgid "surname_is_required"
+msgstr ""
+
+#. Default: "Yes"
+#: ./browser/form.py:124
+msgid "yes"
 msgstr ""
 
 # ZIP is required
