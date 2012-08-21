@@ -1,4 +1,3 @@
-from zExceptions import Redirect
 from yafowil.base import (
     factory,
     ExtractionError,
@@ -6,6 +5,7 @@ from yafowil.base import (
 )
 from yafowil.yaml import parse_from_YAML
 from yafowil.plone.form import Form
+from zExceptions import Redirect
 from zope.interface import implementer
 from zope.component import getMultiAdapter
 from zope.i18nmessageid import MessageFactory
