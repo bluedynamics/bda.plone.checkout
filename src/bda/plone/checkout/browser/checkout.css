@@ -1,0 +1,54 @@
+#form-checkout .field input[type="text"],
+#form-checkout .field input[type="email"] {
+    width: 14em;
+    padding: 0.2em;
+}
+
+#form-checkout h2 {
+  margin-top: 1em;
+}
+
+#form-checkout .field {
+  clear: none;
+  margin-right: 2em;
+}
+
+#form-checkout #field-checkout-personal_data-name,
+#form-checkout #field-checkout-personal_data-email,
+#form-checkout #field-checkout-billing_address-zip,
+#form-checkout #field-checkout-delivery_address-name,
+#form-checkout #field-checkout-delivery_address-zip {
+  float: left;
+}
+
+#form-checkout #input-checkout-billing_address-zip,
+#form-checkout #input-checkout-delivery_address-zip {
+  width: 8em;
+}
+
+#form-checkout #input-checkout-billing_address-city,
+#form-checkout #input-checkout-delivery_address-city {
+  width: 20em;
+}
+#form-checkout #input-checkout-billing_address-street,
+#form-checkout #input-checkout-delivery_address-street {
+  width: 31em;
+}
+
+label.radioType input {
+  margin-right: 0.5em;
+}
+
+#form-checkout div.field.error {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin-top: 0;
+}
+
+#form-checkout div.field.error .errormessage {
+  display: none;
+}
+#form-checkout div.field.error input {
+  border: 1px solid red;
+}

@@ -39,18 +39,18 @@ widgets:
         required: i18n:email_is_required
         display_proxy: True
     mode: expr:context.mode
-- company:
-    factory: "#field:text"
-    value: context.get_value
-    props:
-        label: i18n:label_company
-        display_proxy: True
-    mode: expr:context.mode
 - phone:
     factory: "#field:text"
     value: context.get_value
     props:
         label: i18n:label_phone
         required: i18n:phone_is_required
+        display_proxy: True
+    mode: expr:context.mode
+- company:
+    factory: "#field:text"
+    value: context.get_value
+    props:
+        label: i18n:label_company
         display_proxy: True
     mode: expr:context.mode
