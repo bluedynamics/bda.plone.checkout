@@ -3,7 +3,7 @@
 
   <span id="cart_item_template" style="display: none;">
     <div class="cart_item cart_overview">
-      <h4 class="cart_item_title">Title</h4>
+      <h3 class="cart_item_title">Title</h3>
       <p class="cart_item_description">Description</p>
       <p class="cart_item_comment_wrapper">
         <strong i18n:translate="comment">Comment</strong>:
@@ -14,15 +14,16 @@
           Amount
         </li>
         <li>
-          <span class="cart_item_count">amount</span>
+          <span class="cart_item_count">amount:</span>
         </li>
         <li>
-          <div class="price">
-            <span i18n:translate="price">Price</span>
+          <span class="price">
+            <span i18n:translate="price">Price:</span>
             <span class="cart_item_price">Price</span>
-          </div>
+          </span>
         </li>
       </ul>
+      <div class="visualClear"></div>
     </div>
   </span>
   
@@ -32,17 +33,24 @@
     </div>
   </div>
   
-  <div id="cart_summary" style="display: none;">
-    <div class="cart_sum_content">
+  <div id="cart_summary" style="display: none;" class="summary_wrapper">
+    <table class="cart_sum_content">
       <tal:details condition="not:view/summary_total_only">
-        <span i18n:translate="summary_net">Net:</span>
-        <span class="cart_net">Net</span><br />
-        <span i18n:translate="summary_vat">VAT.:</span>
-        <span class="cart_vat">VAT</span><br />
+      <tr>
+        <td i18n:translate="summary_net">Net:</td>
+        <td class="cart_net">Net</td>
+      </tr>
+      <tr>
+        <td i18n:translate="summary_vat">VAT.:</td>
+        <td class="cart_vat">VAT</td>
+      </tr>
       </tal:details>
-      <strong i18n:translate="summary_total">Total:</strong>
-      <strong class="cart_total">Total</strong>
-    </div>
+      <tr>
+        <td><strong i18n:translate="summary_total">Total:</strong></td>
+        <td><strong class="cart_total">Total</strong></td>
+      </tr>
+    </table>
+    <div class="visualClear"></div>
   </div>
 
 </div>

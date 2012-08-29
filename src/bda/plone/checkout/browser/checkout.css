@@ -6,6 +6,7 @@
 
 #form-checkout h2 {
   margin-top: 1em;
+  border-bottom: 0.1em solid #444;
 }
 
 #form-checkout .field {
@@ -52,3 +53,59 @@ label.radioType input {
 #form-checkout div.field.error input {
   border: 1px solid red;
 }
+
+#cart #cart_items .cart_item_title {
+  margin-top: 0.5em;
+}
+
+#content .cart_item_description {
+  color: #666;
+  font-size: 90%;
+  line-height: 1.25em;
+  margin-bottom: 0;
+}
+
+#content .cart_item_comment_wrapper {
+  margin-bottom: 0;
+  float: left;
+} 
+#content .cart_item_comment {
+  margin-bottom: 0;
+} 
+
+#cart .cart_item {
+  border-bottom: 0.1em solid #ccc;
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
+}
+
+#cart ul.cart_item_content li {
+  display: inline;
+}
+.cart_item ul.cart_item_content {
+  float: right;
+  list-style-type: none !important;
+  margin: 0 !important;
+  text-align: right;
+}
+
+.cart_item  .price {
+  display: inline-block;
+  width: 7em;
+}
+
+.cart_item .cart_item_count {
+  margin-right: 2em;
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -76,7 +76,7 @@ class CartSummary(FieldsProvider):
         compound['heading'] = factory('tag', props={
             'structural': True,
             'tag': 'h2',
-            'text': _('heading_cart_summary', 'Cart Summary')})
+            'text': _('heading_cart_summary', 'Cart')})
         compound['overview'] = factory('tag', props={
             'structural': True,
             'class': 'cart_overview',

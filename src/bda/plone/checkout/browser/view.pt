@@ -17,7 +17,7 @@
 <metal:main fill-slot="main">
   <tal:main-macro metal:define-macro="main">
     
-    <h1 class="documentFirstHeading" i18n:translate="checkout">Checkout</h1>
+    <h1 class="documentFirstHeading" i18n:translate="checkout">Your Order</h1>
     
     <tal:checkout replace="structure context/@@checkoutform" />
 
