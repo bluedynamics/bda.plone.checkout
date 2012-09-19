@@ -8,21 +8,10 @@ from zope.event import notify
 from zope.publisher.interfaces.browser import IBrowserRequest
 from node.utils import instance_property
 from bda.plone.cart import deletecookie
-from .interfaces import (
-    ICheckoutAdapter,
-    ICheckoutEvent,
-)
+from .interfaces import ICheckoutAdapter
 
 
 logger = logging.getLogger('bda.plone.checkout')
-
-
-@implementer(ICheckoutEvent)
-class CheckoutEvent(object):
-    
-    def __init__(self, context, vessel):
-        self.context = context
-        self.vessel = vessel
 
 
 @implementer(ICheckoutAdapter)
@@ -41,10 +30,7 @@ class CheckoutAdapter(object):
                 name = '%s.%s' % (provider.fields_name, key)
                 vessel[name] = fields[key].extracted
     
-    def notify(self):
-        notify(CheckoutEvent(self.context, self.vessel))
-    
-    def clear(self):
+    def clear_session(self):
         deletecookie(self.request)
     
     @property

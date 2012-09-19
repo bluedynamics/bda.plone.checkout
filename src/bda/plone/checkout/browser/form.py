@@ -1,3 +1,4 @@
+import transaction
 from yafowil.base import (
     factory,
     ExtractionError,
@@ -203,18 +204,17 @@ class CheckoutForm(Form, FormContext):
         return self.form(request=request)
     
     def checkout_done(self, request):
+        transaction.commit()
         raise Redirect(self.finish_redirect_url)
     
     def finish(self, widget, data):
         providers = [fields_factory(self.context, self.request) \
                      for fields_factory in provider_registry]
-        checkout_adapter = getMultiAdapter((self.context, self.request),
-                                           ICheckoutAdapter)
-        checkout_adapter.save(providers, widget, data)
-        checkout_adapter.clear()
+        to_adapt = (self.context, self.request)
+        checkout_adapter = getMultiAdapter(to_adapt, ICheckoutAdapter)
+        uid = checkout_adapter.save(providers, widget, data)
+        checkout_adapter.clear_session()
         p_name = data.fetch('checkout.payment_selection.payment').extracted
         payments = Payments(self.context)
         payment = payments.get(p_name)
-        #if not payment.deferred:
-        #    checkout_adapter.notify()
-        self.finish_redirect_url = payment.init_url()
+        self.finish_redirect_url = payment.init_url(str(uid))

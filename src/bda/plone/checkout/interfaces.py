@@ -27,19 +27,12 @@ class ICheckoutAdapter(Interface):
     
     def save(providers, widget, data):
         """Save fields specific data.
+        
+        @param widget: yafowil.base.Widget instance
+        @param data: yafowil.base.RuntimeData instance
+        @return UUID: unique identifier for stored data
         """
     
-    def notify():
-        """Throw event after successful checkout.
-        """
-    
-    def clear():
+    def clear_session():
         """Clear current shopping session.
         """
-
-
-class ICheckoutEvent(Interface):
-    """This event gets triggered when checkout form proceed successful.
-    """
-    context = Attribute(u"Context in which this event was triggered.")
-    vessel = Attribute(u"Instance returned by ``ICheckoutAdapter.vessel``.")
