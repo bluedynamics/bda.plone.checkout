@@ -203,16 +203,18 @@ class CheckoutForm(Form, FormContext):
         return self.form(request=request)
     
     def checkout_done(self, request):
-        name = request.get('checkout.payment_selection.payment')
-        payments = Payments(self.context)
-        payment = payments.get(name)
-        if not payment.deferred:
-            self.checkout_adapter.notify()
-        raise Redirect(payment.next(self.checkout_adapter))
+        raise Redirect(self.finish_redirect_url)
     
     def finish(self, widget, data):
         providers = [fields_factory(self.context, self.request) \
                      for fields_factory in provider_registry]
-        self.checkout_adapter = getMultiAdapter((self.context, self.request),
-                                                ICheckoutAdapter)
-        self.checkout_adapter.save(providers, widget, data)
+        checkout_adapter = getMultiAdapter((self.context, self.request),
+                                           ICheckoutAdapter)
+        checkout_adapter.save(providers, widget, data)
+        checkout_adapter.clear()
+        p_name = data.fetch('checkout.payment_selection.payment').extracted
+        payments = Payments(self.context)
+        payment = payments.get(p_name)
+        if not payment.deferred:
+            checkout_adapter.notify()
+        self.finish_redirect_url = payment.next(checkout_adapter)

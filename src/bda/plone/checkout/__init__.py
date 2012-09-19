@@ -7,6 +7,7 @@ from zope.component import adapter
 from zope.event import notify
 from zope.publisher.interfaces.browser import IBrowserRequest
 from node.utils import instance_property
+from bda.plone.cart import deletecookie
 from .interfaces import (
     ICheckoutAdapter,
     ICheckoutEvent,
@@ -42,6 +43,9 @@ class CheckoutAdapter(object):
     
     def notify(self):
         notify(CheckoutEvent(self.context, self.vessel))
+    
+    def clear(self):
+        deletecookie(self.request)
     
     @property
     def vessel(self):

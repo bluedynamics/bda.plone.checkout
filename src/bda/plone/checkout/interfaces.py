@@ -32,6 +32,10 @@ class ICheckoutAdapter(Interface):
     def notify():
         """Throw event after successful checkout.
         """
+    
+    def clear():
+        """Clear current shopping session.
+        """
 
 
 class ICheckoutEvent(Interface):
