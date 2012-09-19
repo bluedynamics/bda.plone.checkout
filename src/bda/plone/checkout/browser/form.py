@@ -215,6 +215,6 @@ class CheckoutForm(Form, FormContext):
         p_name = data.fetch('checkout.payment_selection.payment').extracted
         payments = Payments(self.context)
         payment = payments.get(p_name)
-        if not payment.deferred:
-            checkout_adapter.notify()
-        self.finish_redirect_url = payment.next(checkout_adapter)
+        #if not payment.deferred:
+        #    checkout_adapter.notify()
+        self.finish_redirect_url = payment.init_url()
