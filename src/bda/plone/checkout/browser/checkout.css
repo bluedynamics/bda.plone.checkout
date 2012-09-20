@@ -6,7 +6,9 @@
 
 #form-checkout h2 {
   margin-top: 1em;
-  border-bottom: 0.1em solid #444;
+  margin-bottom: 0.5em;
+  padding-bottom: 0.25em;
+  border-bottom: 0.1em solid #bbb;
 }
 
 #form-checkout .field {

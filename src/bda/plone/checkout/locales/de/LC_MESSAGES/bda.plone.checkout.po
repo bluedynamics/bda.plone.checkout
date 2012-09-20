@@ -22,7 +22,7 @@ msgstr "Zurück"
 #. Default: "Checkout"
 #: ./browser/view.pt:20
 msgid "checkout"
-msgstr "Kassa"
+msgstr "Ihre Bestellung"
 
 # City is required
 msgid "city_is_required"
@@ -53,7 +53,7 @@ msgstr "Rechnungsadresse"
 #. Default: "Cart Summary"
 #: ./browser/form.py:79
 msgid "heading_cart_summary"
-msgstr "Warenkorb Übersicht"
+msgstr "Warenkorb"
 
 # Delivery Address
 msgid "heading_delivery_address"
