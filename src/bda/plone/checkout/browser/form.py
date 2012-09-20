@@ -190,7 +190,7 @@ class CheckoutForm(Form, FormContext):
                 'handler': None,
                 'next': self.confirm_back})
             self.form['finish'] = factory('submit', props={
-                'label': _('finish', 'Finish'),
+                'label': _('finish', 'Order now'),
                 'action': 'finish',
                 'handler': self.finish,
                 'next': self.checkout_done})

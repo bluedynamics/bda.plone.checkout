@@ -56,6 +56,20 @@ label.radioType input {
   border: 1px solid red;
 }
 
+#input-checkout-checkout_back,
+#input-checkout-next,
+#input-checkout-confirm_back,
+#input-checkout-finish {
+    border:none;
+    background-color:#75ad0a;
+    border-radius: 0.3em 0.3em 0.3em 0.3em;
+    color:white !important;
+    font-weight:bold;
+    font-size:100%;
+    padding:0.3em 0.5em;
+    margin-right:0.4em;
+}
+
 #cart #cart_items .cart_item_title {
   margin-top: 0.5em;
 }

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-08-15 10:19+0000\n"
+"POT-Creation-Date: 2012-09-20 14:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,11 +15,11 @@ msgstr ""
 "Domain: DOMAIN\n"
 
 #. Default: "Back"
-#: ./browser/form.py:170
+#: ./browser/form.py:175
 msgid "back"
 msgstr "Zurück"
 
-#. Default: "Checkout"
+#. Default: "Your Order"
 #: ./browser/view.pt:20
 msgid "checkout"
 msgstr "Ihre Bestellung"
@@ -37,21 +37,21 @@ msgid "email_is_required"
 msgstr "Email ist erforderlich"
 
 #. Default: "Female"
-#: ./browser/form.py:97
+#: ./browser/form.py:98
 msgid "female"
 msgstr "Frau"
 
-#. Default: "Finish"
-#: ./browser/form.py:188
+#. Default: "Order now"
+#: ./browser/form.py:193
 msgid "finish"
-msgstr "Fertigstellen"
+msgstr "Jetzt kaufen"
 
 # Billing Address
 msgid "heading_billing_address"
 msgstr "Rechnungsadresse"
 
-#. Default: "Cart Summary"
-#: ./browser/form.py:79
+#. Default: "Cart"
+#: ./browser/form.py:80
 msgid "heading_cart_summary"
 msgstr "Warenkorb"
 
@@ -124,7 +124,7 @@ msgid "label_zip"
 msgstr "Postleitzahl"
 
 #. Default: "Male"
-#: ./browser/form.py:96
+#: ./browser/form.py:97
 msgid "male"
 msgstr "Herr"
 
@@ -133,17 +133,17 @@ msgid "name_is_required"
 msgstr "Name ist erforderlich"
 
 #. Default: "Next"
-#: ./browser/form.py:176
+#: ./browser/form.py:181
 msgid "next"
 msgstr "Weiter"
 
 #. Default: "No"
-#: ./browser/form.py:125
+#: ./browser/form.py:126
 msgid "no"
 msgstr "Nein"
 
 #. Default: "not set"
-#: ./browser/form.py:126
+#: ./browser/form.py:127
 msgid "not set"
 msgstr "Nicht gesetzt"
 
@@ -160,7 +160,7 @@ msgid "surname_is_required"
 msgstr "Nachname ist erforderlich"
 
 #. Default: "Yes"
-#: ./browser/form.py:124
+#: ./browser/form.py:125
 msgid "yes"
 msgstr "Ja"
 
