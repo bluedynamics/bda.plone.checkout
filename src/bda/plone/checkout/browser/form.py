@@ -93,7 +93,7 @@ class PersonalData(FieldsProvider):
     
     @property
     def gender_vocabulary(self):
-        return [('-', '-'),
+        return [('-', ''),
                 ('male', _('male', 'Male')),
                 ('female', _('female', 'Female'))]
 
