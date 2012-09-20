@@ -160,13 +160,17 @@ class CheckoutForm(Form, FormContext):
     action_resource = '@@checkout'
     
     def prepare(self):
+        request = self.request
+        checkout = not request.get('checkout_confirm') and \
+                   not request.get('action.checkout.finish')
+        form_class = checkout and 'mode_edit' or 'mode_display'
         self.form = factory('#form', name='checkout', props={
-            'action': self.form_action})
+            'action': self.form_action,
+            'class_add': form_class})
         for fields_factory in provider_registry:
             fields_factory(self.context, self.request).extend(self.form)
         # checkout data input
-        if not self.request.get('checkout_confirm') \
-          and not self.request.get('action.checkout.finish'):
+        if checkout:
             self.form['checkout_back'] = factory('submit', props={
                 'label': _('back', 'Back'),
                 'action': 'checkout_back',
