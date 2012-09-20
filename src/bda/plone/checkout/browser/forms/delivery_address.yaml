@@ -12,6 +12,7 @@ widgets:
     value: context.get_alternative_delivery
     props:
         label: i18n:label_alternative_delivery
+        position: expr:context.mode == 'display' and 'before' or 'after'
         vocabulary: expr:context.alternative_delivery_vocab
         format: bool
         display_proxy: True
