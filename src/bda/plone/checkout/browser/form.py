@@ -10,6 +10,7 @@ from zExceptions import Redirect
 from zope.interface import implementer
 from zope.component import getMultiAdapter
 from zope.i18nmessageid import MessageFactory
+from bda.plone.cart import readcookie
 from bda.plone.payment import Payments
 from ..interfaces import (
     IFieldsProvider,
@@ -161,6 +162,8 @@ class CheckoutForm(Form, FormContext):
     
     def prepare(self):
         request = self.request
+        if not readcookie(request):
+            raise Redirect(self.context.absolute_url())
         checkout = not request.get('checkout_confirm') and \
                    not request.get('action.checkout.finish')
         form_class = checkout and 'mode_edit' or 'mode_display'
