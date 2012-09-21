@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-09-21 09:40+0000\n"
+"POT-Creation-Date: 2012-09-21 13:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Domain: DOMAIN\n"
 
 #. Default: "Back"
-#: ./browser/form.py:213
+#: ./browser/form.py:232
 msgid "back"
 msgstr ""
 
@@ -37,17 +37,17 @@ msgid "email_is_required"
 msgstr ""
 
 #. Default: "Please accept our terms and conditions."
-#: ./browser/form.py:187
+#: ./browser/form.py:208
 msgid "error_accept_terms_and_conditiond"
 msgstr ""
 
 #. Default: "Female"
-#: ./browser/form.py:101
+#: ./browser/form.py:103
 msgid "female"
 msgstr ""
 
 #. Default: "Order now"
-#: ./browser/form.py:231
+#: ./browser/form.py:250
 msgid "finish"
 msgstr ""
 
@@ -56,7 +56,7 @@ msgid "heading_billing_address"
 msgstr ""
 
 #. Default: "Cart"
-#: ./browser/form.py:83
+#: ./browser/form.py:85
 msgid "heading_cart_summary"
 msgstr ""
 
@@ -108,10 +108,6 @@ msgstr ""
 msgid "label_name"
 msgstr ""
 
-# Payment
-msgid "label_payment"
-msgstr ""
-
 # Phone
 msgid "label_phone"
 msgstr ""
@@ -129,7 +125,7 @@ msgid "label_zip"
 msgstr ""
 
 #. Default: "Male"
-#: ./browser/form.py:100
+#: ./browser/form.py:102
 msgid "male"
 msgstr ""
 
@@ -138,17 +134,17 @@ msgid "name_is_required"
 msgstr ""
 
 #. Default: "Next"
-#: ./browser/form.py:219
+#: ./browser/form.py:238
 msgid "next"
 msgstr ""
 
 #. Default: "No"
-#: ./browser/form.py:129
+#: ./browser/form.py:140
 msgid "no"
 msgstr ""
 
 #. Default: "not set"
-#: ./browser/form.py:130
+#: ./browser/form.py:141
 msgid "not set"
 msgstr ""
 
@@ -165,17 +161,17 @@ msgid "surname_is_required"
 msgstr ""
 
 #. Default: "Terms and conditions"
-#: ./browser/form.py:170
+#: ./browser/form.py:190
 msgid "terms_and_conditions"
 msgstr ""
 
 #. Default: "I have read and accept the ${terms_and_conditions}"
-#: ./browser/form.py:173
+#: ./browser/form.py:194
 msgid "terms_and_conditions_text"
 msgstr ""
 
 #. Default: "Yes"
-#: ./browser/form.py:128
+#: ./browser/form.py:139
 msgid "yes"
 msgstr ""
 

@@ -110,10 +110,6 @@ msgstr ""
 msgid "heading_order_comment"
 msgstr ""
 
-# Payment
-msgid "label_payment"
-msgstr ""
-
 # Comment
 msgid "label_comment"
 msgstr ""

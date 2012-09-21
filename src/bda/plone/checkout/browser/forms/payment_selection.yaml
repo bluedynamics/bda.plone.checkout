@@ -8,10 +8,9 @@ widgets:
         tag: h2
         text: i18n:heading_payment_selection
 - payment:
-    factory: "#field:select"
+    factory: "field:error:select"
     value: context.get_payment
     props:
-        label: i18n:label_payment
         format: radio
         vocabulary: expr:context.payment_vocabulary
         display_proxy: True
