@@ -10,6 +10,7 @@ from zExceptions import Redirect
 from zope.interface import implementer
 from zope.component import getMultiAdapter
 from zope.i18nmessageid import MessageFactory
+from zope.i18n import translate
 from bda.plone.cart import readcookie
 from bda.plone.payment import Payments
 from ..interfaces import (
@@ -56,6 +57,7 @@ class FieldsProvider(FormContext):
     fields_template = None
     fields_name = ''
     message_factory = _
+    ignore_on_save = False
     
     def __init__(self, context, request):
         self.context = context
@@ -154,6 +156,40 @@ class OrderComment(FieldsProvider):
     fields_name = 'order_comment'
 
 provider_registry.add(OrderComment)
+
+
+class AcceptTermsAndConditions(FieldsProvider):
+    fields_template = 'bda.plone.checkout.browser:forms/accept_terms.yaml'
+    fields_name = 'accept_terms_and_conditions'
+    ignore_on_save = True
+    
+    @property
+    def accept_label(self):
+        # XXX: url from config
+        tac_url = '%s/agb' % self.context.absolute_url()
+        tac_label = _('terms_and_conditions', 'Terms and conditions')
+        tac_label = translate(tac_label, context=self.request)
+        tac_link = '<a href="%s" class="terms_and_consitions">%s</a>'
+        tac_link = tac_link % (tac_url, tac_label)
+        tac_text = _('terms_and_conditions_text',
+                     'I have read and accept the ${terms_and_conditions}',
+                     mapping={'terms_and_conditions': tac_link})
+        return tac_text
+    
+    @property
+    def mode(self):
+        if self.request.get('action.checkout.finish') \
+          or self.form_context is CONFIRM:
+            return 'edit'
+        return 'skip'
+    
+    def validate_accept(self, widget, data):
+        if not data.extracted:
+            raise ExtractionError(_('error_accept_terms_and_conditiond',
+                                    'Please accept our terms and conditions.'))
+        return data.extracted
+
+provider_registry.add(AcceptTermsAndConditions)
 
 
 class CheckoutForm(Form, FormContext):

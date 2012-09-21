@@ -1,0 +1,14 @@
+factory: compound
+name: context.fields_name
+widgets:
+- accept:
+    factory: '#field:*validate_accept:checkbox'
+    props:
+        label: expr:context.accept_label
+        position: 'after'
+        format: bool
+    custom:
+        validate_accept:
+            extractors:
+                - context.validate_accept
+    mode: expr:context.mode

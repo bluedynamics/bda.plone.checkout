@@ -1,61 +1,59 @@
 #form-checkout .field input[type="text"],
 #form-checkout .field input[type="email"] {
-    width: 14em;
-    padding: 0.2em;
+        width: 14em;
+        padding: 0.2em;
 }
-
 #form-checkout h2 {
-  margin-top: 1em;
-  margin-bottom: 0.5em;
-  padding-bottom: 0.25em;
-  border-bottom: 0.1em solid #bbb;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    padding-bottom: 0.25em;
+    border-bottom: 0.1em solid #bbb;
 }
-
 #form-checkout .field {
-  clear: none;
-  margin-right: 2em;
+    clear: none;
+    margin-right: 2em;
 }
-
 #form-checkout #field-checkout-personal_data-name,
 #form-checkout #field-checkout-personal_data-email,
 #form-checkout #field-checkout-billing_address-zip,
 #form-checkout #field-checkout-delivery_address-name,
 #form-checkout #field-checkout-delivery_address-zip {
-  float: left;
+    float: left;
 }
-
 #form-checkout #input-checkout-billing_address-zip,
 #form-checkout #input-checkout-delivery_address-zip {
-  width: 8em;
+    width: 8em;
 }
-
 #form-checkout #input-checkout-billing_address-city,
 #form-checkout #input-checkout-delivery_address-city {
-  width: 20em;
+    width: 20em;
 }
 #form-checkout #input-checkout-billing_address-street,
 #form-checkout #input-checkout-delivery_address-street {
-  width: 31em;
+    width: 31em;
 }
-
 label.radioType input {
-  margin-right: 0.5em;
+    margin-right: 0.5em;
 }
-
 #form-checkout div.field.error {
-  background: transparent;
-  border: none;
-  padding: 0;
-  margin-top: 0;
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin-top: 0;
 }
-
 #form-checkout div.field.error .errormessage {
-  display: none;
+    display: none;
 }
 #form-checkout div.field.error input {
-  border: 1px solid red;
+    border: 1px solid red;
 }
-
+#form-checkout #field-checkout-accept_terms_and_conditions-accept label {
+    margin-left:0.3em;
+}
+#form-checkout #field-checkout-accept_terms_and_conditions-accept .errormessage {
+    display:block;
+    color:red;
+}
 #input-checkout-checkout_back,
 #input-checkout-next,
 #input-checkout-confirm_back,
@@ -69,59 +67,40 @@ label.radioType input {
     padding:0.3em 0.5em;
     margin-right:0.4em;
 }
-
 #cart #cart_items .cart_item_title {
-  margin-top: 0.5em;
+    margin-top: 0.5em;
 }
-
 #content .cart_item_description {
-  color: #666;
-  font-size: 90%;
-  line-height: 1.25em;
-  margin-bottom: 0;
+    color: #666;
+    font-size: 90%;
+    line-height: 1.25em;
+    margin-bottom: 0;
 }
-
 #content .cart_item_comment_wrapper {
-  margin-bottom: 0;
-  float: left;
+    margin-bottom: 0;
+    float: left;
 } 
 #content .cart_item_comment {
-  margin-bottom: 0;
+    margin-bottom: 0;
 } 
-
 #cart .cart_item {
-  border-bottom: 0.1em solid #ccc;
-  padding-bottom: 0.5em;
-  margin-bottom: 1em;
+    border-bottom: 0.1em solid #ccc;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
 }
-
 #cart ul.cart_item_content li {
-  display: inline;
+    display: inline;
 }
 .cart_item ul.cart_item_content {
-  float: right;
-  list-style-type: none !important;
-  margin: 0 !important;
-  text-align: right;
+    float: right;
+    list-style-type: none !important;
+    margin: 0 !important;
+    text-align: right;
 }
-
-.cart_item  .price {
-  display: inline-block;
-  width: 7em;
+.cart_item .price {
+    display: inline-block;
+    width: 7em;
 }
-
 .cart_item .cart_item_count {
-  margin-right: 2em;
+    margin-right: 2em;
 }
-
-
-
-
-
-
-
-
-
-
-
-

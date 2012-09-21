@@ -25,6 +25,8 @@ class CheckoutAdapter(object):
     def save(self, providers, widget, data):
         vessel = self.vessel
         for provider in providers:
+            if provider.ignore_on_save:
+                continue
             fields = data.get(provider.fields_name, dict())
             for key in fields:
                 name = '%s.%s' % (provider.fields_name, key)
