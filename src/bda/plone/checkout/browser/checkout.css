@@ -56,6 +56,9 @@ label.radioType input {
 #form-checkout div.field.error input {
     border: 1px solid red;
 }
+#form-checkout.mode_display #field-checkout-accept_terms_and_conditions-accept {
+    margin-bottom:1em;
+}
 #field-checkout-delivery_address-alternative_delivery label,
 #form-checkout #field-checkout-accept_terms_and_conditions-accept label {
     display: inline-block;
