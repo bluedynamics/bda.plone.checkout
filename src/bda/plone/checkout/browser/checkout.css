@@ -71,6 +71,13 @@ label.radioType input {
     padding:0.3em 0.5em;
     margin-right:0.4em;
 }
+#input-checkout-checkout_back:hover,
+#input-checkout-next:hover,
+#input-checkout-confirm_back:hover,
+#input-checkout-finish:hover {
+    background-color:#eeeeee;
+    color:#205C90 !important;
+}
 #cart #cart_items .cart_item_title {
     margin-top: 0.5em;
 }
