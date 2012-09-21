@@ -42,7 +42,9 @@ class FormContext(object):
     
     @property
     def form_context(self):
-        return self.request.get('checkout_confirm') and CONFIRM or CHECKOUT
+        confirm = self.request.get('checkout_confirm') or \
+                  self.request.get('action.checkout.finish')
+        return confirm and CONFIRM or CHECKOUT
     
     @property
     def mode(self):
@@ -215,11 +217,9 @@ class CheckoutForm(Form, FormContext):
     action_resource = '@@checkout'
     
     def prepare(self):
-        request = self.request
-        if not readcookie(request):
+        if not readcookie(self.request):
             raise Redirect(self.context.absolute_url())
-        checkout = not request.get('checkout_confirm') and \
-                   not request.get('action.checkout.finish')
+        checkout = self.form_context is CHECKOUT
         form_class = checkout and 'mode_edit' or 'mode_display'
         self.form = factory('#form', name='checkout', props={
             'action': self.form_action,
