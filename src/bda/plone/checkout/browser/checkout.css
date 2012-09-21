@@ -35,6 +35,12 @@
 #form-checkout #input-checkout-delivery_address-street {
     width: 31em;
 }
+#form-checkout.mode_display label {
+    display: none;
+}
+#form-checkout.mode_display .field {
+    margin-bottom: 0px;
+}
 label.radioType input {
     margin-right: 0.5em;
 }
@@ -52,6 +58,7 @@ label.radioType input {
 }
 #field-checkout-delivery_address-alternative_delivery label,
 #form-checkout #field-checkout-accept_terms_and_conditions-accept label {
+    display: inline-block;
     margin-left:0.3em;
 }
 #form-checkout #field-checkout-accept_terms_and_conditions-accept .errormessage {
