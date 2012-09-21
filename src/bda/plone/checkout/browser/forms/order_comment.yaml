@@ -7,6 +7,7 @@ widgets:
         structural: True
         tag: h2
         text: i18n:heading_order_comment
+        class_add: expr:context.hidden_class
 - comment:
     factory: "#field:textarea"
     value: context.get_value
@@ -15,4 +16,5 @@ widgets:
         rows: 8
         columns: 20
         display_proxy: True
+        class_add: expr:context.hidden_class
     mode: expr:context.mode

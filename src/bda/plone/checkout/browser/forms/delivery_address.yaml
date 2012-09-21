@@ -7,6 +7,7 @@ widgets:
         structural: True
         tag: h2
         text: i18n:heading_delivery_address
+        class_add: expr:context.hidden_class
 - alternative_delivery:
     factory: '#field:checkbox'
     value: context.get_alternative_delivery
@@ -15,6 +16,7 @@ widgets:
         position: expr:context.mode == 'display' and 'before' or 'after'
         vocabulary: expr:context.alternative_delivery_vocab
         format: bool
+        class_add: expr:context.hidden_class
         display_proxy: True
     mode: expr:context.mode
 - container:

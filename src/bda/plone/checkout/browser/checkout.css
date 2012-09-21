@@ -1,7 +1,7 @@
 #form-checkout .field input[type="text"],
 #form-checkout .field input[type="email"] {
-        width: 14em;
-        padding: 0.2em;
+    width: 14em;
+    padding: 0.2em;
 }
 #form-checkout h2 {
     margin-top: 1em;
@@ -12,6 +12,9 @@
 #form-checkout .field {
     clear: none;
     margin-right: 2em;
+}
+#form-checkout .hidden {
+    display:none;
 }
 #form-checkout #field-checkout-personal_data-name,
 #form-checkout #field-checkout-personal_data-email,
@@ -47,6 +50,7 @@ label.radioType input {
 #form-checkout div.field.error input {
     border: 1px solid red;
 }
+#field-checkout-delivery_address-alternative_delivery label,
 #form-checkout #field-checkout-accept_terms_and_conditions-accept label {
     margin-left:0.3em;
 }

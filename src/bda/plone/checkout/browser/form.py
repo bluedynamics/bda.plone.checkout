@@ -123,6 +123,15 @@ class DeliveryAddress(FieldsProvider):
         return widget.dottedpath in self.request
     
     @property
+    def hidden_class(self):
+        if self.form_context is CHECKOUT:
+            return ''
+        name = 'checkout.delivery_address.alternative_delivery'
+        if self.request.get(name) is None:
+            return 'hidden'
+        return ''
+    
+    @property
     def alternative_delivery_vocab(self):
         return {
             True: _('yes', 'Yes'),
@@ -154,6 +163,15 @@ provider_registry.add(PaymentSelection)
 class OrderComment(FieldsProvider):
     fields_template = 'bda.plone.checkout.browser:forms/order_comment.yaml'
     fields_name = 'order_comment'
+    
+    @property
+    def hidden_class(self):
+        if self.form_context is CHECKOUT:
+            return ''
+        name = 'checkout.order_comment.comment'
+        if not self.request.get(name):
+            return 'hidden'
+        return ''
 
 provider_registry.add(OrderComment)
 
