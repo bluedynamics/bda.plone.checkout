@@ -82,6 +82,7 @@ label.radioType input {
     font-size:100%;
     padding:0.3em 0.75em;
     margin-right:0.4em;
+    cursor: pointer;
 }
 #input-checkout-checkout_back:hover,
 #input-checkout-next:hover,
