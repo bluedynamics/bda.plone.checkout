@@ -80,7 +80,7 @@ label.radioType input {
     color:white !important;
     font-weight:bold;
     font-size:100%;
-    padding:0.3em 0.5em;
+    padding:0.3em 0.75em;
     margin-right:0.4em;
 }
 #input-checkout-checkout_back:hover,
@@ -95,7 +95,6 @@ label.radioType input {
 }
 #content .cart_item_description {
     color: #666;
-    font-size: 90%;
     line-height: 1.25em;
     margin-bottom: 0;
 }
