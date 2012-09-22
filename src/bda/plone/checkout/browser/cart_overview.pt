@@ -10,11 +10,9 @@
         <span class="cart_item_comment">comment</span>
       </p>
       <ul class="cart_item_content">
-        <li class="shop-cartlisting-count" i18n:translate="amount">
-          Amount
-        </li>
         <li>
-          <span class="cart_item_count">amount:</span>
+          <span class="cart_item_count">0</span>
+          <span class="cart_item_quantity_unit">Quantity</span>
         </li>
         <li>
           <span class="price">

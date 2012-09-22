@@ -40,6 +40,7 @@
 }
 #form-checkout.mode_display .field {
     margin-bottom: 0px;
+    margin-right: 0.5em;
 }
 label.radioType input {
     margin-right: 0.5em;
@@ -57,6 +58,7 @@ label.radioType input {
     border: 1px solid red;
 }
 #form-checkout.mode_display #field-checkout-accept_terms_and_conditions-accept {
+    margin-top:1em;
     margin-bottom:1em;
 }
 #field-checkout-delivery_address-alternative_delivery label,
@@ -122,6 +124,6 @@ label.radioType input {
     display: inline-block;
     width: 7em;
 }
-.cart_item .cart_item_count {
+.cart_item .cart_item_quantity_unit {
     margin-right: 2em;
 }
