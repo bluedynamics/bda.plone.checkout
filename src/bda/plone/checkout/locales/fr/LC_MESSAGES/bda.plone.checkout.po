@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-08-15 10:19+0000\n"
+"POT-Creation-Date: 2012-09-24 15:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -9,20 +9,22 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"Language-Code: en\n"
-"Language-Name: English\n"
+"Language-Code: fr\n"
+"Language-Name: French\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
+"X-Is-Fallback-For: fr-be fr-ca fr-lu fr-mc fr-ch fr-fr\n"
 
 #. Default: "Back"
-#: ./browser/form.py:170
+#: ./browser/form.py:251
 msgid "back"
 msgstr "Zurück"
 
-#. Default: "Checkout"
+#. Default: "Your Order"
 #: ./browser/view.pt:20
+#, fuzzy
 msgid "checkout"
-msgstr "Kassa"
+msgstr "zur Kasse"
 
 # City is required
 msgid "city_is_required"
@@ -36,22 +38,29 @@ msgstr "Land ist erforderlich"
 msgid "email_is_required"
 msgstr "Email ist erforderlich"
 
+#. Default: "Please accept our terms and conditions."
+#: ./browser/form.py:227
+msgid "error_accept_terms_and_conditiond"
+msgstr "Bitte akzeptieren Sie die Allgemeinen Geschäftsbedingungen"
+
 #. Default: "Female"
-#: ./browser/form.py:97
+#: ./browser/form.py:104
 msgid "female"
 msgstr "Frau"
 
-#. Default: "Finish"
-#: ./browser/form.py:188
+#. Default: "Order now"
+#: ./browser/form.py:269
+#, fuzzy
 msgid "finish"
-msgstr "Fertigstellen"
+msgstr "fertigstellen"
 
 # Billing Address
 msgid "heading_billing_address"
 msgstr "Rechnungsadresse"
 
-#. Default: "Cart Summary"
-#: ./browser/form.py:79
+#. Default: "Cart"
+#: ./browser/form.py:86
+#, fuzzy
 msgid "heading_cart_summary"
 msgstr "Warenkorb Übersicht"
 
@@ -70,6 +79,10 @@ msgstr "Zahlungsart"
 # Personal Data
 msgid "heading_personal_data"
 msgstr "Persönliche Angaben"
+
+# Shipping
+msgid "heading_shipping_selection"
+msgstr ""
 
 # Delivery address differs from shipping address?
 msgid "label_alternative_delivery"
@@ -103,10 +116,6 @@ msgstr "Anrede"
 msgid "label_name"
 msgstr "Name"
 
-# Payment
-msgid "label_payment"
-msgstr "Zahlungsart"
-
 # Phone
 msgid "label_phone"
 msgstr "Telefon"
@@ -124,7 +133,7 @@ msgid "label_zip"
 msgstr "Postleitzahl"
 
 #. Default: "Male"
-#: ./browser/form.py:96
+#: ./browser/form.py:103
 msgid "male"
 msgstr "Herr"
 
@@ -133,17 +142,17 @@ msgid "name_is_required"
 msgstr "Name ist erforderlich"
 
 #. Default: "Next"
-#: ./browser/form.py:176
+#: ./browser/form.py:257
 msgid "next"
 msgstr "Weiter"
 
 #. Default: "No"
-#: ./browser/form.py:125
+#: ./browser/form.py:141
 msgid "no"
 msgstr "Nein"
 
 #. Default: "not set"
-#: ./browser/form.py:126
+#: ./browser/form.py:142
 msgid "not set"
 msgstr "Nicht gesetzt"
 
@@ -159,8 +168,18 @@ msgstr "Strasse ist erforderlich"
 msgid "surname_is_required"
 msgstr "Nachname ist erforderlich"
 
+#. Default: "Terms and conditions"
+#: ./browser/form.py:209
+msgid "terms_and_conditions"
+msgstr ""
+
+#. Default: "I have read and accept the ${terms_and_conditions}"
+#: ./browser/form.py:213
+msgid "terms_and_conditions_text"
+msgstr ""
+
 #. Default: "Yes"
-#: ./browser/form.py:124
+#: ./browser/form.py:140
 msgid "yes"
 msgstr "Ja"
 

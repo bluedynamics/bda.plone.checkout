@@ -17,169 +17,169 @@ msgstr ""
 #. Default: "Back"
 #: ./browser/form.py:251
 msgid "back"
-msgstr ""
+msgstr "Back"
 
 #. Default: "Your Order"
 #: ./browser/view.pt:20
 msgid "checkout"
-msgstr ""
+msgstr "Your Order"
 
-# City is required
+#. Default: "City is required"
 msgid "city_is_required"
-msgstr ""
+msgstr "City is required"
 
-# Country is required
+#. Default: "Country is required"
 msgid "country_is_required"
-msgstr ""
+msgstr "Country is required"
 
-# Email is required
+#. Default: "Email is required"
 msgid "email_is_required"
-msgstr ""
+msgstr "Email is required"
 
 #. Default: "Please accept our terms and conditions."
 #: ./browser/form.py:227
 msgid "error_accept_terms_and_conditiond"
-msgstr ""
+msgstr "Please accept our terms and conditions."
 
 #. Default: "Female"
 #: ./browser/form.py:104
 msgid "female"
-msgstr ""
+msgstr "Female"
 
 #. Default: "Order now"
 #: ./browser/form.py:269
 msgid "finish"
-msgstr ""
+msgstr "Order now"
 
-# Billing Address
+#. Default: "Billing Address"
 msgid "heading_billing_address"
-msgstr ""
+msgstr "Billing Address"
 
 #. Default: "Cart"
 #: ./browser/form.py:86
 msgid "heading_cart_summary"
-msgstr ""
+msgstr "Cart"
 
-# Delivery Address
+#. Default: "Delivery Address"
 msgid "heading_delivery_address"
-msgstr ""
+msgstr "Delivery Address"
 
-# Additional information
+#. Default: "Additional information"
 msgid "heading_order_comment"
-msgstr ""
+msgstr "Additional information"
 
-# Payment Selection
+#. Default: "Payment Selection"
 msgid "heading_payment_selection"
-msgstr ""
+msgstr "Payment"
 
-# Personal Data
+#. Default: "Personal Data"
 msgid "heading_personal_data"
-msgstr ""
+msgstr "Personal Data"
 
-# Shipping
+#. Default: "Shipping"
 msgid "heading_shipping_selection"
-msgstr ""
+msgstr "Shipping"
 
-# Delivery address differs from shipping address?
+#. Default: "Delivery address differs from shipping address?"
 msgid "label_alternative_delivery"
-msgstr ""
+msgstr "Delivery address differs from shipping address?"
 
-# City
+#. Default: "City"
 msgid "label_city"
-msgstr ""
+msgstr "City"
 
-# Comment
+#. Default: "Comment"
 msgid "label_comment"
-msgstr ""
+msgstr "Comment"
 
-# Company
+#. Default: "Company"
 msgid "label_company"
-msgstr ""
+msgstr "Company"
 
-# Country
+#. Default: "Country"
 msgid "label_country"
-msgstr ""
+msgstr "Country"
 
-# Email
+#. Default: "Email"
 msgid "label_email"
-msgstr ""
+msgstr "Email"
 
-# Gender
+#. Default: "Gender"
 msgid "label_gender"
-msgstr ""
+msgstr "Gender"
 
-# Name
+#. Default: "Name"
 msgid "label_name"
-msgstr ""
+msgstr "Name"
 
-# Phone
+#. Default: "Phone"
 msgid "label_phone"
-msgstr ""
+msgstr "Phone"
 
-# Street
+#. Default: "Street"
 msgid "label_street"
-msgstr ""
+msgstr "Street"
 
-# Name
+#. Default: "Name"
 msgid "label_surname"
-msgstr ""
+msgstr "Name"
 
-# ZIP
+#. Default: "ZIP"
 msgid "label_zip"
-msgstr ""
+msgstr "ZIP"
 
 #. Default: "Male"
 #: ./browser/form.py:103
 msgid "male"
-msgstr ""
+msgstr "Male"
 
-# Name is required
+#. Default: "Name is required"
 msgid "name_is_required"
-msgstr ""
+msgstr "Name is required"
 
 #. Default: "Next"
 #: ./browser/form.py:257
 msgid "next"
-msgstr ""
+msgstr "Next"
 
 #. Default: "No"
 #: ./browser/form.py:141
 msgid "no"
-msgstr ""
+msgstr "No"
 
 #. Default: "not set"
 #: ./browser/form.py:142
 msgid "not set"
-msgstr ""
+msgstr "not set"
 
-# Phone is required
+#. Default: "Phone is required"
 msgid "phone_is_required"
-msgstr ""
+msgstr "Phone is required"
 
-# Street is required
+#. Default: "Street is required"
 msgid "street_is_required"
-msgstr ""
+msgstr "Street is required"
 
-# Surname is required
+#. Default: "Surname is required"
 msgid "surname_is_required"
-msgstr ""
+msgstr "Surname is required"
 
 #. Default: "Terms and conditions"
 #: ./browser/form.py:209
 msgid "terms_and_conditions"
-msgstr ""
+msgstr "Terms and conditions"
 
 #. Default: "I have read and accept the ${terms_and_conditions}"
 #: ./browser/form.py:213
 msgid "terms_and_conditions_text"
-msgstr ""
+msgstr "I have read and accept the ${terms_and_conditions}"
 
 #. Default: "Yes"
 #: ./browser/form.py:140
 msgid "yes"
-msgstr ""
+msgstr "Yes"
 
-# ZIP is required
+#. Default: "ZIP is required"
 msgid "zip_is_required"
-msgstr ""
+msgstr "ZIP is required"
 

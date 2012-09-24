@@ -9,10 +9,11 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"Language-Code: en\n"
-"Language-Name: English\n"
+"Language-Code: it\n"
+"Language-Name: Italian\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
+"X-Is-Fallback-For: it-ch it-it\n"
 
 #. Default: "Back"
 #: ./browser/form.py:251
@@ -24,15 +25,15 @@ msgstr ""
 msgid "checkout"
 msgstr ""
 
-# City is required
+#. Default: "City is required"
 msgid "city_is_required"
 msgstr ""
 
-# Country is required
+#. Default: "Country is required"
 msgid "country_is_required"
 msgstr ""
 
-# Email is required
+#. Default: "Email is required"
 msgid "email_is_required"
 msgstr ""
 
@@ -51,7 +52,7 @@ msgstr ""
 msgid "finish"
 msgstr ""
 
-# Billing Address
+#. Default: "Billing Address"
 msgid "heading_billing_address"
 msgstr ""
 
@@ -60,71 +61,71 @@ msgstr ""
 msgid "heading_cart_summary"
 msgstr ""
 
-# Delivery Address
+#. Default: "Delivery Address"
 msgid "heading_delivery_address"
 msgstr ""
 
-# Additional information
+#. Default: "Additional information"
 msgid "heading_order_comment"
 msgstr ""
 
-# Payment Selection
+#. Default: "Payment Selection"
 msgid "heading_payment_selection"
 msgstr ""
 
-# Personal Data
+#. Default: "Personal Data"
 msgid "heading_personal_data"
 msgstr ""
 
-# Shipping
+#. Default: "Shipping"
 msgid "heading_shipping_selection"
 msgstr ""
 
-# Delivery address differs from shipping address?
+#. Default: "Delivery address differs from shipping address?"
 msgid "label_alternative_delivery"
 msgstr ""
 
-# City
+#. Default: "City"
 msgid "label_city"
 msgstr ""
 
-# Comment
+#. Default: "Comment"
 msgid "label_comment"
 msgstr ""
 
-# Company
+#. Default: "Company"
 msgid "label_company"
 msgstr ""
 
-# Country
+#. Default: "Country"
 msgid "label_country"
 msgstr ""
 
-# Email
+#. Default: "Email"
 msgid "label_email"
 msgstr ""
 
-# Gender
+#. Default: "Gender"
 msgid "label_gender"
 msgstr ""
 
-# Name
+#. Default: "Name"
 msgid "label_name"
 msgstr ""
 
-# Phone
+#. Default: "Phone"
 msgid "label_phone"
 msgstr ""
 
-# Street
+#. Default: "Street"
 msgid "label_street"
 msgstr ""
 
-# Name
+#. Default: "Name"
 msgid "label_surname"
 msgstr ""
 
-# ZIP
+#. Default: "ZIP"
 msgid "label_zip"
 msgstr ""
 
@@ -133,7 +134,7 @@ msgstr ""
 msgid "male"
 msgstr ""
 
-# Name is required
+#. Default: "Name is required"
 msgid "name_is_required"
 msgstr ""
 
@@ -152,15 +153,15 @@ msgstr ""
 msgid "not set"
 msgstr ""
 
-# Phone is required
+#. Default: "Phone is required"
 msgid "phone_is_required"
 msgstr ""
 
-# Street is required
+#. Default: "Street is required"
 msgid "street_is_required"
 msgstr ""
 
-# Surname is required
+#. Default: "Surname is required"
 msgid "surname_is_required"
 msgstr ""
 
@@ -179,7 +180,7 @@ msgstr ""
 msgid "yes"
 msgstr ""
 
-# ZIP is required
+#. Default: "ZIP is required"
 msgid "zip_is_required"
 msgstr ""
 
