@@ -7,7 +7,7 @@ widgets:
         structural: True
         tag: h2
         text: i18n:heading_shipping_selection
-- payment:
+- shipping:
     factory: "field:error:select"
     value: context.get_shipping
     props:
