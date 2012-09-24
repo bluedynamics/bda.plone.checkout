@@ -113,3 +113,7 @@ msgstr ""
 # Comment
 msgid "label_comment"
 msgstr ""
+
+# Shipping
+msgid "heading_shipping_selection"
+msgstr ""

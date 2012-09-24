@@ -13,6 +13,7 @@ from zope.i18nmessageid import MessageFactory
 from zope.i18n import translate
 from bda.plone.cart import readcookie
 from bda.plone.payment import Payments
+from bda.plone.shipping import Shippings
 from ..interfaces import (
     IFieldsProvider,
     ICheckoutAdapter,
@@ -142,6 +143,24 @@ class DeliveryAddress(FieldsProvider):
         }
 
 provider_registry.add(DeliveryAddress)
+
+
+class ShippingSelection(FieldsProvider):
+    fields_template = 'bda.plone.checkout.browser:forms/shipping_selection.yaml'
+    fields_name = 'shipping_selection'
+    
+    @property
+    def shippings(self):
+        return Shippings(self.context)
+    
+    @property
+    def shipping_vocabulary(self):
+        return self.shippings.vocab
+    
+    def get_shipping(self, widget, data):
+        return self.request.get(widget.dottedpath, self.shippings.default)
+
+provider_registry.add(ShippingSelection)
 
 
 class PaymentSelection(FieldsProvider):

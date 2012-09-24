@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-09-22 08:04+0000\n"
+"POT-Creation-Date: 2012-09-24 09:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Domain: DOMAIN\n"
 
 #. Default: "Back"
-#: ./browser/form.py:232
+#: ./browser/form.py:251
 msgid "back"
 msgstr ""
 
@@ -37,17 +37,17 @@ msgid "email_is_required"
 msgstr ""
 
 #. Default: "Please accept our terms and conditions."
-#: ./browser/form.py:208
+#: ./browser/form.py:227
 msgid "error_accept_terms_and_conditiond"
 msgstr ""
 
 #. Default: "Female"
-#: ./browser/form.py:103
+#: ./browser/form.py:104
 msgid "female"
 msgstr ""
 
 #. Default: "Order now"
-#: ./browser/form.py:250
+#: ./browser/form.py:269
 msgid "finish"
 msgstr ""
 
@@ -56,7 +56,7 @@ msgid "heading_billing_address"
 msgstr ""
 
 #. Default: "Cart"
-#: ./browser/form.py:85
+#: ./browser/form.py:86
 msgid "heading_cart_summary"
 msgstr ""
 
@@ -74,6 +74,10 @@ msgstr ""
 
 # Personal Data
 msgid "heading_personal_data"
+msgstr ""
+
+# Shipping
+msgid "heading_shipping_selection"
 msgstr ""
 
 # Delivery address differs from shipping address?
@@ -125,7 +129,7 @@ msgid "label_zip"
 msgstr ""
 
 #. Default: "Male"
-#: ./browser/form.py:102
+#: ./browser/form.py:103
 msgid "male"
 msgstr ""
 
@@ -134,17 +138,17 @@ msgid "name_is_required"
 msgstr ""
 
 #. Default: "Next"
-#: ./browser/form.py:238
+#: ./browser/form.py:257
 msgid "next"
 msgstr ""
 
 #. Default: "No"
-#: ./browser/form.py:140
+#: ./browser/form.py:141
 msgid "no"
 msgstr ""
 
 #. Default: "not set"
-#: ./browser/form.py:141
+#: ./browser/form.py:142
 msgid "not set"
 msgstr ""
 
@@ -161,17 +165,17 @@ msgid "surname_is_required"
 msgstr ""
 
 #. Default: "Terms and conditions"
-#: ./browser/form.py:190
+#: ./browser/form.py:209
 msgid "terms_and_conditions"
 msgstr ""
 
 #. Default: "I have read and accept the ${terms_and_conditions}"
-#: ./browser/form.py:194
+#: ./browser/form.py:213
 msgid "terms_and_conditions_text"
 msgstr ""
 
 #. Default: "Yes"
-#: ./browser/form.py:139
+#: ./browser/form.py:140
 msgid "yes"
 msgstr ""
 
