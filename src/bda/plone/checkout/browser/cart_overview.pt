@@ -34,15 +34,21 @@
   <div id="cart_summary" style="display: none;" class="summary_wrapper">
     <table class="cart_sum_content">
       <tal:details condition="not:view/summary_total_only">
-      <tr>
-        <td i18n:translate="summary_net">Net:</td>
-        <td class="cart_net">Net</td>
-      </tr>
-      <tr>
-        <td i18n:translate="summary_vat">VAT.:</td>
-        <td class="cart_vat">VAT</td>
-      </tr>
+        <tr>
+          <td i18n:translate="summary_net">Net:</td>
+          <td class="cart_net">Net</td>
+        </tr>
+        <tr>
+          <td i18n:translate="summary_vat">VAT.:</td>
+          <td class="cart_vat">VAT</td>
+        </tr>
       </tal:details>
+      <tal:shipping condition="view/include_shipping_costs">
+        <tr>
+          <td i18n:translate="summary_shipping">Shipping:</td>
+          <td class="cart_shipping">Net</td>
+        </tr>
+      </tal:shipping>
       <tr>
         <td><strong i18n:translate="summary_total">Total:</strong></td>
         <td><strong class="cart_total">Total</strong></td>
