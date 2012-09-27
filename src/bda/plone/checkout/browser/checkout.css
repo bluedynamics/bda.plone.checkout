@@ -1,8 +1,10 @@
 #form-checkout .field input[type="text"],
 #form-checkout .field input[type="email"] {
-    width: 14em;
+    width: 12em;
     padding: 0.2em;
 }
+
+
 #form-checkout h2 {
     margin-top: 1em;
     margin-bottom: 0.5em;
@@ -16,6 +18,22 @@
 #form-checkout .hidden {
     display:none;
 }
+
+#field-checkout-personal_data-name,
+#field-checkout-personal_data-surname,
+#field-checkout-personal_data-email,
+#field-checkout-personal_data-phone,
+#field-checkout-delivery_address-name,
+#field-checkout-delivery_address-surname {
+  width: 14em;
+  float: left;
+}
+
+#field-checkout-personal_data-company,
+#field-checkout-delivery_address-company  {
+  clear: both!important;
+}
+
 #form-checkout #field-checkout-personal_data-name,
 #form-checkout #field-checkout-personal_data-email,
 #form-checkout #field-checkout-billing_address-zip,

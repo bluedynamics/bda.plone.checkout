@@ -119,7 +119,7 @@ msgstr "Telefon"
 
 # Street
 msgid "label_street"
-msgstr "Straße"
+msgstr "Strasse"
 
 # Name
 msgid "label_surname"
@@ -159,7 +159,7 @@ msgstr "Telefonnummer ist erforderlich"
 
 # Street is required
 msgid "street_is_required"
-msgstr "Straße ist erforderlich"
+msgstr "Strasse ist erforderlich"
 
 # Surname is required
 msgid "surname_is_required"
