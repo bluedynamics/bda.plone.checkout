@@ -13,7 +13,7 @@
 }
 #form-checkout .field {
     clear: none;
-    margin-right: 2em;
+    margin-right: 1em;
 }
 #form-checkout .hidden {
     display:none;
@@ -25,10 +25,11 @@
 #field-checkout-personal_data-phone,
 #field-checkout-delivery_address-name,
 #field-checkout-delivery_address-surname {
-  width: 14em;
+  width: 13em;
   float: left;
 }
 
+#field-checkout-personal_data-email,
 #field-checkout-personal_data-company,
 #field-checkout-delivery_address-company  {
   clear: both!important;
@@ -41,18 +42,43 @@
 #form-checkout #field-checkout-delivery_address-zip {
     float: left;
 }
+#form-checkout #field-checkout-billing_address-zip,
+#form-checkout #field-checkout-delivery_address-zip {
+    width: 8em;
+}
+
 #form-checkout #input-checkout-billing_address-zip,
 #form-checkout #input-checkout-delivery_address-zip {
-    width: 8em;
+    width: 7em;
+}
+
+#form-checkout #field-checkout-billing_address-city,
+#form-checkout #field-checkout-delivery_address-city {
+    width: 20em;
+    float: left;
 }
 #form-checkout #input-checkout-billing_address-city,
 #form-checkout #input-checkout-delivery_address-city {
-    width: 20em;
+    width: 19em;
+}
+#form-checkout #field-checkout-billing_address-street,
+#form-checkout #field-checkout-delivery_address-street {
+    width: 31em;
 }
 #form-checkout #input-checkout-billing_address-street,
 #form-checkout #input-checkout-delivery_address-street {
-    width: 31em;
+    width: 30em;
 }
+#field-checkout-billing_address-country,
+#field-checkout-delivery_address-country {
+ width: 7em; 
+}
+
+#field-checkout-billing_address-country,
+#field-checkout-delivery_address-country {
+  clear: both;
+}
+
 #form-checkout.mode_display label {
     display: none;
 }
