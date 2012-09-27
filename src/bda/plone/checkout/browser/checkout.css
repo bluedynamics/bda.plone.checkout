@@ -4,6 +4,9 @@
     padding: 0.2em;
 }
 
+#form-checkout input {
+  font-size: 80%!important;
+}
 
 #form-checkout h2 {
     margin-top: 1em;
