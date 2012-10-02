@@ -1,11 +1,17 @@
-#form-checkout .field input[type="text"],
-#form-checkout .field input[type="email"] {
+#form-checkout div.field input[type="text"],
+#form-checkout div.field input[type="email"],
+#form-checkout div.field input[type="text"]:focus,
+#form-checkout div.field input[type="email"]:focus,
+#form-checkout div.field.error input[type="text"]:focus,
+#form-checkout div.field.error input[type="email"]:focus,
+#form-checkout div.field.error input[type="text"],
+#form-checkout div.field.error input[type="email"] {
+    box-shadow: inset 0 0 2px #aaa!important;
+    border: 1px solid #aaa;
+    padding: 0.4em!important;
     width: 12em;
     padding: 0.2em;
-}
-
-#form-checkout input {
-  font-size: 80%!important;
+    font-size: 80%!important;
 }
 
 #form-checkout h2 {
@@ -79,7 +85,7 @@
 
 #field-checkout-billing_address-country,
 #field-checkout-delivery_address-country {
-  clear: both;
+  clear: both!important;
 }
 
 #form-checkout.mode_display label {
@@ -88,6 +94,7 @@
 #form-checkout.mode_display .field {
     margin-bottom: 0px;
     margin-right: 0.5em;
+    width: auto!important;
 }
 label.radioType input {
     margin-right: 0.5em;
@@ -101,9 +108,12 @@ label.radioType input {
 #form-checkout div.field.error .errormessage {
     display: none;
 }
-#form-checkout div.field.error input {
+#form-checkout div.field.error input,
+#form-checkout div.field.error input[type="text"],
+#form-checkout div.field.error input[type="email"] {
     border: 1px solid red;
 }
+
 #form-checkout.mode_display #field-checkout-accept_terms_and_conditions-accept {
     margin-top:1em;
     margin-bottom:1em;
