@@ -25,12 +25,12 @@ widgets:
         class: delivery_address
         structural: True
     widgets:
-    - name:
+    - firstname:
         factory: "#field:*conditional_required:text"
         value: context.get_value
         props:
-            label: i18n:label_name
-            conditional_required: i18n:name_is_required
+            label: i18n:label_firstname
+            conditional_required: i18n:firstname_is_required
             required_bullet_trigger: conditional_required
             display_proxy: True
         custom:
@@ -38,12 +38,12 @@ widgets:
                 extractors:
                     - context.conditional_required
         mode: expr:context.mode
-    - surname:
+    - lastname:
         factory: "#field:*conditional_required:text"
         value: context.get_value
         props:
-            label: i18n:label_surname
-            conditional_required: i18n:surname_is_required
+            label: i18n:label_lastname
+            conditional_required: i18n:lastname_is_required
             required_bullet_trigger: conditional_required
             display_proxy: True
         custom:

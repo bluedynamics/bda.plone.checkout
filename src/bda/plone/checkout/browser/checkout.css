@@ -28,12 +28,12 @@
     display:none;
 }
 
-#field-checkout-personal_data-name,
-#field-checkout-personal_data-surname,
+#field-checkout-personal_data-firstname,
+#field-checkout-personal_data-lastname,
 #field-checkout-personal_data-email,
 #field-checkout-personal_data-phone,
-#field-checkout-delivery_address-name,
-#field-checkout-delivery_address-surname {
+#field-checkout-delivery_address-firstname,
+#field-checkout-delivery_address-lastname {
   width: 13em;
   float: left;
 }
@@ -44,10 +44,10 @@
   clear: both!important;
 }
 
-#form-checkout #field-checkout-personal_data-name,
+#form-checkout #field-checkout-personal_data-lastname,
 #form-checkout #field-checkout-personal_data-email,
 #form-checkout #field-checkout-billing_address-zip,
-#form-checkout #field-checkout-delivery_address-name,
+#form-checkout #field-checkout-delivery_address-lastname,
 #form-checkout #field-checkout-delivery_address-zip {
     float: left;
 }

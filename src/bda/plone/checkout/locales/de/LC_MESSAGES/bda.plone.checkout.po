@@ -109,9 +109,9 @@ msgstr "E-Mail"
 msgid "label_gender"
 msgstr "Anrede"
 
-# Name
-msgid "label_name"
-msgstr "Name"
+# Vorname
+msgid "label_firstname"
+msgstr "Vorname"
 
 # Phone
 msgid "label_phone"
@@ -121,9 +121,9 @@ msgstr "Telefon"
 msgid "label_street"
 msgstr "Strasse"
 
-# Name
-msgid "label_surname"
-msgstr "Nachname"
+# Last Name
+msgid "label_lastname"
+msgstr "Name"
 
 # ZIP
 msgid "label_zip"
@@ -134,8 +134,8 @@ msgstr "Postleitzahl"
 msgid "male"
 msgstr "Herr"
 
-# Name is required
-msgid "name_is_required"
+# Last Name is required
+msgid "lastname_is_required"
 msgstr "Name ist erforderlich"
 
 #. Default: "Next"
@@ -161,9 +161,9 @@ msgstr "Telefonnummer ist erforderlich"
 msgid "street_is_required"
 msgstr "Strasse ist erforderlich"
 
-# Surname is required
-msgid "surname_is_required"
-msgstr "Nachname ist erforderlich"
+# First Name is required
+msgid "firstname_is_required"
+msgstr "Vorname ist erforderlich"
 
 #. Default: "Terms and conditions"
 #: ./browser/form.py:209

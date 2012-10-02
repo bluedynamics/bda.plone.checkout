@@ -109,8 +109,8 @@ msgstr ""
 msgid "label_gender"
 msgstr ""
 
-#. Default: "Name"
-msgid "label_name"
+#. Default: "First Name"
+msgid "label_firstname"
 msgstr ""
 
 #. Default: "Phone"
@@ -121,8 +121,8 @@ msgstr ""
 msgid "label_street"
 msgstr ""
 
-#. Default: "Name"
-msgid "label_surname"
+#. Default: "Last Name"
+msgid "label_lastname"
 msgstr ""
 
 #. Default: "ZIP"
@@ -134,8 +134,8 @@ msgstr ""
 msgid "male"
 msgstr ""
 
-#. Default: "Name is required"
-msgid "name_is_required"
+#. Default: "First Name is required"
+msgid "firstname_is_required"
 msgstr ""
 
 #. Default: "Next"
@@ -161,8 +161,8 @@ msgstr ""
 msgid "street_is_required"
 msgstr ""
 
-#. Default: "Surname is required"
-msgid "surname_is_required"
+#. Default: "Last Name is required"
+msgid "lastname_is_required"
 msgstr ""
 
 #. Default: "Terms and conditions"

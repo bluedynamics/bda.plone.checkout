@@ -18,20 +18,20 @@ msgstr ""
 msgid "label_gender"
 msgstr ""
 
-# Name
-msgid "label_name"
+# First Name
+msgid "label_firstname"
 msgstr ""
 
-# Name is required
-msgid "name_is_required"
+# First Name is required
+msgid "firstname_is_required"
 msgstr ""
 
-# Name
-msgid "label_surname"
+# Last Name
+msgid "label_lastname"
 msgstr ""
 
-# Surname is required
-msgid "surname_is_required"
+# Last Name is required
+msgid "lastname_is_required"
 msgstr ""
 
 # Email

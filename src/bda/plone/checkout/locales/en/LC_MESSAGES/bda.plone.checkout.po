@@ -121,7 +121,7 @@ msgid "label_street"
 msgstr "Street"
 
 #. Default: "Name"
-msgid "label_surname"
+msgid "label_lastname"
 msgstr "Name"
 
 #. Default: "ZIP"
@@ -133,9 +133,9 @@ msgstr "ZIP"
 msgid "male"
 msgstr "Male"
 
-#. Default: "Name is required"
-msgid "name_is_required"
-msgstr "Name is required"
+#. Default: "First Name is required"
+msgid "firstname_is_required"
+msgstr "First Name is required"
 
 #. Default: "Next"
 #: ./browser/form.py:257
@@ -160,9 +160,9 @@ msgstr "Phone is required"
 msgid "street_is_required"
 msgstr "Street is required"
 
-#. Default: "Surname is required"
-msgid "surname_is_required"
-msgstr "Surname is required"
+#. Default: "Last Name is required"
+msgid "lastname_is_required"
+msgstr "Last Name is required"
 
 #. Default: "Terms and conditions"
 #: ./browser/form.py:209
