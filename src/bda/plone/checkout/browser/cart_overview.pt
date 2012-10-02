@@ -36,17 +36,17 @@
       <tal:details condition="not:view/summary_total_only">
         <tr>
           <td i18n:translate="summary_net">Net:</td>
-          <td class="cart_net">Net</td>
+          <td class="cart_net">0.00</td>
         </tr>
         <tr>
           <td i18n:translate="summary_vat">VAT.:</td>
-          <td class="cart_vat">VAT</td>
+          <td class="cart_vat">0.00</td>
         </tr>
       </tal:details>
       <tal:shipping condition="view/include_shipping_costs">
         <tr>
           <td i18n:translate="summary_shipping">Shipping:</td>
-          <td class="cart_shipping">Net</td>
+          <td class="cart_shipping">0.00</td>
         </tr>
       </tal:shipping>
       <tr>
