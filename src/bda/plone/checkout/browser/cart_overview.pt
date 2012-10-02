@@ -1,6 +1,9 @@
 <div id="cart"
      i18n:domain="bda.plone.cart">
-
+  
+  <span style="display:none;"
+        class="cart_execution_context">checkout</span>
+  
   <span id="cart_item_template" style="display: none;">
     <div class="cart_item cart_overview">
       <h3 class="cart_item_title">Title</h3>
