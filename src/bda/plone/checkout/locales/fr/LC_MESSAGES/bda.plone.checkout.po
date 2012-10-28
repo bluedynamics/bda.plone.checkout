@@ -1,4 +1,4 @@
-msgid ""
+﻿msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2012-09-24 15:17+0000\n"
@@ -18,67 +18,67 @@ msgstr ""
 #. Default: "Back"
 #: ./browser/form.py:251
 msgid "back"
-msgstr "Zurück"
+msgstr "Retour"
 
 #. Default: "Your Order"
 #: ./browser/view.pt:20
 #, fuzzy
 msgid "checkout"
-msgstr "zur Kasse"
+msgstr "Caisse"
 
 # City is required
 msgid "city_is_required"
-msgstr "Ort ist erforderlich"
+msgstr "La localité est obligatoire"
 
 # Country is required
 msgid "country_is_required"
-msgstr "Land ist erforderlich"
+msgstr "Le pays est obligatoire"
 
 # Email is required
 msgid "email_is_required"
-msgstr "Email ist erforderlich"
+msgstr "L'adresse E-mail est obligatoire"
 
 #. Default: "Please accept our terms and conditions."
 #: ./browser/form.py:227
 msgid "error_accept_terms_and_conditiond"
-msgstr "Bitte akzeptieren Sie die Allgemeinen Geschäftsbedingungen"
+msgstr "S'il vous plaît accepter les termes et conditions"
 
 #. Default: "Female"
 #: ./browser/form.py:104
 msgid "female"
-msgstr "Frau"
+msgstr "Madame"
 
 #. Default: "Order now"
 #: ./browser/form.py:269
 #, fuzzy
 msgid "finish"
-msgstr "fertigstellen"
+msgstr "Terminer"
 
 # Billing Address
 msgid "heading_billing_address"
-msgstr "Rechnungsadresse"
+msgstr "Adresse de facturation"
 
 #. Default: "Cart"
 #: ./browser/form.py:86
 #, fuzzy
 msgid "heading_cart_summary"
-msgstr "Warenkorb Übersicht"
+msgstr "Aperçu du panier"
 
 # Delivery Address
 msgid "heading_delivery_address"
-msgstr "Lieferadresse"
+msgstr "Adresse de livraison"
 
 # Additional information
 msgid "heading_order_comment"
-msgstr "Zusätzliche Informationen"
+msgstr "Informations complémentaires"
 
 # Payment Selection
 msgid "heading_payment_selection"
-msgstr "Zahlungsart"
+msgstr "Mode de payement"
 
 # Personal Data
 msgid "heading_personal_data"
-msgstr "Persönliche Angaben"
+msgstr "Données personnelles"
 
 # Shipping
 msgid "heading_shipping_selection"
@@ -86,23 +86,23 @@ msgstr ""
 
 # Delivery address differs from shipping address?
 msgid "label_alternative_delivery"
-msgstr "Lieferadresse weicht von Rechnungsadresse ab?"
+msgstr "Différence entre adresse de livraison et facturation?"
 
 # City
 msgid "label_city"
-msgstr "Ort"
+msgstr "Lieu"
 
 # Comment
 msgid "label_comment"
-msgstr "Kommentar"
+msgstr "commentaire"
 
 # Company
 msgid "label_company"
-msgstr "Firma"
+msgstr "Entreprise"
 
 # Country
 msgid "label_country"
-msgstr "Land"
+msgstr "Pays"
 
 # Email
 msgid "label_email"
@@ -110,70 +110,68 @@ msgstr "E-Mail"
 
 # Gender
 msgid "label_gender"
-msgstr "Anrede"
+msgstr "Titre"
 
 # First Name
 msgid "label_firstname"
-msgstr "First Name"
+msgstr "Nom"
 
 # Phone
 msgid "label_phone"
-msgstr "Telefon"
-
+msgstr "Téléphone"
 # Street
 msgid "label_street"
-msgstr "Strasse"
+msgstr "Rue"
 
 # Last Name
 msgid "label_lastname"
-msgstr "Nachname"
-
+msgstr "Nom de famille"
 # ZIP
 msgid "label_zip"
-msgstr "Postleitzahl"
+msgstr "Code postal"
 
 #. Default: "Male"
 #: ./browser/form.py:103
 msgid "male"
-msgstr "Herr"
+msgstr "Monsieur"
 
 # First Name is required
 msgid "firstname_is_required"
-msgstr "First Name ist erforderlich"
+msgstr "Nom obligatoire"
 
 #. Default: "Next"
 #: ./browser/form.py:257
 msgid "next"
-msgstr "Weiter"
+msgstr "Suivant"
 
 #. Default: "No"
 #: ./browser/form.py:141
 msgid "no"
-msgstr "Nein"
+msgstr "Non"
 
 #. Default: "not set"
 #: ./browser/form.py:142
 msgid "not set"
-msgstr "Nicht gesetzt"
+msgstr "Non défini"
 
 # Phone is required
 msgid "phone_is_required"
-msgstr "Telefonnummer ist erforderlich"
+msgstr "No. de téléphone obligatoire"
 
 # Street is required
 msgid "street_is_required"
-msgstr "Strasse ist erforderlich"
+msgstr "Rue obligatoire"
 
 # Last Name is required
 msgid "lastname_is_required"
-msgstr "Nachname ist erforderlich"
+msgstr "Nom de famille obligatoire"
 
 #. Default: "Terms and conditions"
 #: ./browser/form.py:209
 msgid "terms_and_conditions"
 msgstr ""
 
-#. Default: "I have read and accept the ${terms_and_conditions}"
+#. Default: "J'ai lu et accepte les ${terms_and_conditions}"
 #: ./browser/form.py:213
 msgid "terms_and_conditions_text"
 msgstr ""
@@ -181,9 +179,9 @@ msgstr ""
 #. Default: "Yes"
 #: ./browser/form.py:140
 msgid "yes"
-msgstr "Ja"
+msgstr "Oui"
 
 # ZIP is required
 msgid "zip_is_required"
-msgstr "Postleitzahl ist erforderlich"
+msgstr "No. postal obligatoire"
 
