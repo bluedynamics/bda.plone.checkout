@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-09-24 15:17+0000\n"
+"POT-Creation-Date: 2012-11-07 16:19+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -49,6 +49,10 @@ msgstr ""
 #. Default: "Order now"
 #: ./browser/form.py:269
 msgid "finish"
+msgstr ""
+
+# First Name is required
+msgid "firstname_is_required"
 msgstr ""
 
 # Billing Address
@@ -104,12 +108,16 @@ msgstr ""
 msgid "label_email"
 msgstr ""
 
+# First Name
+msgid "label_firstname"
+msgstr ""
+
 # Gender
 msgid "label_gender"
 msgstr ""
 
-# First Name
-msgid "label_firstname"
+# Last Name
+msgid "label_lastname"
 msgstr ""
 
 # Phone
@@ -120,21 +128,17 @@ msgstr ""
 msgid "label_street"
 msgstr ""
 
-# Last Name
-msgid "label_lastname"
-msgstr ""
-
 # ZIP
 msgid "label_zip"
+msgstr ""
+
+# Last Name is required
+msgid "lastname_is_required"
 msgstr ""
 
 #. Default: "Male"
 #: ./browser/form.py:103
 msgid "male"
-msgstr ""
-
-# First Name is required
-msgid "firstname_is_required"
 msgstr ""
 
 #. Default: "Next"
@@ -158,10 +162,6 @@ msgstr ""
 
 # Street is required
 msgid "street_is_required"
-msgstr ""
-
-# Last Name is required
-msgid "lastname_is_required"
 msgstr ""
 
 #. Default: "Terms and conditions"

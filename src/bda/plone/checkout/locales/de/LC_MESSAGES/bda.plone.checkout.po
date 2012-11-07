@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-09-24 15:17+0000\n"
+"POT-Creation-Date: 2012-11-07 16:19+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -51,6 +51,10 @@ msgstr "Frau"
 #: ./browser/form.py:269
 msgid "finish"
 msgstr "Jetzt kaufen"
+
+# First Name is required
+msgid "firstname_is_required"
+msgstr "Vorname ist erforderlich"
 
 # Billing Address
 msgid "heading_billing_address"
@@ -105,13 +109,17 @@ msgstr "Land"
 msgid "label_email"
 msgstr "E-Mail"
 
+# Vorname
+msgid "label_firstname"
+msgstr "Vorname"
+
 # Gender
 msgid "label_gender"
 msgstr "Anrede"
 
-# Vorname
-msgid "label_firstname"
-msgstr "Vorname"
+# Last Name
+msgid "label_lastname"
+msgstr "Name"
 
 # Phone
 msgid "label_phone"
@@ -121,22 +129,18 @@ msgstr "Telefon"
 msgid "label_street"
 msgstr "Strasse"
 
-# Last Name
-msgid "label_lastname"
-msgstr "Name"
-
 # ZIP
 msgid "label_zip"
 msgstr "Postleitzahl"
+
+# Last Name is required
+msgid "lastname_is_required"
+msgstr "Name ist erforderlich"
 
 #. Default: "Male"
 #: ./browser/form.py:103
 msgid "male"
 msgstr "Herr"
-
-# Last Name is required
-msgid "lastname_is_required"
-msgstr "Name ist erforderlich"
 
 #. Default: "Next"
 #: ./browser/form.py:257
@@ -160,10 +164,6 @@ msgstr "Telefonnummer ist erforderlich"
 # Street is required
 msgid "street_is_required"
 msgstr "Strasse ist erforderlich"
-
-# First Name is required
-msgid "firstname_is_required"
-msgstr "Vorname ist erforderlich"
 
 #. Default: "Terms and conditions"
 #: ./browser/form.py:209
