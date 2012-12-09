@@ -86,7 +86,7 @@ msgstr "Données personnelles"
 
 # Shipping
 msgid "heading_shipping_selection"
-msgstr ""
+msgstr "Expédition"
 
 # Delivery address differs from shipping address?
 msgid "label_alternative_delivery"
@@ -98,7 +98,7 @@ msgstr "Lieu"
 
 # Comment
 msgid "label_comment"
-msgstr "commentaire"
+msgstr "Commentaire"
 
 # Company
 msgid "label_company"
