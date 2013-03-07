@@ -30,6 +30,9 @@ class ProviderRegistry(object):
     def add(self, factory):
         self.providers.append(factory)
     
+    def remove(self, factory):
+        self.providers.remove(factory)
+    
     def __iter__(self):
         return self.providers.__iter__()
 
