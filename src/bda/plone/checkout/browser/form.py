@@ -30,9 +30,6 @@ class ProviderRegistry(object):
     def add(self, factory):
         self.providers.append(factory)
     
-    def remove(self, factory):
-        self.providers.remove(factory)
-    
     def __iter__(self):
         return self.providers.__iter__()
 
@@ -235,8 +232,10 @@ provider_registry.add(AcceptTermsAndConditions)
 
 
 class CheckoutForm(Form, FormContext):
-    
     action_resource = '@@checkout'
+    # in order to provide your own registry, subclass CheckoutForm and and
+    # override ``provider_registry``
+    provider_registry = provider_registry
     
     def prepare(self):
         if not readcookie(self.request):
@@ -246,7 +245,7 @@ class CheckoutForm(Form, FormContext):
         self.form = factory('#form', name='checkout', props={
             'action': self.form_action,
             'class_add': form_class})
-        for fields_factory in provider_registry:
+        for fields_factory in self.provider_registry:
             fields_factory(self.context, self.request).extend(self.form)
         # checkout data input
         if checkout:
@@ -292,7 +291,7 @@ class CheckoutForm(Form, FormContext):
     
     def finish(self, widget, data):
         providers = [fields_factory(self.context, self.request) \
-                     for fields_factory in provider_registry]
+                     for fields_factory in self.provider_registry]
         to_adapt = (self.context, self.request)
         checkout_adapter = getMultiAdapter(to_adapt, ICheckoutAdapter)
         uid = checkout_adapter.save(providers, widget, data)
