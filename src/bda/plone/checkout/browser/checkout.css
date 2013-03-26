@@ -121,12 +121,21 @@ label.radioType input {
 #field-checkout-delivery_address-alternative_delivery label,
 #form-checkout #field-checkout-accept_terms_and_conditions-accept label {
     display: inline-block;
-    margin-left:0.3em;
 }
 #form-checkout #field-checkout-accept_terms_and_conditions-accept .errormessage {
     display:block;
     color:red;
 }
+#form-checkout div.field.error input[type="text"],
+#form-checkout div.field.error input[type="email"] {
+    border: 1px solid red;
+}
+#form-checkout div.field input[type="radio"],
+#form-checkout div.field input[type="checkbox"] {
+    margin-right: 0.5em;
+}
+
+
 #input-checkout-checkout_back,
 #input-checkout-next,
 #input-checkout-confirm_back,
