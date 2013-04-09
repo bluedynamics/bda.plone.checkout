@@ -13,8 +13,8 @@
                 delivery_address.hide();
             }
         }
-        var sel = 'input[name=checkout.delivery_address.alternative_delivery]';
-        var input = $(sel);
+        var fld_name = "checkout.delivery_address.alternative_delivery",
+            input = $('input[name="' + fld_name + '"]');
         toggle(input);
         input.change(function(event) {
             toggle($(this));
