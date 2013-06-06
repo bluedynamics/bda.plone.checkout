@@ -1,10 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: bda.plone.checkout\n"
 "POT-Creation-Date: 2012-11-07 16:19+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: Peter Holzer <hpeter@agitator.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -12,175 +11,175 @@ msgstr ""
 "Language-Code: it\n"
 "Language-Name: Italian\n"
 "Preferred-Encodings: utf-8 latin1\n"
-"Domain: DOMAIN\n"
+"Domain: bda.plone.checkout\n"
 "X-Is-Fallback-For: it-ch it-it\n"
 
 #. Default: "Back"
 #: ./browser/form.py:251
 msgid "back"
-msgstr ""
+msgstr "Indietro"
 
 #. Default: "Your Order"
 #: ./browser/view.pt:20
 msgid "checkout"
-msgstr ""
+msgstr "Cassa"
 
 #. Default: "City is required"
 msgid "city_is_required"
-msgstr ""
+msgstr "Cittŕ > campo obbligatorio"
 
 #. Default: "Country is required"
 msgid "country_is_required"
-msgstr ""
+msgstr "Stato > campo obbligatorio"
 
 #. Default: "Email is required"
 msgid "email_is_required"
-msgstr ""
+msgstr "e-mail > campo obbligatorio"
 
 #. Default: "Please accept our terms and conditions."
 #: ./browser/form.py:227
 msgid "error_accept_terms_and_conditiond"
-msgstr ""
+msgstr "Errore durante accettando le condizioni"
 
 #. Default: "Female"
 #: ./browser/form.py:104
 msgid "female"
-msgstr ""
+msgstr "Signora"
 
 #. Default: "Order now"
 #: ./browser/form.py:269
 msgid "finish"
-msgstr ""
+msgstr "Completare"
 
 #. Default: "First Name is required"
 msgid "firstname_is_required"
-msgstr ""
+msgstr "Nome > campo obbligatorio"
 
 #. Default: "Billing Address"
 msgid "heading_billing_address"
-msgstr ""
+msgstr "Indirizzo di fatturazione"
 
 #. Default: "Cart"
 #: ./browser/form.py:86
 msgid "heading_cart_summary"
-msgstr ""
+msgstr "Panoramica carrello"
 
 #. Default: "Delivery Address"
 msgid "heading_delivery_address"
-msgstr ""
+msgstr "Indirizzo di spedizione"
 
 #. Default: "Additional information"
 msgid "heading_order_comment"
-msgstr ""
+msgstr "Informazioni aggiuntive"
 
 #. Default: "Payment Selection"
 msgid "heading_payment_selection"
-msgstr ""
+msgstr "Modalitŕ di pagamento"
 
 #. Default: "Personal Data"
 msgid "heading_personal_data"
-msgstr ""
+msgstr "Dati personali"
 
 #. Default: "Shipping"
 msgid "heading_shipping_selection"
-msgstr ""
+msgstr "L'indirizzo di spedizione č diverso da quello di fatturazione?"
 
 #. Default: "Delivery address differs from shipping address?"
 msgid "label_alternative_delivery"
-msgstr ""
+msgstr "Indirizzo di spedizione"
 
 #. Default: "City"
 msgid "label_city"
-msgstr ""
+msgstr "Stato"
 
 #. Default: "Comment"
 msgid "label_comment"
-msgstr ""
+msgstr "Commenti"
 
 #. Default: "Company"
 msgid "label_company"
-msgstr ""
+msgstr "Ditta"
 
 #. Default: "Country"
 msgid "label_country"
-msgstr ""
+msgstr "Stato"
 
 #. Default: "Email"
 msgid "label_email"
-msgstr ""
+msgstr "e-mail"
 
 #. Default: "First Name"
 msgid "label_firstname"
-msgstr ""
+msgstr "prenome"
 
 #. Default: "Gender"
 msgid "label_gender"
-msgstr ""
+msgstr "Titolo"
 
 #. Default: "Last Name"
 msgid "label_lastname"
-msgstr ""
+msgstr "Nome"
 
 #. Default: "Phone"
 msgid "label_phone"
-msgstr ""
+msgstr "Telefono"
 
 #. Default: "Street"
 msgid "label_street"
-msgstr ""
+msgstr "Indirizzo"
 
 #. Default: "ZIP"
 msgid "label_zip"
-msgstr ""
+msgstr "CAP"
 
 #. Default: "Last Name is required"
 msgid "lastname_is_required"
-msgstr ""
+msgstr "Nome > campo obbligatorio"
 
 #. Default: "Male"
 #: ./browser/form.py:103
 msgid "male"
-msgstr ""
+msgstr "Signor"
 
 #. Default: "Next"
 #: ./browser/form.py:257
 msgid "next"
-msgstr ""
+msgstr "Avanti"
 
 #. Default: "No"
 #: ./browser/form.py:141
 msgid "no"
-msgstr ""
+msgstr "No"
 
 #. Default: "not set"
 #: ./browser/form.py:142
 msgid "not set"
-msgstr ""
+msgstr "Non impostato"
 
 #. Default: "Phone is required"
 msgid "phone_is_required"
-msgstr ""
+msgstr "Numero di telefono > campo obbligatorio"
 
 #. Default: "Street is required"
 msgid "street_is_required"
-msgstr ""
+msgstr "Indirizzo > campo obbligatorio"
 
 #. Default: "Terms and conditions"
 #: ./browser/form.py:209
 msgid "terms_and_conditions"
-msgstr ""
+msgstr "termini e le condizioni"
 
 #. Default: "I have read and accept the ${terms_and_conditions}"
 #: ./browser/form.py:213
 msgid "terms_and_conditions_text"
-msgstr ""
+msgstr "termini e le condizioni di testo"
 
 #. Default: "Yes"
 #: ./browser/form.py:140
 msgid "yes"
-msgstr ""
+msgstr "Sě"
 
 #. Default: "ZIP is required"
 msgid "zip_is_required"
-msgstr ""
+msgstr "CAP > campo obbligatorio"
 
