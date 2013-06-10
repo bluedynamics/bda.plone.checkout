@@ -2,184 +2,187 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2012-11-07 16:19+0000\n"
-"PO-Revision-Date: 2013-06-10 09:38+0100\n"
+"PO-Revision-Date: 2013-06-10 09:41+0100\n"
 "Last-Translator: Espen Moe-Nilssen <espen@medialog.no>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language-Team: LANGUAGE <espen@medialog.no>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"Language-Code: en\n"
-"Language-Name: English\n"
+"Language-Code: de\n"
+"Language-Name: German\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
+"X-Is-Fallback-For: de-at de-li de-lu de-ch de-de\n"
+"X-Poedit-Language: Norwegian Bokmal\n"
+"X-Poedit-Country: NORWAY\n"
 
 #. Default: "Back"
 #: ./browser/form.py:251
 msgid "back"
-msgstr "Back"
+msgstr "Tilbake"
 
 #. Default: "Your Order"
 #: ./browser/view.pt:20
 msgid "checkout"
-msgstr "Your Order"
+msgstr "Din bestilling"
 
-#. Default: "City is required"
+# City is required
 msgid "city_is_required"
-msgstr "City is required"
+msgstr "Poststed er påkrevd"
 
-#. Default: "Country is required"
+# Country is required
 msgid "country_is_required"
-msgstr "Country is required"
+msgstr "Land er påkrevd"
 
-#. Default: "Email is required"
+# Email is required
 msgid "email_is_required"
-msgstr "Email is required"
+msgstr "Epost er påkrevd"
 
 #. Default: "Please accept our terms and conditions."
 #: ./browser/form.py:227
 msgid "error_accept_terms_and_conditiond"
-msgstr "Please accept our terms and conditions."
+msgstr "Vennligst aksepter betalingsvilkårene."
 
 #. Default: "Female"
 #: ./browser/form.py:104
 msgid "female"
-msgstr "Female"
+msgstr "Fru"
 
 #. Default: "Order now"
 #: ./browser/form.py:269
 msgid "finish"
-msgstr "Order now"
+msgstr "Bestill nå?"
 
-#. Default: "First Name is required"
+# First Name is required
 msgid "firstname_is_required"
-msgstr "First Name is required"
+msgstr "Fornavn er påkrevd"
 
-#. Default: "Billing Address"
+# Billing Address
 msgid "heading_billing_address"
-msgstr "Billing Address"
+msgstr "Regningsadresse"
 
 #. Default: "Cart"
 #: ./browser/form.py:86
 msgid "heading_cart_summary"
-msgstr "Cart"
+msgstr "Handlekurv"
 
-#. Default: "Delivery Address"
+# Delivery Address
 msgid "heading_delivery_address"
-msgstr "Delivery Address"
+msgstr "Leveringsadresse"
 
-#. Default: "Additional information"
+# Additional information
 msgid "heading_order_comment"
-msgstr "Additional information"
+msgstr "Ekstra informasjon"
 
-#. Default: "Payment Selection"
+# Payment Selection
 msgid "heading_payment_selection"
-msgstr "Payment"
+msgstr "Betalingsmåte"
 
-#. Default: "Personal Data"
+# Personal Data
 msgid "heading_personal_data"
-msgstr "Personal Data"
+msgstr "Personlige data"
 
-#. Default: "Shipping"
+# Shipping
 msgid "heading_shipping_selection"
-msgstr "Shipping"
+msgstr "Frakt"
 
-#. Default: "Delivery address differs from shipping address?"
+# Delivery address differs from shipping address?
 msgid "label_alternative_delivery"
-msgstr "Billing address differs from delivery  address?"
+msgstr "Leveringsadressen er forskjellig fra betalingsadr."
 
-#. Default: "City"
+# City
 msgid "label_city"
-msgstr "City"
+msgstr "By"
 
-#. Default: "Comment"
+# Comment
 msgid "label_comment"
-msgstr "Comment"
+msgstr "Kommentar"
 
-#. Default: "Company"
+# Company
 msgid "label_company"
-msgstr "Company"
+msgstr "Firma"
 
-#. Default: "Country"
+# Country
 msgid "label_country"
-msgstr "Country"
+msgstr "Land"
 
-#. Default: "Email"
+# Email
 msgid "label_email"
-msgstr "Email"
+msgstr "E-post"
 
-# First Name
+# Vorname
 msgid "label_firstname"
-msgstr ""
+msgstr "Fornavn"
 
-#. Default: "Gender"
+# Gender
 msgid "label_gender"
-msgstr "Gender"
+msgstr "Kjønn"
 
-#. Default: "Name"
+# Last Name
 msgid "label_lastname"
-msgstr "Name"
+msgstr "Etternavn"
 
-#. Default: "Phone"
+# Phone
 msgid "label_phone"
-msgstr "Phone"
+msgstr "Telefon"
 
-#. Default: "Street"
+# Street
 msgid "label_street"
-msgstr "Street"
+msgstr "Adresse"
 
-#. Default: "ZIP"
+# ZIP
 msgid "label_zip"
-msgstr "ZIP"
+msgstr "Postnummer"
 
-#. Default: "Last Name is required"
+# Last Name is required
 msgid "lastname_is_required"
-msgstr "Last Name is required"
+msgstr "Etternavn er påkrevd"
 
 #. Default: "Male"
 #: ./browser/form.py:103
 msgid "male"
-msgstr "Male"
+msgstr "Her"
 
 #. Default: "Next"
 #: ./browser/form.py:257
 msgid "next"
-msgstr "Next"
+msgstr "Videre"
 
 #. Default: "No"
 #: ./browser/form.py:141
 msgid "no"
-msgstr "No"
+msgstr "Nei"
 
 #. Default: "not set"
 #: ./browser/form.py:142
 msgid "not set"
-msgstr "not set"
+msgstr "Ikke valgt"
 
-#. Default: "Phone is required"
+# Phone is required
 msgid "phone_is_required"
-msgstr "Phone is required"
+msgstr "Telefonnr. er påkrevd"
 
-#. Default: "Street is required"
+# Street is required
 msgid "street_is_required"
-msgstr "Street is required"
+msgstr "Gateadresse er påkrevd"
 
 #. Default: "Terms and conditions"
 #: ./browser/form.py:209
 msgid "terms_and_conditions"
-msgstr "Terms and conditions"
+msgstr "Salgsbetingelsene"
 
 #. Default: "I have read and accept the ${terms_and_conditions}"
 #: ./browser/form.py:213
 msgid "terms_and_conditions_text"
-msgstr "I have read and accept the ${terms_and_conditions}"
+msgstr "Jeg har lest og forstått ${terms_and_conditions}"
 
 #. Default: "Yes"
 #: ./browser/form.py:140
 msgid "yes"
-msgstr "Yes"
+msgstr "Ja"
 
-#. Default: "ZIP is required"
+# ZIP is required
 msgid "zip_is_required"
-msgstr "ZIP is required"
+msgstr "Postnummer er påkrevd"
 
