@@ -1,2 +1,4 @@
 *.pyc
 src/bda.plone.checkout.egg-info/
+
+.DS_Store
