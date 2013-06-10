@@ -7,14 +7,14 @@
                 delivery_address.show();
                 return;
             }
-            if (input.attr('checked') == true) {
+            if (input.is(':checked')) {
                 delivery_address.show();
             } else {
                 delivery_address.hide();
             }
         }
-        var fld_name = "checkout.delivery_address.alternative_delivery",
-            input = $('input[name="' + fld_name + '"]');
+        var fld_name = "checkout.delivery_address.alternative_delivery";
+        var input = $('input[name="' + fld_name + '"]');
         toggle(input);
         input.change(function(event) {
             toggle($(this));
