@@ -5,6 +5,5 @@
     <dependency>profile-yafowil.plone:default</dependency>
     <dependency>profile-bda.plone.cart:default</dependency>
     <dependency>profile-bda.plone.payment:default</dependency>
-    <dependency>profile-bda.plone.stock:default</dependency>
   </dependencies>
 </metadata>
