@@ -17,11 +17,11 @@ logger = logging.getLogger('bda.plone.checkout')
 @implementer(ICheckoutAdapter)
 @adapter(Interface, IBrowserRequest)
 class CheckoutAdapter(object):
-    
+
     def __init__(self, context, request):
         self.context = context
         self.request = request
-    
+
     def save(self, providers, widget, data):
         vessel = self.vessel
         for provider in providers:
@@ -31,10 +31,10 @@ class CheckoutAdapter(object):
             for key in fields:
                 name = '%s.%s' % (provider.fields_name, key)
                 vessel[name] = fields[key].extracted
-    
+
     def clear_session(self):
         deletecookie(self.request)
-    
+
     @property
     def vessel(self):
         """``zope.interface.mapping.IWriteMapping`` providing instance.
@@ -48,7 +48,7 @@ class CheckoutAdapter(object):
 class NullCheckoutAdapter(CheckoutAdapter):
     """Dummy adapter. provides non persisting write mapping.
     """
-    
+
     @instance_property
     def vessel(self):
         return dict()

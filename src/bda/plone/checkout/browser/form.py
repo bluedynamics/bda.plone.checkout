@@ -23,13 +23,13 @@ _ = MessageFactory('bda.plone.checkout')
 
 
 class ProviderRegistry(object):
-    
+
     def __init__(self):
         self.providers = list()
-    
+
     def add(self, factory):
         self.providers.append(factory)
-    
+
     def __iter__(self):
         return self.providers.__iter__()
 
@@ -40,17 +40,17 @@ CHECKOUT = 0
 CONFIRM = 1
 
 class FormContext(object):
-    
+
     @property
     def form_context(self):
         confirm = self.request.get('checkout_confirm') or \
                   self.request.get('action.checkout.finish')
         return confirm and CONFIRM or CHECKOUT
-    
+
     @property
     def mode(self):
         return self.form_context is CONFIRM and 'display' or 'edit'
-    
+
     def get_value(self, widget, data):
         return self.request.get(widget.dottedpath, UNSET)
 
@@ -61,11 +61,11 @@ class FieldsProvider(FormContext):
     fields_name = ''
     message_factory = _
     ignore_on_save = False
-    
+
     def __init__(self, context, request):
         self.context = context
         self.request = request
-    
+
     def extend(self, form):
         fields = parse_from_YAML(self.fields_template, 
                                  self, self.message_factory)
@@ -74,7 +74,7 @@ class FieldsProvider(FormContext):
 
 class CartSummary(FieldsProvider):
     fields_name = 'cart_summary'
-    
+
     def extend(self, form):
         if not self.form_context == CONFIRM:
             return
@@ -96,7 +96,7 @@ provider_registry.add(CartSummary)
 class PersonalData(FieldsProvider):
     fields_template = 'bda.plone.checkout.browser:forms/personal_data.yaml'
     fields_name = 'personal_data'
-    
+
     @property
     def gender_vocabulary(self):
         return [('-', ''),
@@ -116,15 +116,15 @@ provider_registry.add(BillingAddress)
 class DeliveryAddress(FieldsProvider):
     fields_template = 'bda.plone.checkout.browser:forms/delivery_address.yaml'
     fields_name = 'delivery_address'
-    
+
     def conditional_required(self, widget, data):
         if data.parent['alternative_delivery'].extracted and not data.extracted:
             raise ExtractionError(widget.attrs['conditional_required'])
         return data.extracted
-    
+
     def get_alternative_delivery(self, widget, data):
         return widget.dottedpath in self.request
-    
+
     @property
     def hidden_class(self):
         if self.form_context is CHECKOUT:
@@ -133,7 +133,7 @@ class DeliveryAddress(FieldsProvider):
         if self.request.get(name) is None:
             return 'hidden'
         return ''
-    
+
     @property
     def alternative_delivery_vocab(self):
         return {
@@ -148,15 +148,15 @@ provider_registry.add(DeliveryAddress)
 class ShippingSelection(FieldsProvider):
     fields_template = 'bda.plone.checkout.browser:forms/shipping_selection.yaml'
     fields_name = 'shipping_selection'
-    
+
     @property
     def shippings(self):
         return Shippings(self.context)
-    
+
     @property
     def shipping_vocabulary(self):
         return self.shippings.vocab
-    
+
     def get_shipping(self, widget, data):
         return self.request.get(widget.dottedpath, self.shippings.default)
 
@@ -166,15 +166,15 @@ provider_registry.add(ShippingSelection)
 class PaymentSelection(FieldsProvider):
     fields_template = 'bda.plone.checkout.browser:forms/payment_selection.yaml'
     fields_name = 'payment_selection'
-    
+
     @property
     def payments(self):
         return Payments(self.context)
-    
+
     @property
     def payment_vocabulary(self):
         return self.payments.vocab
-    
+
     def get_payment(self, widget, data):
         return self.request.get(widget.dottedpath, self.payments.default)
 
@@ -184,7 +184,7 @@ provider_registry.add(PaymentSelection)
 class OrderComment(FieldsProvider):
     fields_template = 'bda.plone.checkout.browser:forms/order_comment.yaml'
     fields_name = 'order_comment'
-    
+
     @property
     def hidden_class(self):
         if self.form_context is CHECKOUT:
@@ -201,7 +201,7 @@ class AcceptTermsAndConditions(FieldsProvider):
     fields_template = 'bda.plone.checkout.browser:forms/accept_terms.yaml'
     fields_name = 'accept_terms_and_conditions'
     ignore_on_save = True
-    
+
     @property
     def accept_label(self):
         # XXX: url from config
@@ -214,14 +214,14 @@ class AcceptTermsAndConditions(FieldsProvider):
                      'I have read and accept the ${terms_and_conditions}',
                      mapping={'terms_and_conditions': tac_link})
         return tac_text
-    
+
     @property
     def mode(self):
         if self.request.get('action.checkout.finish') \
           or self.form_context is CONFIRM:
             return 'edit'
         return 'skip'
-    
+
     def validate_accept(self, widget, data):
         if not data.extracted:
             raise ExtractionError(_('error_accept_terms_and_conditiond',
@@ -236,7 +236,7 @@ class CheckoutForm(Form, FormContext):
     # in order to provide your own registry, subclass CheckoutForm and and
     # override ``provider_registry``
     provider_registry = provider_registry
-    
+
     def prepare(self):
         if not readcookie(self.request):
             raise Redirect(self.context.absolute_url())
@@ -268,27 +268,28 @@ class CheckoutForm(Form, FormContext):
                 'handler': None,
                 'next': self.confirm_back})
             self.form['finish'] = factory('submit', props={
+                'class': 'prevent_if_no_longer_available',
                 'label': _('finish', 'Order now'),
                 'action': 'finish',
                 'handler': self.finish,
                 'next': self.checkout_done})
-    
+
     def checkout_back(self, request):
         raise Redirect('%s/@@cart' % self.context.absolute_url())
-    
+
     def confirm_back(self, request):
         self.prepare()
         return self.form(request=request)
-    
+
     def checkout_summary(self, request):
         self.request['checkout_confirm'] = '1'
         self.prepare()
         return self.form(request=request)
-    
+
     def checkout_done(self, request):
         transaction.commit()
         raise Redirect(self.finish_redirect_url)
-    
+
     def finish(self, widget, data):
         providers = [fields_factory(self.context, self.request) \
                      for fields_factory in self.provider_registry]
