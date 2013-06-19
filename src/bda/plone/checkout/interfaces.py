@@ -4,6 +4,11 @@ from zope.interface import (
 )
 
 
+class CheckoutError(Exception):
+    """Thrown if ``ICheckoutAdapter.save`` fails.
+    """
+
+
 class ICheckoutExtensionLayer(Interface):
     """Browser layer for bda.plone.checkout.
     """

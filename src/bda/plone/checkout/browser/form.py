@@ -15,6 +15,7 @@ from bda.plone.cart import readcookie
 from bda.plone.payment import Payments
 from bda.plone.shipping import Shippings
 from ..interfaces import (
+    CheckoutError,
     IFieldsProvider,
     ICheckoutAdapter,
 )
@@ -295,7 +296,11 @@ class CheckoutForm(Form, FormContext):
                      for fields_factory in self.provider_registry]
         to_adapt = (self.context, self.request)
         checkout_adapter = getMultiAdapter(to_adapt, ICheckoutAdapter)
-        uid = checkout_adapter.save(providers, widget, data)
+        try:
+            uid = checkout_adapter.save(providers, widget, data)
+        except CheckoutError:
+            transaction.abort()
+            self.checkout_back(self.request)
         checkout_adapter.clear_session()
         p_name = data.fetch('checkout.payment_selection.payment').extracted
         payments = Payments(self.context)
