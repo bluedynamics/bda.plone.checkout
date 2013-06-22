@@ -7,6 +7,8 @@
   <span id="cart_item_template" style="display: none;">
     <div class="cart_item cart_overview">
       <h3 class="cart_item_title">Title</h3>
+      <div class="cart_item_alert" style="display: none;">Alert</div>
+      <img class="cart_item_preview_image" src="" />
       <p class="cart_item_description">Description</p>
       <p class="cart_item_comment_wrapper">
         <strong i18n:translate="comment">Comment</strong>:
