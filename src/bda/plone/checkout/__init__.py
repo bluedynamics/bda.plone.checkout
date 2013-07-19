@@ -10,10 +10,25 @@ from bda.plone.cart import deletecookie
 from .interfaces import (
     CheckoutError,
     ICheckoutAdapter,
+    ICheckoutEvent,
+    ICheckoutDone,
 )
 
 
 logger = logging.getLogger('bda.plone.checkout')
+
+
+@implementer(ICheckoutEvent)
+class CheckoutEvent(object):
+
+    def __init__(self, context, request, uid):
+        self.context = context
+        self.request = request
+        self.uid = uid
+
+
+@implementer(ICheckoutDone)
+class CheckoutDone(CheckoutEvent): pass
 
 
 @implementer(ICheckoutAdapter)

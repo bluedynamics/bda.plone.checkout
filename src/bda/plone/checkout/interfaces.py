@@ -41,3 +41,18 @@ class ICheckoutAdapter(Interface):
     def clear_session():
         """Clear current shopping session.
         """
+
+
+class ICheckoutEvent(Interface):
+    """Checkout related event.
+    """
+    context = Attribute(u"Context in which this event was triggered.")
+
+    request = Attribute(u"Current request.")
+
+    uid = Attribute(u"UID returned by ICheckoutAdapter.save().")
+
+
+class ICheckoutDone(ICheckoutEvent):
+    """This event gets triggered when checkout has been finished.
+    """

@@ -8,6 +8,7 @@ from yafowil.yaml import parse_from_YAML
 from yafowil.plone.form import Form
 from zExceptions import Redirect
 from zope.interface import implementer
+from zope.event import notify
 from zope.component import getMultiAdapter
 from zope.i18nmessageid import MessageFactory
 from zope.i18n import translate
@@ -19,6 +20,8 @@ from ..interfaces import (
     IFieldsProvider,
     ICheckoutAdapter,
 )
+from .. import CheckoutDone
+
 
 _ = MessageFactory('bda.plone.checkout')
 
@@ -306,3 +309,5 @@ class CheckoutForm(Form, FormContext):
         payments = Payments(self.context)
         payment = payments.get(p_name)
         self.finish_redirect_url = payment.init_url(str(uid))
+        event = CheckoutDone(self.context, self.request, uid)
+        notify(event)
