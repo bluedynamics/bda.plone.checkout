@@ -33,6 +33,7 @@ class CheckoutAdapter(object):
             for key in fields:
                 name = '%s.%s' % (provider.fields_name, key)
                 vessel[name] = fields[key].extracted
+        return 'fake_uid'
 
     def clear_session(self):
         deletecookie(self.request)
@@ -40,7 +41,7 @@ class CheckoutAdapter(object):
     @property
     def vessel(self):
         """``zope.interface.mapping.IWriteMapping`` providing instance.
-        
+
         Form data gets written to this object.
         """
         raise NotImplementedError(u"Abstract CheckoutAdapter does not "
