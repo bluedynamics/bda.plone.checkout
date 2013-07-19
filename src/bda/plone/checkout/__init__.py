@@ -4,7 +4,6 @@ from zope.interface import (
     implementer,
 )
 from zope.component import adapter
-from zope.event import notify
 from zope.publisher.interfaces.browser import IBrowserRequest
 from node.utils import instance_property
 from bda.plone.cart import deletecookie
