@@ -62,6 +62,16 @@ class CheckoutAdapter(object):
         raise NotImplementedError(u"Abstract CheckoutAdapter does not "
                                   u"implement ``vessel``.")
 
+    @property
+    def skip_payment(self):
+        raise NotImplementedError(u"Abstract CheckoutAdapter does not "
+                                  u"implement ``skip_payment``.")
+
+    @property
+    def skip_payment_redirect_url(self):
+        raise NotImplementedError(u"Abstract CheckoutAdapter does not "
+                                  u"implement ``skip_payment_redirect_url``.")
+
 
 class NullCheckoutAdapter(CheckoutAdapter):
     """Dummy adapter. provides non persisting write mapping.

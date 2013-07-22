@@ -30,6 +30,11 @@ class ICheckoutAdapter(Interface):
     vessel = Attribute(u"``zope.interface.mapping.IWriteMapping providing`` "
                        u"instance.")
 
+    skip_payment = Attribute(u"Flag whether to skip payment.")
+
+    skip_payment_redirect_url = Attribute(u"URL to redirect if payment should"
+                                          u" be skipped.")
+
     def save(providers, widget, data):
         """Save fields specific data.
 
@@ -50,7 +55,7 @@ class ICheckoutEvent(Interface):
 
     request = Attribute(u"Current request.")
 
-    uid = Attribute(u"UID returned by ICheckoutAdapter.save().")
+    uid = Attribute(u"UUID returned by ICheckoutAdapter.save().")
 
 
 class ICheckoutDone(ICheckoutEvent):

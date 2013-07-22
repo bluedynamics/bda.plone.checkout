@@ -305,9 +305,13 @@ class CheckoutForm(Form, FormContext):
             transaction.abort()
             self.checkout_back(self.request)
         checkout_adapter.clear_session()
-        p_name = data.fetch('checkout.payment_selection.payment').extracted
-        payments = Payments(self.context)
-        payment = payments.get(p_name)
-        self.finish_redirect_url = payment.init_url(str(uid))
+        if checkout_adapter.skip_payment:
+            self.finish_redirect_url = \
+                checkout_adapter.skip_payment_redirect_url
+        else:
+            p_name = data.fetch('checkout.payment_selection.payment').extracted
+            payments = Payments(self.context)
+            payment = payments.get(p_name)
+            self.finish_redirect_url = payment.init_url(str(uid))
         event = CheckoutDone(self.context, self.request, uid)
         notify(event)
