@@ -1,9 +1,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bda.plone.checkout\n"
-"POT-Creation-Date: 2012-11-07 16:19+0000\n"
+"POT-Creation-Date: 2013-07-22 15:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: Peter Holzer <hpeter@agitator.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -15,7 +16,7 @@ msgstr ""
 "X-Is-Fallback-For: de-at de-li de-lu de-ch de-de\n"
 
 #. Default: "Back"
-#: ./browser/form.py:251
+#: ./browser/form.py:257
 msgid "back"
 msgstr "Zurück"
 
@@ -37,17 +38,17 @@ msgid "email_is_required"
 msgstr "Email ist erforderlich"
 
 #. Default: "Please accept our terms and conditions."
-#: ./browser/form.py:227
+#: ./browser/form.py:231
 msgid "error_accept_terms_and_conditiond"
 msgstr "Akzeptieren Sie unsere Allgemeinen Geschäftsbedingungen"
 
 #. Default: "Female"
-#: ./browser/form.py:104
+#: ./browser/form.py:108
 msgid "female"
 msgstr "Frau"
 
 #. Default: "Order now"
-#: ./browser/form.py:269
+#: ./browser/form.py:276
 msgid "finish"
 msgstr "Jetzt kaufen"
 
@@ -60,7 +61,7 @@ msgid "heading_billing_address"
 msgstr "Rechnungsadresse"
 
 #. Default: "Cart"
-#: ./browser/form.py:86
+#: ./browser/form.py:90
 msgid "heading_cart_summary"
 msgstr "Warenkorb"
 
@@ -137,22 +138,22 @@ msgid "lastname_is_required"
 msgstr "Name ist erforderlich"
 
 #. Default: "Male"
-#: ./browser/form.py:103
+#: ./browser/form.py:107
 msgid "male"
 msgstr "Herr"
 
 #. Default: "Next"
-#: ./browser/form.py:257
+#: ./browser/form.py:263
 msgid "next"
 msgstr "Weiter"
 
 #. Default: "No"
-#: ./browser/form.py:141
+#: ./browser/form.py:145
 msgid "no"
 msgstr "Nein"
 
 #. Default: "not set"
-#: ./browser/form.py:142
+#: ./browser/form.py:146
 msgid "not set"
 msgstr "Nicht gesetzt"
 
@@ -165,17 +166,17 @@ msgid "street_is_required"
 msgstr "Strasse ist erforderlich"
 
 #. Default: "Terms and conditions"
-#: ./browser/form.py:209
+#: ./browser/form.py:213
 msgid "terms_and_conditions"
 msgstr "Allgemeinen Geschäftsbedingungen"
 
 #. Default: "I have read and accept the ${terms_and_conditions}"
-#: ./browser/form.py:213
+#: ./browser/form.py:217
 msgid "terms_and_conditions_text"
 msgstr "Ich habe die ${terms_and_conditions} gelesen und bin damit einverstanden"
 
 #. Default: "Yes"
-#: ./browser/form.py:140
+#: ./browser/form.py:144
 msgid "yes"
 msgstr "Ja"
 
