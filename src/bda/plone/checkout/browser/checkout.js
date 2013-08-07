@@ -21,7 +21,7 @@
         });
         
 
-        // registration
+        // terms and conditions overlay
         $('a.terms_and_conditions').prepOverlay(
             {
                 subtype: 'ajax',
