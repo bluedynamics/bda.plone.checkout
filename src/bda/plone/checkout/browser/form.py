@@ -212,7 +212,7 @@ class AcceptTermsAndConditions(FieldsProvider):
         tac_url = '%s/agb' % self.context.absolute_url()
         tac_label = _('terms_and_conditions', 'Terms and conditions')
         tac_label = translate(tac_label, context=self.request)
-        tac_link = '<a href="%s" class="terms_and_consitions">%s</a>'
+        tac_link = '<a href="%s" class="terms_and_conditions">%s</a>'
         tac_link = tac_link % (tac_url, tac_label)
         tac_text = _('terms_and_conditions_text',
                      'I have read and accept the ${terms_and_conditions}',
