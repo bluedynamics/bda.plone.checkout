@@ -19,6 +19,17 @@
         input.change(function(event) {
             toggle($(this));
         });
+        
+
+        // registration
+        $('a.terms_and_conditions').prepOverlay(
+            {
+                subtype: 'ajax',
+                filter: common_content_filter,
+                cssclass: 'overlay-terms-and-condition',
+            }
+        );
+        
     });
 
 })(jQuery);
