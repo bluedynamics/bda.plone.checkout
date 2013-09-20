@@ -38,6 +38,12 @@ setup(name='bda.plone.checkout',
           'bda.plone.cart',
           'bda.plone.payment',
       ],
+      extras_require={
+          'test': [
+              'plone.app.testing',
+              'bda.plone.checkout',
+          ]
+      },
       entry_points="""
       [z3c.autoinclude.plugin]
       target = plone

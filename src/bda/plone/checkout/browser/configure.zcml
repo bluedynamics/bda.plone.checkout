@@ -3,11 +3,13 @@
 
   <browser:resource
     name="bda.plone.checkout.js"
-    file="checkout.js" />
+    file="checkout.js"
+    layer="..interfaces.ICheckoutExtensionLayer" />
 
   <browser:resource
     name="bda.plone.checkout.css"
-    file="checkout.css" />
+    file="checkout.css"
+    layer="..interfaces.ICheckoutExtensionLayer" />
 
   <browser:page
     for="*"
@@ -28,6 +30,7 @@
     name="cart_overview"
     class="bda.plone.cart.browser.CartView"
     template="cart_overview.pt"
-    permission="zope2.View" />
+    permission="zope2.View"
+    layer="..interfaces.ICheckoutExtensionLayer" />
 
 </configure>
