@@ -31,7 +31,7 @@ class CheckoutLayer(PloneSandboxLayer):
         pass
 
 
-Checkout_FIXTURE = CartLayer()
+Checkout_FIXTURE = CheckoutLayer()
 Checkout_INTEGRATION_TESTING = IntegrationTesting(
     bases=(Checkout_FIXTURE,),
     name="Checkout:Integration")
