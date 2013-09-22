@@ -2,16 +2,33 @@
 bda.plone.checkout
 ==================
 
+Checkout process and forms for ``bda.plone.shop``.
+
+
+Installation
+============
+
+This package is part of the ``bda.plone.shop`` stack. Please refer to
+``https://github.com/bluedynamics/bda.plone.shop`` for installation
+instructions.
+
+
+Customizing the checkout form
+=============================
+
+XXX
+
 
 Create translations
--------------------
+===================
 
 ::
+    $ cd src/bda/plone/checkout/
+    $ ./i18n.sh
 
-    cd src/bda/plone/checkout/
-    
-    i18ndude rebuild-pot --pot locales/bda.plone.checkout.pot \
-        --merge locales/manual.pot --create bda.plone.checkout .
-    
-    i18ndude sync --pot locales/bda.plone.checkout.pot \
-        locales/de/LC_MESSAGES/bda.plone.checkout.po
+
+Contributors
+============
+
+- Robert Niederreiter (Author)
+- Peter Holzer
