@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Bda plone checkout norsk\n"
-"POT-Creation-Date: 2013-07-22 15:16+0000\n"
+"POT-Creation-Date: 2013-10-01 20:14+0000\n"
 "PO-Revision-Date: 2013-06-10 11:28+0100\n"
 "Last-Translator: Espen Moe-Nilssen <espen@medialog.no>\n"
 "Language-Team: Espen Moe-Nilssen <espen@medialog.no>\n"
