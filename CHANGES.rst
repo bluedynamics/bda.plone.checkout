@@ -2,8 +2,8 @@
 Changelog
 =========
 
-0.2dev
-------
+0.2
+---
 
 - introduce ``skip_payment`` and ``skip_payment_redirect_url`` on
   ``bda.plone.checkout.ICheckoutAdapter`` and consider in
