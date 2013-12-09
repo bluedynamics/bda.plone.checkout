@@ -27,6 +27,19 @@ from .. import CheckoutDone
 _ = MessageFactory('bda.plone.checkout')
 
 
+def get_prop_from_member(member, name, prefix=None):
+    """Get property from memberdata.
+    If a prefix is given, add it to the name to get the value from the
+    property sheet.
+    """
+    default = UNSET
+    if member:
+        if prefix:
+            name = '%s%s' % (prefix, name)
+        default = member.getProperty(name, None)
+    return default
+
+
 class ProviderRegistry(object):
 
     def __init__(self):
@@ -115,21 +128,29 @@ provider_registry.add(PersonalData)
 class BillingAddress(FieldsProvider):
     fields_template = 'bda.plone.checkout.browser:forms/billing_address.yaml'
     fields_name = 'billing_address'
+    memberdata_prefix = None
 
-    def get_value(self, widget, data):
-        default = UNSET
+    def __init__(self, context, request):
+        self.context = context
+        self.request = request
+        member = None
         membership = getToolByName(self.context, 'portal_membership', None)
         if membership and not membership.isAnonymousUser():
             member = membership.getAuthenticatedMember()
-            default = member.getProperty(widget.name, default)
+        self.member = member
+
+    def get_value(self, widget, data):
+        default = get_prop_from_member(self.member, widget.name,
+                                       prefix=self.memberdata_prefix)
         return self.request.get(widget.dottedpath, default)
 
 provider_registry.add(BillingAddress)
 
 
-class DeliveryAddress(FieldsProvider):
+class DeliveryAddress(BillingAddress):
     fields_template = 'bda.plone.checkout.browser:forms/delivery_address.yaml'
     fields_name = 'delivery_address'
+    prefix = 'delivery_'
 
     def conditional_required(self, widget, data):
         if data.parent['alternative_delivery'].extracted\
@@ -157,20 +178,12 @@ class DeliveryAddress(FieldsProvider):
             UNSET: _('not set', 'not set'),
         }
 
-    def get_value(self, widget, data):
-        default = UNSET
-        name = 'delivery_' in widget.name and widget.name[9:] or widget.name
-        membership = getToolByName(self.context, 'portal_membership', None)
-        if membership and not membership.isAnonymousUser():
-            member = membership.getAuthenticatedMember()
-            default = member.getProperty(name, default)
-        return self.request.get(widget.dottedpath, default)
-
 provider_registry.add(DeliveryAddress)
 
 
 class ShippingSelection(FieldsProvider):
-    fields_template = 'bda.plone.checkout.browser:forms/shipping_selection.yaml'
+    fields_template =\
+        'bda.plone.checkout.browser:forms/shipping_selection.yaml'
     fields_name = 'shipping_selection'
 
     @property
