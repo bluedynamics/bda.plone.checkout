@@ -20,6 +20,7 @@ from ..interfaces import (
     IFieldsProvider,
     ICheckoutAdapter,
 )
+from Products.CMFPlone.utils import getToolByName
 from .. import CheckoutDone
 
 
@@ -43,12 +44,13 @@ provider_registry = ProviderRegistry()
 CHECKOUT = 0
 CONFIRM = 1
 
+
 class FormContext(object):
 
     @property
     def form_context(self):
-        confirm = self.request.get('checkout_confirm') or \
-                  self.request.get('action.checkout.finish')
+        confirm = self.request.get('checkout_confirm') or\
+            self.request.get('action.checkout.finish')
         return confirm and CONFIRM or CHECKOUT
 
     @property
@@ -71,7 +73,7 @@ class FieldsProvider(FormContext):
         self.request = request
 
     def extend(self, form):
-        fields = parse_from_YAML(self.fields_template, 
+        fields = parse_from_YAML(self.fields_template,
                                  self, self.message_factory)
         form[self.fields_name] = fields
 
@@ -114,6 +116,14 @@ class BillingAddress(FieldsProvider):
     fields_template = 'bda.plone.checkout.browser:forms/billing_address.yaml'
     fields_name = 'billing_address'
 
+    def get_value(self, widget, data):
+        default = UNSET
+        membership = getToolByName(self.context, 'portal_membership', None)
+        if membership and not membership.isAnonymousUser():
+            member = membership.getAuthenticatedMember()
+            default = member.getProperty(widget.name, default)
+        return self.request.get(widget.dottedpath, default)
+
 provider_registry.add(BillingAddress)
 
 
@@ -122,7 +132,8 @@ class DeliveryAddress(FieldsProvider):
     fields_name = 'delivery_address'
 
     def conditional_required(self, widget, data):
-        if data.parent['alternative_delivery'].extracted and not data.extracted:
+        if data.parent['alternative_delivery'].extracted\
+                and not data.extracted:
             raise ExtractionError(widget.attrs['conditional_required'])
         return data.extracted
 
@@ -145,6 +156,15 @@ class DeliveryAddress(FieldsProvider):
             False: _('no', 'No'),
             UNSET: _('not set', 'not set'),
         }
+
+    def get_value(self, widget, data):
+        default = UNSET
+        name = 'delivery_' in widget.name and widget.name[9:] or widget.name
+        membership = getToolByName(self.context, 'portal_membership', None)
+        if membership and not membership.isAnonymousUser():
+            member = membership.getAuthenticatedMember()
+            default = member.getProperty(name, default)
+        return self.request.get(widget.dottedpath, default)
 
 provider_registry.add(DeliveryAddress)
 
@@ -221,8 +241,8 @@ class AcceptTermsAndConditions(FieldsProvider):
 
     @property
     def mode(self):
-        if self.request.get('action.checkout.finish') \
-          or self.form_context is CONFIRM:
+        if self.request.get('action.checkout.finish')\
+                or self.form_context is CONFIRM:
             return 'edit'
         return 'skip'
 
@@ -295,7 +315,7 @@ class CheckoutForm(Form, FormContext):
         raise Redirect(self.finish_redirect_url)
 
     def finish(self, widget, data):
-        providers = [fields_factory(self.context, self.request) \
+        providers = [fields_factory(self.context, self.request)
                      for fields_factory in self.provider_registry]
         to_adapt = (self.context, self.request)
         checkout_adapter = getMultiAdapter(to_adapt, ICheckoutAdapter)
