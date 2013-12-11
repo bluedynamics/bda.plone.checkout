@@ -75,9 +75,6 @@ class FormContext(object):
     def mode(self):
         return self.form_context is CONFIRM and 'display' or 'edit'
 
-    def get_value(self, widget, data):
-        return self.request.get(widget.dottedpath, UNSET)
-
 
 @implementer(IFieldsProvider)
 class FieldsProvider(FormContext):
@@ -85,10 +82,21 @@ class FieldsProvider(FormContext):
     fields_name = ''
     message_factory = _
     ignore_on_save = False
+    memberdata_prefix = None
 
     def __init__(self, context, request):
         self.context = context
         self.request = request
+        member = None
+        membership = getToolByName(self.context, 'portal_membership', None)
+        if membership and not membership.isAnonymousUser():
+            member = membership.getAuthenticatedMember()
+        self.member = member
+
+    def get_value(self, widget, data):
+        default = get_prop_from_member(self.member, widget.name,
+                                       prefix=self.memberdata_prefix)
+        return self.request.get(widget.dottedpath, default)
 
     def extend(self, form):
         fields = parse_from_YAML(self.fields_template,
@@ -133,21 +141,6 @@ provider_registry.add(PersonalData)
 class BillingAddress(FieldsProvider):
     fields_template = 'bda.plone.checkout.browser:forms/billing_address.yaml'
     fields_name = 'billing_address'
-    memberdata_prefix = None
-
-    def __init__(self, context, request):
-        self.context = context
-        self.request = request
-        member = None
-        membership = getToolByName(self.context, 'portal_membership', None)
-        if membership and not membership.isAnonymousUser():
-            member = membership.getAuthenticatedMember()
-        self.member = member
-
-    def get_value(self, widget, data):
-        default = get_prop_from_member(self.member, widget.name,
-                                       prefix=self.memberdata_prefix)
-        return self.request.get(widget.dottedpath, default)
 
     def country_vocabulary(self):
         return country_vocabulary()
