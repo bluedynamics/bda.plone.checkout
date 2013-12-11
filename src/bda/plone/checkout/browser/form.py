@@ -150,7 +150,7 @@ class BillingAddress(FieldsProvider):
         return self.request.get(widget.dottedpath, default)
 
     def country_vocabulary(self):
-        return country_vocabulary
+        return country_vocabulary()
 
 provider_registry.add(BillingAddress)
 
@@ -158,7 +158,7 @@ provider_registry.add(BillingAddress)
 class DeliveryAddress(BillingAddress):
     fields_template = 'bda.plone.checkout.browser:forms/delivery_address.yaml'
     fields_name = 'delivery_address'
-    prefix = 'delivery_'
+    memberdata_prefix = 'delivery_'
 
     def conditional_required(self, widget, data):
         if data.parent['alternative_delivery'].extracted\
