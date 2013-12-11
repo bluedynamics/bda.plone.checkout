@@ -1,26 +1,26 @@
-import transaction
-from yafowil.base import factory
-from yafowil.base import UNSET
-from yafowil.base import ExtractionError
-from yafowil.yaml import parse_from_YAML
-from yafowil.plone.form import Form
-from zExceptions import Redirect
-from zope.interface import implementer
-from zope.event import notify
-from zope.component import getMultiAdapter
-from zope.i18nmessageid import MessageFactory
-from zope.i18n import translate
+from Products.CMFPlone.utils import getToolByName
+from Products.CMFPlone.utils import safe_unicode
 from bda.plone.cart import readcookie
+from bda.plone.checkout import CheckoutDone
+from bda.plone.checkout.interfaces import CheckoutError
+from bda.plone.checkout.interfaces import ICheckoutAdapter
+from bda.plone.checkout.interfaces import IFieldsProvider
 from bda.plone.payment import Payments
 from bda.plone.shipping import Shippings
+from yafowil.base import ExtractionError
+from yafowil.base import UNSET
+from yafowil.base import factory
+from yafowil.plone.form import Form
+from yafowil.yaml import parse_from_YAML
+from zExceptions import Redirect
+from zope.component import getMultiAdapter
+from zope.event import notify
+from zope.i18n import translate
+from zope.i18nmessageid import MessageFactory
+from zope.interface import implementer
 
-from bda.plone.checkout.interfaces import CheckoutError
-from bda.plone.checkout.interfaces import IFieldsProvider
-from bda.plone.checkout.interfaces import ICheckoutAdapter
-from Products.CMFPlone.utils import getToolByName
-from bda.plone.checkout import CheckoutDone
 import pycountry
-from Products.CMFPlone.utils import safe_unicode
+import transaction
 
 
 _ = MessageFactory('bda.plone.checkout')
