@@ -1,9 +1,7 @@
 import transaction
-from yafowil.base import (
-    factory,
-    ExtractionError,
-    UNSET,
-)
+from yafowil.base import factory
+from yafowil.base import UNSET
+from yafowil.base import ExtractionError
 from yafowil.yaml import parse_from_YAML
 from yafowil.plone.form import Form
 from zExceptions import Redirect
@@ -15,16 +13,23 @@ from zope.i18n import translate
 from bda.plone.cart import readcookie
 from bda.plone.payment import Payments
 from bda.plone.shipping import Shippings
-from ..interfaces import (
-    CheckoutError,
-    IFieldsProvider,
-    ICheckoutAdapter,
-)
+
+from bda.plone.checkout.interfaces import CheckoutError
+from bda.plone.checkout.interfaces import IFieldsProvider
+from bda.plone.checkout.interfaces import ICheckoutAdapter
 from Products.CMFPlone.utils import getToolByName
-from .. import CheckoutDone
+from bda.plone.checkout import CheckoutDone
+import pycountry
+from Products.CMFPlone.utils import safe_unicode
 
 
 _ = MessageFactory('bda.plone.checkout')
+
+
+def country_vocabulary():
+    """Vocabulary for countries from ISO3166 source.
+    """
+    return [(it.numeric, safe_unicode(it.name)) for it in pycountry.countries]
 
 
 def get_prop_from_member(member, name, prefix=None):
@@ -143,6 +148,9 @@ class BillingAddress(FieldsProvider):
         default = get_prop_from_member(self.member, widget.name,
                                        prefix=self.memberdata_prefix)
         return self.request.get(widget.dottedpath, default)
+
+    def country_vocabulary(self):
+        return country_vocabulary
 
 provider_registry.add(BillingAddress)
 

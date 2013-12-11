@@ -32,10 +32,11 @@ widgets:
         display_proxy: True
     mode: expr:context.mode
 - country:
-    factory: "#field:text"
+    factory: "#field:select"
     value: context.get_value
     props:
         label: i18n:label_country
         required: i18n:country_is_required
         display_proxy: True
+        vocabulary: expr:context.country_vocabulary
     mode: expr:context.mode

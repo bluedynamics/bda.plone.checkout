@@ -98,13 +98,14 @@ widgets:
                     - context.conditional_required
         mode: expr:context.mode
     - country:
-        factory: "#field:*conditional_required:text"
+        factory: "#field:*conditional_required:select"
         value: context.get_value
         props:
             label: i18n:label_country
             conditional_required: i18n:country_is_required
             required_bullet_trigger: conditional_required
             display_proxy: True
+            vocabulary: expr:context.country_vocabulary
         custom:
             conditional_required:
                 extractors:
