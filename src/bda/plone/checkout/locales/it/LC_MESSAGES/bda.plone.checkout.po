@@ -42,11 +42,6 @@ msgstr "e-mail > campo obbligatorio"
 msgid "error_accept_terms_and_conditiond"
 msgstr "Errore durante accettando le condizioni"
 
-#. Default: "Female"
-#: ./browser/form.py:108
-msgid "female"
-msgstr "Signora"
-
 #. Default: "Order now"
 #: ./browser/form.py:276
 msgid "finish"
@@ -136,11 +131,6 @@ msgstr "CAP"
 #. Default: "Last Name is required"
 msgid "lastname_is_required"
 msgstr "Nome > campo obbligatorio"
-
-#. Default: "Male"
-#: ./browser/form.py:107
-msgid "male"
-msgstr "Signor"
 
 #. Default: "Next"
 #: ./browser/form.py:263

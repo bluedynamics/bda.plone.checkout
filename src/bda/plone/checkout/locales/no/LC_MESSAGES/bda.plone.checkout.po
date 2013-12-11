@@ -43,11 +43,6 @@ msgstr "Epost er påkrevd"
 msgid "error_accept_terms_and_conditiond"
 msgstr "Vennligst aksepter betalingsvilkårene."
 
-#. Default: "Female"
-#: ./browser/form.py:108
-msgid "female"
-msgstr "Fru"
-
 #. Default: "Order now"
 #: ./browser/form.py:276
 msgid "finish"
@@ -137,11 +132,6 @@ msgstr "Postnummer"
 # Last Name is required
 msgid "lastname_is_required"
 msgstr "Etternavn er påkrevd"
-
-#. Default: "Male"
-#: ./browser/form.py:107
-msgid "male"
-msgstr "Her"
 
 #. Default: "Next"
 #: ./browser/form.py:263

@@ -41,11 +41,6 @@ msgstr ""
 msgid "error_accept_terms_and_conditiond"
 msgstr ""
 
-#. Default: "Female"
-#: ./browser/form.py:108
-msgid "female"
-msgstr ""
-
 #. Default: "Order now"
 #: ./browser/form.py:276
 msgid "finish"
@@ -134,11 +129,6 @@ msgstr ""
 
 # Last Name is required
 msgid "lastname_is_required"
-msgstr ""
-
-#. Default: "Male"
-#: ./browser/form.py:107
-msgid "male"
 msgstr ""
 
 #. Default: "Next"

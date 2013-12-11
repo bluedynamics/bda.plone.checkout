@@ -1,5 +1,4 @@
 from Products.CMFPlone.utils import getToolByName
-from Products.CMFPlone.utils import safe_unicode
 from bda.plone.cart import readcookie
 from bda.plone.checkout import CheckoutDone
 from bda.plone.checkout.interfaces import CheckoutError
@@ -7,6 +6,8 @@ from bda.plone.checkout.interfaces import ICheckoutAdapter
 from bda.plone.checkout.interfaces import IFieldsProvider
 from bda.plone.payment import Payments
 from bda.plone.shipping import Shippings
+from bda.plone.shop.vocabulary import country_vocabulary
+from bda.plone.shop.vocabulary import gender_vocabulary
 from yafowil.base import ExtractionError
 from yafowil.base import UNSET
 from yafowil.base import factory
@@ -19,17 +20,10 @@ from zope.i18n import translate
 from zope.i18nmessageid import MessageFactory
 from zope.interface import implementer
 
-import pycountry
 import transaction
 
 
 _ = MessageFactory('bda.plone.checkout')
-
-
-def country_vocabulary():
-    """Vocabulary for countries from ISO3166 source.
-    """
-    return [(it.numeric, safe_unicode(it.name)) for it in pycountry.countries]
 
 
 def get_prop_from_member(member, name, prefix=None):
@@ -131,9 +125,7 @@ class PersonalData(FieldsProvider):
 
     @property
     def gender_vocabulary(self):
-        return [('-', ''),
-                ('male', _('male', 'Male')),
-                ('female', _('female', 'Female'))]
+        return gender_vocabulary()
 
 provider_registry.add(PersonalData)
 
@@ -142,6 +134,7 @@ class BillingAddress(FieldsProvider):
     fields_template = 'bda.plone.checkout.browser:forms/billing_address.yaml'
     fields_name = 'billing_address'
 
+    @property
     def country_vocabulary(self):
         return country_vocabulary()
 
