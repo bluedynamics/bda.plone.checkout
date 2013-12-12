@@ -92,8 +92,9 @@ class FieldsProvider(FormContext):
                                        prefix=self.memberdata_prefix)
         ret = None
         if 'checkbox' in widget.blueprints:
-            # for checkboxes, only their name is in request.form if selected,
-            # otherwise they are completly ommited.
+            # for selected checkboxes, not the value but only the input name
+            # (dottedpath) is in request.form, otherwise they are completly
+            # ommited.
             ret = widget.dottedpath in self.request or default
         else:
             ret = self.request.get(widget.dottedpath, default)
