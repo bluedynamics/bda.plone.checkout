@@ -1,4 +1,5 @@
 from bda.plone.cart import deletecookie
+from bda.plone.checkout.interfaces import CheckoutError
 from bda.plone.checkout.interfaces import ICheckoutAdapter
 from bda.plone.checkout.interfaces import ICheckoutDone
 from bda.plone.checkout.interfaces import ICheckoutEvent
@@ -13,7 +14,7 @@ from zope.publisher.interfaces.browser import IBrowserRequest
 
 import logging
 
-
+CheckoutError  # API import / pep 8 pleasure.
 message_factory = MessageFactory('bda.plone.checkout')
 logger = logging.getLogger('bda.plone.checkout')
 
