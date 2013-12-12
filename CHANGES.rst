@@ -5,6 +5,9 @@ Changelog
 0.3dev
 ------
 
+- Prefill the checkout form with defaults from ICheckoutFormPresets adapter.
+  [thet]
+
 - introduce ``bda.plone.checkout.ICheckoutFormPresets``.
   [rnix]
 
