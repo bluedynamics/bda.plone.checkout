@@ -10,7 +10,7 @@ widgets:
         class_add: expr:context.hidden_class
 - alternative_delivery:
     factory: '#field:checkbox'
-    value: context.get_alternative_delivery
+    value: context.get_value
     props:
         label: i18n:label_alternative_delivery
         position: expr:context.mode == 'display' and 'before' or 'after'

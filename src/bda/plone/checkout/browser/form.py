@@ -90,7 +90,14 @@ class FieldsProvider(FormContext):
     def get_value(self, widget, data):
         default = get_prop_from_member(self.member, widget.name,
                                        prefix=self.memberdata_prefix)
-        return self.request.get(widget.dottedpath, default)
+        ret = None
+        if 'checkbox' in widget.blueprints:
+            # for checkboxes, only their name is in request.form if selected,
+            # otherwise they are completly ommited.
+            ret = widget.dottedpath in self.request or default
+        else:
+            ret = self.request.get(widget.dottedpath, default)
+        return ret
 
     def extend(self, form):
         fields = parse_from_YAML(self.fields_template,
@@ -151,9 +158,6 @@ class DeliveryAddress(BillingAddress):
                 and not data.extracted:
             raise ExtractionError(widget.attrs['conditional_required'])
         return data.extracted
-
-    def get_alternative_delivery(self, widget, data):
-        return widget.dottedpath in self.request
 
     @property
     def hidden_class(self):
