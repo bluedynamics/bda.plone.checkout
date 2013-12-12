@@ -1,9 +1,9 @@
-from Products.CMFPlone.utils import getToolByName
 from bda.plone.cart import readcookie
 from bda.plone.checkout import CheckoutDone
 from bda.plone.checkout import message_factory as _
 from bda.plone.checkout.interfaces import CheckoutError
 from bda.plone.checkout.interfaces import ICheckoutAdapter
+from bda.plone.checkout.interfaces import ICheckoutFormPresets
 from bda.plone.checkout.interfaces import IFieldsProvider
 from bda.plone.checkout.vocabularies import country_vocabulary
 from bda.plone.checkout.vocabularies import gender_vocabulary
@@ -21,19 +21,6 @@ from zope.i18n import translate
 from zope.interface import implementer
 
 import transaction
-
-
-def get_prop_from_member(member, name, prefix=None):
-    """Get property from memberdata.
-    If a prefix is given, add it to the name to get the value from the
-    property sheet.
-    """
-    default = UNSET
-    if member:
-        if prefix:
-            name = '%s%s' % (prefix, name)
-        default = member.getProperty(name, None)
-    return default
 
 
 class ProviderRegistry(object):
@@ -73,20 +60,18 @@ class FieldsProvider(FormContext):
     fields_name = ''
     message_factory = _
     ignore_on_save = False
-    memberdata_prefix = None
 
     def __init__(self, context, request):
         self.context = context
         self.request = request
-        member = None
-        membership = getToolByName(self.context, 'portal_membership', None)
-        if membership and not membership.isAnonymousUser():
-            member = membership.getAuthenticatedMember()
-        self.member = member
+        self.preset_adapter = getMultiAdapter(
+            (self.context, self.request),
+            ICheckoutFormPresets
+        )
 
     def get_value(self, widget, data):
-        default = get_prop_from_member(self.member, widget.name,
-                                       prefix=self.memberdata_prefix)
+        default = self.preset_adapter.get_value(widget.dottedpath)
+
         ret = None
         if 'checkbox' in widget.blueprints:
             # for selected checkboxes, not the value but only the input name
@@ -149,7 +134,6 @@ provider_registry.add(BillingAddress)
 class DeliveryAddress(BillingAddress):
     fields_template = 'bda.plone.checkout.browser:forms/delivery_address.yaml'
     fields_name = 'delivery_address'
-    memberdata_prefix = 'delivery_'
 
     def conditional_required(self, widget, data):
         if data.parent['alternative_delivery'].extracted\

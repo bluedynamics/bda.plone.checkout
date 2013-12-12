@@ -23,6 +23,9 @@ class ICheckoutFormPresets(Interface):
     def get_value(field_name):
         """Return value for field name or ``node.utils.UNSET`` if no preset
         value or field name unknown.
+
+        @param field_name: Field name in dottedpath notation.
+        @return: Default value for form.
         """
 
 

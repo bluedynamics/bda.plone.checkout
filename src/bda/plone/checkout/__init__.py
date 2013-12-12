@@ -85,7 +85,7 @@ class NullCheckoutFormPresets(object):
         self.context = context
         self.request = request
 
-    def get_value(field_name):
+    def get_value(self, field_name):
         """Always return UNSET.
         """
         return UNSET
