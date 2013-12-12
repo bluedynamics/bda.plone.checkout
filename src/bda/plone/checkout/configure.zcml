@@ -10,7 +10,8 @@
   
   <include file="profiles.zcml" />
   <include package=".browser" />
-  
+
+  <adapter factory=".NullCheckoutFormPresets" />
   <adapter factory=".NullCheckoutAdapter" />
 
 </configure>
