@@ -1,6 +1,7 @@
 from Products.CMFPlone.utils import getToolByName
 from bda.plone.cart import readcookie
 from bda.plone.checkout import CheckoutDone
+from bda.plone.checkout import message_factory as _
 from bda.plone.checkout.interfaces import CheckoutError
 from bda.plone.checkout.interfaces import ICheckoutAdapter
 from bda.plone.checkout.interfaces import IFieldsProvider
@@ -17,13 +18,9 @@ from zExceptions import Redirect
 from zope.component import getMultiAdapter
 from zope.event import notify
 from zope.i18n import translate
-from zope.i18nmessageid import MessageFactory
 from zope.interface import implementer
 
 import transaction
-
-
-_ = MessageFactory('bda.plone.checkout')
 
 
 def get_prop_from_member(member, name, prefix=None):
