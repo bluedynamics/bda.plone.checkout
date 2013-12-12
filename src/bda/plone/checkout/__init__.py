@@ -5,10 +5,14 @@ from zope.interface import (
 )
 from zope.component import adapter
 from zope.publisher.interfaces.browser import IBrowserRequest
-from node.utils import instance_property
+from node.utils import (
+    instance_property,
+    UNSET,
+)
 from bda.plone.cart import deletecookie
 from .interfaces import (
     CheckoutError,
+    ICheckoutFormPresets,
     ICheckoutAdapter,
     ICheckoutEvent,
     ICheckoutDone,
@@ -71,6 +75,22 @@ class CheckoutAdapter(object):
     def skip_payment_redirect_url(self):
         raise NotImplementedError(u"Abstract CheckoutAdapter does not "
                                   u"implement ``skip_payment_redirect_url``.")
+
+
+@implementer(ICheckoutFormPresets)
+@adapter(Interface, IBrowserRequest)
+class NullCheckoutFormPresets(object):
+    """Dummy adapter.
+    """
+
+    def __init__(self, context, request):
+        self.context = context
+        self.request = request
+
+    def get_value(field_name):
+        """Always return UNSET.
+        """
+        return UNSET
 
 
 class NullCheckoutAdapter(CheckoutAdapter):

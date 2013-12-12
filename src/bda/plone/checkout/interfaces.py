@@ -14,6 +14,20 @@ class ICheckoutExtensionLayer(Interface):
     """
 
 
+class ICheckoutFormPresets(Interface):
+    """Adapter used in checkout process to obtain preset values for checkout
+    form fields.
+
+    Possible implementations might aquire information from user property sheets
+    or cookies.
+    """
+
+    def get_value(field_name):
+        """Return value for field name or ``node.utils.UNSET`` if no preset
+        value or field name unknown.
+        """
+
+
 class IFieldsProvider(Interface):
     """Form fields provider for checkout.
     """
