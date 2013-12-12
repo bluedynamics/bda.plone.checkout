@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bda.plone.checkout\n"
-"POT-Creation-Date: 2013-10-01 20:14+0000\n"
+"POT-Creation-Date: 2013-12-12 15:29+0000\n"
 "PO-Revision-Date: 2013-07-08 14:55+0100\n"
 "Last-Translator: Peter Holzer <peter.holzer@agitator.com>\n"
 "Language-Team: \n"
@@ -16,7 +16,7 @@ msgstr ""
 "X-Is-Fallback-For: it-ch it-it\n"
 
 #. Default: "Back"
-#: ./browser/form.py:257
+#: ./browser/form.py:270
 msgid "back"
 msgstr "Indietro"
 
@@ -38,12 +38,17 @@ msgid "email_is_required"
 msgstr "e-mail > campo obbligatorio"
 
 #. Default: "Please accept our terms and conditions."
-#: ./browser/form.py:231
+#: ./browser/form.py:244
 msgid "error_accept_terms_and_conditiond"
 msgstr "Errore durante accettando le condizioni"
 
+#. Default: "Female"
+#: ./vocabularies.py:10
+msgid "female"
+msgstr "Signora"
+
 #. Default: "Order now"
-#: ./browser/form.py:276
+#: ./browser/form.py:289
 msgid "finish"
 msgstr "Completare"
 
@@ -51,12 +56,16 @@ msgstr "Completare"
 msgid "firstname_is_required"
 msgstr "Nome > campo obbligatorio"
 
+# Accept terms
+msgid "heading_accept_terms"
+msgstr ""
+
 #. Default: "Billing Address"
 msgid "heading_billing_address"
 msgstr "Indirizzo di fatturazione"
 
 #. Default: "Cart"
-#: ./browser/form.py:90
+#: ./browser/form.py:102
 msgid "heading_cart_summary"
 msgstr "Panoramica carrello"
 
@@ -132,18 +141,23 @@ msgstr "CAP"
 msgid "lastname_is_required"
 msgstr "Nome > campo obbligatorio"
 
+#. Default: "Male"
+#: ./vocabularies.py:9
+msgid "male"
+msgstr "Signor"
+
 #. Default: "Next"
-#: ./browser/form.py:263
+#: ./browser/form.py:276
 msgid "next"
 msgstr "Avanti"
 
 #. Default: "No"
-#: ./browser/form.py:145
+#: ./browser/form.py:157
 msgid "no"
 msgstr "No"
 
 #. Default: "not set"
-#: ./browser/form.py:146
+#: ./browser/form.py:158
 msgid "not set"
 msgstr "Non impostato"
 
@@ -156,17 +170,17 @@ msgid "street_is_required"
 msgstr "Indirizzo > campo obbligatorio"
 
 #. Default: "Terms and conditions"
-#: ./browser/form.py:213
+#: ./browser/form.py:226
 msgid "terms_and_conditions"
 msgstr "termini e le condizioni"
 
 #. Default: "I have read and accept the ${terms_and_conditions}"
-#: ./browser/form.py:217
+#: ./browser/form.py:230
 msgid "terms_and_conditions_text"
 msgstr "termini e le condizioni di testo"
 
 #. Default: "Yes"
-#: ./browser/form.py:144
+#: ./browser/form.py:156
 msgid "yes"
 msgstr "Sě"
 
@@ -174,10 +188,3 @@ msgstr "Sě"
 msgid "zip_is_required"
 msgstr "CAP > campo obbligatorio"
 
-#. Default: "Female"
-msgid "female"
-msgstr "Signora"
-
-#. Default: "Male"
-msgid "male"
-msgstr "Signor"

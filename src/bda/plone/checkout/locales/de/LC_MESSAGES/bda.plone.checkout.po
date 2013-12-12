@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bda.plone.checkout\n"
-"POT-Creation-Date: 2013-10-01 20:14+0000\n"
+"POT-Creation-Date: 2013-12-12 15:29+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: Peter Holzer <hpeter@agitator.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "X-Is-Fallback-For: de-at de-li de-lu de-ch de-de\n"
 
 #. Default: "Back"
-#: ./browser/form.py:257
+#: ./browser/form.py:270
 msgid "back"
 msgstr "Zurück"
 
@@ -38,12 +38,17 @@ msgid "email_is_required"
 msgstr "Email ist erforderlich"
 
 #. Default: "Please accept our terms and conditions."
-#: ./browser/form.py:231
+#: ./browser/form.py:244
 msgid "error_accept_terms_and_conditiond"
 msgstr "Akzeptieren Sie unsere Allgemeinen Geschäftsbedingungen"
 
+#. Default: "Female"
+#: ./vocabularies.py:10
+msgid "female"
+msgstr "Frau"
+
 #. Default: "Order now"
-#: ./browser/form.py:276
+#: ./browser/form.py:289
 msgid "finish"
 msgstr "Jetzt kaufen"
 
@@ -51,12 +56,16 @@ msgstr "Jetzt kaufen"
 msgid "firstname_is_required"
 msgstr "Vorname ist erforderlich"
 
+# Accept terms
+msgid "heading_accept_terms"
+msgstr "Bedingungen und Konditionen"
+
 # Billing Address
 msgid "heading_billing_address"
 msgstr "Rechnungsadresse"
 
 #. Default: "Cart"
-#: ./browser/form.py:90
+#: ./browser/form.py:102
 msgid "heading_cart_summary"
 msgstr "Warenkorb"
 
@@ -132,18 +141,23 @@ msgstr "Postleitzahl"
 msgid "lastname_is_required"
 msgstr "Name ist erforderlich"
 
+#. Default: "Male"
+#: ./vocabularies.py:9
+msgid "male"
+msgstr "Herr"
+
 #. Default: "Next"
-#: ./browser/form.py:263
+#: ./browser/form.py:276
 msgid "next"
 msgstr "Weiter"
 
 #. Default: "No"
-#: ./browser/form.py:145
+#: ./browser/form.py:157
 msgid "no"
 msgstr "Nein"
 
 #. Default: "not set"
-#: ./browser/form.py:146
+#: ./browser/form.py:158
 msgid "not set"
 msgstr "Nicht gesetzt"
 
@@ -156,17 +170,17 @@ msgid "street_is_required"
 msgstr "Strasse ist erforderlich"
 
 #. Default: "Terms and conditions"
-#: ./browser/form.py:213
+#: ./browser/form.py:226
 msgid "terms_and_conditions"
 msgstr "Allgemeinen Geschäftsbedingungen"
 
 #. Default: "I have read and accept the ${terms_and_conditions}"
-#: ./browser/form.py:217
+#: ./browser/form.py:230
 msgid "terms_and_conditions_text"
 msgstr "Ich habe die ${terms_and_conditions} gelesen und bin damit einverstanden"
 
 #. Default: "Yes"
-#: ./browser/form.py:144
+#: ./browser/form.py:156
 msgid "yes"
 msgstr "Ja"
 
@@ -174,10 +188,3 @@ msgstr "Ja"
 msgid "zip_is_required"
 msgstr "Postleitzahl ist erforderlich"
 
-#. Default: "Female"
-msgid "female"
-msgstr "Frau"
-
-#. Default: "Male"
-msgid "male"
-msgstr "Herr"

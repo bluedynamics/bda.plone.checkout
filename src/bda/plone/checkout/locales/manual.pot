@@ -117,3 +117,7 @@ msgstr ""
 # Shipping
 msgid "heading_shipping_selection"
 msgstr ""
+
+# Accept terms
+msgid "heading_accept_terms"
+msgstr ""

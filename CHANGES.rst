@@ -5,6 +5,10 @@ Changelog
 0.3dev
 ------
 
+- Heading for accept_terms form in checkout. This better seperates this button
+  visually from the rest.
+  [thet]
+
 - Prefill the checkout form with defaults from ICheckoutFormPresets adapter.
   [thet]
 

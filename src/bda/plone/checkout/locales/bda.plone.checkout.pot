@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-10-01 20:14+0000\n"
+"POT-Creation-Date: 2013-12-12 15:29+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Domain: DOMAIN\n"
 
 #. Default: "Back"
-#: ./browser/form.py:257
+#: ./browser/form.py:270
 msgid "back"
 msgstr ""
 
@@ -37,12 +37,17 @@ msgid "email_is_required"
 msgstr ""
 
 #. Default: "Please accept our terms and conditions."
-#: ./browser/form.py:231
+#: ./browser/form.py:244
 msgid "error_accept_terms_and_conditiond"
 msgstr ""
 
+#. Default: "Female"
+#: ./vocabularies.py:10
+msgid "female"
+msgstr ""
+
 #. Default: "Order now"
-#: ./browser/form.py:276
+#: ./browser/form.py:289
 msgid "finish"
 msgstr ""
 
@@ -50,12 +55,16 @@ msgstr ""
 msgid "firstname_is_required"
 msgstr ""
 
+# Accept terms
+msgid "heading_accept_terms"
+msgstr ""
+
 # Billing Address
 msgid "heading_billing_address"
 msgstr ""
 
 #. Default: "Cart"
-#: ./browser/form.py:90
+#: ./browser/form.py:102
 msgid "heading_cart_summary"
 msgstr ""
 
@@ -131,18 +140,23 @@ msgstr ""
 msgid "lastname_is_required"
 msgstr ""
 
+#. Default: "Male"
+#: ./vocabularies.py:9
+msgid "male"
+msgstr ""
+
 #. Default: "Next"
-#: ./browser/form.py:263
+#: ./browser/form.py:276
 msgid "next"
 msgstr ""
 
 #. Default: "No"
-#: ./browser/form.py:145
+#: ./browser/form.py:157
 msgid "no"
 msgstr ""
 
 #. Default: "not set"
-#: ./browser/form.py:146
+#: ./browser/form.py:158
 msgid "not set"
 msgstr ""
 
@@ -155,17 +169,17 @@ msgid "street_is_required"
 msgstr ""
 
 #. Default: "Terms and conditions"
-#: ./browser/form.py:213
+#: ./browser/form.py:226
 msgid "terms_and_conditions"
 msgstr ""
 
 #. Default: "I have read and accept the ${terms_and_conditions}"
-#: ./browser/form.py:217
+#: ./browser/form.py:230
 msgid "terms_and_conditions_text"
 msgstr ""
 
 #. Default: "Yes"
-#: ./browser/form.py:144
+#: ./browser/form.py:156
 msgid "yes"
 msgstr ""
 
@@ -173,10 +187,3 @@ msgstr ""
 msgid "zip_is_required"
 msgstr ""
 
-#. Default: "Female"
-msgid "female"
-msgstr ""
-
-#. Default: "Male"
-msgid "male"
-msgstr ""
