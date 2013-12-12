@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <layers>
   <layer
-    name="bda.plone.checkout"
-    interface="bda.plone.checkout.interfaces.ICheckoutExtensionLayer" />
+      name="bda.plone.checkout"
+      interface="bda.plone.checkout.interfaces.ICheckoutExtensionLayer"/>
 </layers>

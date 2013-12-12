@@ -1,8 +1,7 @@
+from bda.plone.checkout.tests import Checkout_INTEGRATION_TESTING
+from bda.plone.checkout.tests import set_browserlayer
+
 import unittest2 as unittest
-from bda.plone.checkout.tests import (
-    Checkout_INTEGRATION_TESTING,
-    set_browserlayer,
-)
 
 
 class TestCheckout(unittest.TestCase):

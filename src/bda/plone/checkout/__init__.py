@@ -1,23 +1,17 @@
-import logging
-from zope.interface import (
-    Interface,
-    implementer,
-)
-from zope.component import adapter
-from zope.publisher.interfaces.browser import IBrowserRequest
-from node.utils import (
-    instance_property,
-    UNSET,
-)
 from bda.plone.cart import deletecookie
-from .interfaces import (
-    CheckoutError,
-    ICheckoutFormPresets,
-    ICheckoutAdapter,
-    ICheckoutEvent,
-    ICheckoutDone,
-)
+from bda.plone.checkout.interfaces import ICheckoutAdapter
+from bda.plone.checkout.interfaces import ICheckoutDone
+from bda.plone.checkout.interfaces import ICheckoutEvent
+from bda.plone.checkout.interfaces import ICheckoutFormPresets
+from node.utils import UNSET
+from node.utils import instance_property
+from zope.component import adapter
 from zope.i18nmessageid import MessageFactory
+from zope.interface import Interface
+from zope.interface import implementer
+from zope.publisher.interfaces.browser import IBrowserRequest
+
+import logging
 
 
 message_factory = MessageFactory('bda.plone.checkout')
@@ -34,7 +28,8 @@ class CheckoutEvent(object):
 
 
 @implementer(ICheckoutDone)
-class CheckoutDone(CheckoutEvent): pass
+class CheckoutDone(CheckoutEvent):
+    pass
 
 
 @implementer(ICheckoutAdapter)

@@ -3,7 +3,7 @@
     $(document).ready(function() {
         var delivery_address = $('div.delivery_address');
         var toggle = function(input) {
-            if (input.attr('type') == 'hidden') {
+            if (input.attr('type') === 'hidden') {
                 delivery_address.show();
                 return;
             }
@@ -12,7 +12,7 @@
             } else {
                 delivery_address.hide();
             }
-        }
+        };
         var fld_name = "checkout.delivery_address.alternative_delivery";
         var input = $('input[name="' + fld_name + '"]');
         toggle(input);
@@ -20,16 +20,13 @@
             toggle($(this));
         });
         
-
         // terms and conditions overlay
-        $('a.terms_and_conditions').prepOverlay(
-            {
-                subtype: 'ajax',
-                filter: common_content_filter,
-                cssclass: 'overlay-terms-and-condition',
-            }
-        );
+        $('a.terms_and_conditions').prepOverlay({
+            subtype: 'ajax',
+            filter: common_content_filter,
+            cssclass: 'overlay-terms-and-condition',
+        });
         
     });
 
-})(jQuery);
+}(jQuery));

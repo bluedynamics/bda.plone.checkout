@@ -2,35 +2,35 @@
            xmlns:browser="http://namespaces.zope.org/browser">
 
   <browser:resource
-    name="bda.plone.checkout.js"
-    file="checkout.js"
-    layer="..interfaces.ICheckoutExtensionLayer" />
+      name="bda.plone.checkout.js"
+      file="checkout.js"
+      layer="..interfaces.ICheckoutExtensionLayer"/>
 
   <browser:resource
-    name="bda.plone.checkout.css"
-    file="checkout.css"
-    layer="..interfaces.ICheckoutExtensionLayer" />
+      name="bda.plone.checkout.css"
+      file="checkout.css"
+      layer="..interfaces.ICheckoutExtensionLayer"/>
 
   <browser:page
-    for="*"
-    name="checkout"
-    template="view.pt"
-    permission="zope2.View"
-    layer="..interfaces.ICheckoutExtensionLayer" />
+      for="*"
+      name="checkout"
+      template="view.pt"
+      permission="zope2.View"
+      layer="..interfaces.ICheckoutExtensionLayer"/>
 
   <browser:page
-    for="*"
-    name="checkoutform"
-    class=".form.CheckoutForm"
-    permission="zope2.View"
-    layer="..interfaces.ICheckoutExtensionLayer" />
+      for="*"
+      name="checkoutform"
+      class=".form.CheckoutForm"
+      permission="zope2.View"
+      layer="..interfaces.ICheckoutExtensionLayer"/>
 
   <browser:page
-    for="*"
-    name="cart_overview"
-    class="bda.plone.cart.browser.CartView"
-    template="cart_overview.pt"
-    permission="zope2.View"
-    layer="..interfaces.ICheckoutExtensionLayer" />
+      for="*"
+      name="cart_overview"
+      class="bda.plone.cart.browser.CartView"
+      template="cart_overview.pt"
+      permission="zope2.View"
+      layer="..interfaces.ICheckoutExtensionLayer"/>
 
 </configure>
