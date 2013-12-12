@@ -5,7 +5,8 @@ Changelog
 0.3dev
 ------
 
-- no changes yet
+- introduce ``bda.plone.checkout.ICheckoutFormPresets``.
+  [rnix]
 
 
 0.2
