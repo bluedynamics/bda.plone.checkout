@@ -34,14 +34,15 @@ setup(name='bda.plone.checkout',
       install_requires=[
           'setuptools',
           'Plone',
-          'yafowil.plone',
           'bda.plone.cart',
           'bda.plone.payment',
+          'pycountry',
+          'yafowil.plone',
       ],
       extras_require={
           'test': [
-              'plone.app.testing',
               'bda.plone.checkout',
+              'plone.app.testing',
           ]
       },
       entry_points="""

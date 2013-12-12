@@ -17,8 +17,10 @@ from .interfaces import (
     ICheckoutEvent,
     ICheckoutDone,
 )
+from zope.i18nmessageid import MessageFactory
 
 
+message_factory = MessageFactory('bda.plone.checkout')
 logger = logging.getLogger('bda.plone.checkout')
 
 

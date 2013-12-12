@@ -174,3 +174,10 @@ msgstr "Yes"
 msgid "zip_is_required"
 msgstr "ZIP is required"
 
+#. Default: "Female"
+msgid "female"
+msgstr "Female"
+
+#. Default: "Male"
+msgid "male"
+msgstr "Male"

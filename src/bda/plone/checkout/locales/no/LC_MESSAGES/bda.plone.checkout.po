@@ -175,3 +175,10 @@ msgstr "Ja"
 msgid "zip_is_required"
 msgstr "Postnummer er påkrevd"
 
+#. Default: "Female"
+msgid "female"
+msgstr "Fru"
+
+#. Default: "Male"
+msgid "male"
+msgstr "Her"

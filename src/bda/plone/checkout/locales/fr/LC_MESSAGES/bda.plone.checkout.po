@@ -174,3 +174,10 @@ msgstr "Oui"
 msgid "zip_is_required"
 msgstr "No. postal obligatoire"
 
+#. Default: "Female"
+msgid "female"
+msgstr "Madame"
+
+#. Default: "Male"
+msgid "male"
+msgstr "Monsieur"

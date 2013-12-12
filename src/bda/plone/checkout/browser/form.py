@@ -4,10 +4,10 @@ from bda.plone.checkout import CheckoutDone
 from bda.plone.checkout.interfaces import CheckoutError
 from bda.plone.checkout.interfaces import ICheckoutAdapter
 from bda.plone.checkout.interfaces import IFieldsProvider
+from bda.plone.checkout.vocabularies import country_vocabulary
+from bda.plone.checkout.vocabularies import gender_vocabulary
 from bda.plone.payment import Payments
 from bda.plone.shipping import Shippings
-from bda.plone.shop.vocabularies import country_vocabulary
-from bda.plone.shop.vocabularies import gender_vocabulary
 from yafowil.base import ExtractionError
 from yafowil.base import UNSET
 from yafowil.base import factory
