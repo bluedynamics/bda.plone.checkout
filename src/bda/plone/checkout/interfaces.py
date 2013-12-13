@@ -1,5 +1,7 @@
 from zope.interface import Attribute
 from zope.interface import Interface
+from bda.plone.cart.interfaces import ICartExtensionLayer
+from bda.plone.payment.interfaces import IPaymentExtensionLayer
 
 
 class CheckoutError(Exception):
@@ -7,7 +9,7 @@ class CheckoutError(Exception):
     """
 
 
-class ICheckoutExtensionLayer(Interface):
+class ICheckoutExtensionLayer(ICartExtensionLayer, IPaymentExtensionLayer):
     """Browser layer for bda.plone.checkout.
     """
 
