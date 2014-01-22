@@ -12,6 +12,9 @@ Changelog
 - Prefill the checkout form with defaults from ICheckoutFormPresets adapter.
   [thet]
 
+- Fix BrowserLayer order precedence.
+  [thet]
+
 - introduce ``bda.plone.checkout.ICheckoutFormPresets``.
   [rnix]
 
