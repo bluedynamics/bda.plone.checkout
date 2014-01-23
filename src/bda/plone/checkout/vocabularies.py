@@ -1,7 +1,6 @@
+import pycountry
 from Products.CMFPlone.utils import safe_unicode
 from bda.plone.checkout import message_factory as _
-
-import pycountry
 
 
 def gender_vocabulary():

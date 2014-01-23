@@ -1,3 +1,14 @@
+import transaction
+from zExceptions import Redirect
+from zope.component import getMultiAdapter
+from zope.event import notify
+from zope.i18n import translate
+from zope.interface import implementer
+from yafowil.base import ExtractionError
+from yafowil.base import UNSET
+from yafowil.base import factory
+from yafowil.plone.form import Form
+from yafowil.yaml import parse_from_YAML
 from bda.plone.cart import readcookie
 from bda.plone.checkout import CheckoutDone
 from bda.plone.checkout import message_factory as _
@@ -9,18 +20,6 @@ from bda.plone.checkout.vocabularies import country_vocabulary
 from bda.plone.checkout.vocabularies import gender_vocabulary
 from bda.plone.payment import Payments
 from bda.plone.shipping import Shippings
-from yafowil.base import ExtractionError
-from yafowil.base import UNSET
-from yafowil.base import factory
-from yafowil.plone.form import Form
-from yafowil.yaml import parse_from_YAML
-from zExceptions import Redirect
-from zope.component import getMultiAdapter
-from zope.event import notify
-from zope.i18n import translate
-from zope.interface import implementer
-
-import transaction
 
 
 class ProviderRegistry(object):
@@ -70,9 +69,13 @@ class FieldsProvider(FormContext):
         )
 
     def get_value(self, widget, data):
-        default = self.preset_adapter.get_value(widget.dottedpath)
+        """Function to fetch form field default values.
 
+        Special case in checkout form is that form fields might get hidden mode
+        """
+        default = self.preset_adapter.get_value(widget.dottedpath)
         ret = None
+        # XXX: improve, looks odd
         if 'checkbox' in widget.blueprints:
             # for selected checkboxes, not the value but only the input name
             # (dottedpath) is in request.form, otherwise they are completly
