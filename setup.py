@@ -40,7 +40,6 @@ setup(
     ],
     extras_require={
         'test': [
-            'bda.plone.checkout',
             'plone.app.testing',
         ]
     },
