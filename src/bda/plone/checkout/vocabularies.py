@@ -4,8 +4,7 @@ from bda.plone.checkout import message_factory as _
 
 
 def gender_vocabulary():
-    return [('-', ''),
-            ('male', _('male', 'Male')),
+    return [('male', _('male', 'Male')),
             ('female', _('female', 'Female'))]
 
 

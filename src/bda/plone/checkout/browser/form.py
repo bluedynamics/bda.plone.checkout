@@ -118,7 +118,7 @@ class PersonalData(FieldsProvider):
 
     @property
     def gender_vocabulary(self):
-        return gender_vocabulary()
+        return [('-', '')] + gender_vocabulary()
 
 provider_registry.add(PersonalData)
 
