@@ -4,9 +4,9 @@ widgets:
 - heading:
     factory: tag
     props:
-        structural: True
         tag: h2
-        text: i18n:heading_accept_terms
+        text: i18n:heading_accept_terms:Accept Terms and Conditions
+    mode: expr:context.mode
 - accept:
     factory: '#field:*validate_accept:checkbox'
     props:

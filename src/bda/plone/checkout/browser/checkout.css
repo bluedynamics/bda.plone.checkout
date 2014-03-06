@@ -6,121 +6,115 @@
 #form-checkout div.field.error input[type="email"]:focus,
 #form-checkout div.field.error input[type="text"],
 #form-checkout div.field.error input[type="email"] {
-    box-shadow: inset 0 0 2px #aaa!important;
-    border: 1px solid #aaa;
-    padding: 0.4em!important;
-    width: 12em;
-    padding: 0.2em;
-    font-size: 80%!important;
+    box-shadow:inset 0 0 2px #aaa!important;
+    border:1px solid #aaa;
+    padding:0.4em!important;
+    width:12em;
+    padding:0.2em;
+    font-size:80%!important;
 }
-
 #form-checkout h2 {
-    margin-top: 1em;
-    margin-bottom: 0.5em;
-    padding-bottom: 0.25em;
-    border-bottom: 0.1em solid #bbb;
+    margin-top:1em;
+    margin-bottom:0.5em;
+    padding-bottom:0.25em;
+    border-bottom:0.1em solid #bbb;
 }
 #form-checkout .field {
-    clear: none;
-    margin-right: 1em;
+    clear:none;
+    margin-right:1em;
 }
 #form-checkout .hidden {
     display:none;
 }
-
 #field-checkout-personal_data-firstname,
 #field-checkout-personal_data-lastname,
 #field-checkout-personal_data-email,
 #field-checkout-personal_data-phone,
 #field-checkout-delivery_address-firstname,
 #field-checkout-delivery_address-lastname {
-  width: 13em;
-  float: left;
+    width:13em;
+    float:left;
 }
-
 #field-checkout-personal_data-email,
 #field-checkout-personal_data-company,
 #field-checkout-delivery_address-company  {
-  clear: both!important;
+    clear:both !important;
 }
-
 #form-checkout #field-checkout-personal_data-lastname,
 #form-checkout #field-checkout-personal_data-email,
 #form-checkout #field-checkout-billing_address-zip,
 #form-checkout #field-checkout-delivery_address-lastname,
 #form-checkout #field-checkout-delivery_address-zip {
-    float: left;
+    float:left;
 }
 #form-checkout #field-checkout-billing_address-zip,
 #form-checkout #field-checkout-delivery_address-zip {
-    width: 8em;
+    width:8em;
 }
-
 #form-checkout #input-checkout-billing_address-zip,
 #form-checkout #input-checkout-delivery_address-zip {
-    width: 7em;
+    width:7em;
 }
-
 #form-checkout #field-checkout-billing_address-city,
 #form-checkout #field-checkout-delivery_address-city {
-    width: 20em;
-    float: left;
+    width:20em;
+    float:left;
 }
 #form-checkout #input-checkout-billing_address-city,
 #form-checkout #input-checkout-delivery_address-city {
-    width: 19em;
+    width:19em;
 }
 #form-checkout #field-checkout-billing_address-street,
 #form-checkout #field-checkout-delivery_address-street {
-    width: 31em;
+    width:31em;
 }
 #form-checkout #input-checkout-billing_address-street,
 #form-checkout #input-checkout-delivery_address-street {
-    width: 30em;
+    width:30em;
 }
 #field-checkout-billing_address-country,
 #field-checkout-delivery_address-country {
- width: 7em; 
+    width:7em; 
 }
-
 #field-checkout-billing_address-country,
 #field-checkout-delivery_address-country {
-  clear: both!important;
+    clear:both!important;
 }
-
 #form-checkout.mode_display label {
-    display: none;
+    display:none;
 }
 #form-checkout.mode_display .field {
-    margin-bottom: 0px;
-    margin-right: 0.5em;
+    margin-bottom:0px;
+    margin-right:0.5em;
     width: auto!important;
 }
 label.radioType input {
-    margin-right: 0.5em;
+    margin-right:0.5em;
 }
 #form-checkout div.field.error {
-    background: transparent;
-    border: none;
-    padding: 0;
-    margin-top: 0;
+    background:transparent;
+    border:none;
+    padding:0;
+    margin-top:0;
 }
 #form-checkout div.field.error .errormessage {
-    display: none;
+    display:none;
 }
 #form-checkout div.field.error input,
 #form-checkout div.field.error input[type="text"],
 #form-checkout div.field.error input[type="email"] {
-    border: 1px solid red;
+    border:1px solid red;
 }
-
 #form-checkout.mode_display #field-checkout-accept_terms_and_conditions-accept {
     margin-top:1em;
     margin-bottom:1em;
 }
 #field-checkout-delivery_address-alternative_delivery label,
 #form-checkout #field-checkout-accept_terms_and_conditions-accept label {
-    display: inline-block;
+    display:inline-block;
+}
+#field-checkout-delivery_address-alternative_delivery .display-checkbox {
+    display:none;
 }
 #form-checkout #field-checkout-accept_terms_and_conditions-accept .errormessage {
     display:block;
@@ -128,14 +122,12 @@ label.radioType input {
 }
 #form-checkout div.field.error input[type="text"],
 #form-checkout div.field.error input[type="email"] {
-    border: 1px solid red;
+    border:1px solid red;
 }
 #form-checkout div.field input[type="radio"],
 #form-checkout div.field input[type="checkbox"] {
-    margin-right: 0.5em;
+    margin-right:0.5em;
 }
-
-
 #input-checkout-checkout_back,
 #input-checkout-next,
 #input-checkout-confirm_back,
@@ -148,7 +140,7 @@ label.radioType input {
     font-size:100%;
     padding:0.3em 0.75em;
     margin-right:0.4em;
-    cursor: pointer;
+    cursor:pointer;
 }
 #input-checkout-checkout_back:hover,
 #input-checkout-next:hover,
@@ -158,38 +150,38 @@ label.radioType input {
     color:#75ad0a !important;
 }
 #cart #cart_items .cart_item_title {
-    margin-top: 0.5em;
+    margin-top:0.5em;
 }
 #content .cart_item_description {
-    color: #666;
-    line-height: 1.25em;
-    margin-bottom: 0.5em;
+    color:#666;
+    line-height:1.25em;
+    margin-bottom:0.5em;
 }
 #content .cart_item_comment_wrapper {
-    margin-bottom: 0;
-    float: left;
+    margin-bottom:0;
+    float:left;
 } 
 #content .cart_item_comment {
-    margin-bottom: 0;
+    margin-bottom:0;
 } 
 #cart .cart_item {
-    border-bottom: 0.1em solid #ccc;
-    padding-bottom: 0.5em;
-    margin-bottom: 1em;
+    border-bottom:0.1em solid #ccc;
+    padding-bottom:0.5em;
+    margin-bottom:1em;
 }
 #cart ul.cart_item_content li {
-    display: inline;
+    display:inline;
 }
 .cart_item ul.cart_item_content {
-    float: right;
-    list-style-type: none !important;
-    margin: 0 !important;
-    text-align: right;
+    float:right;
+    list-style-type:none !important;
+    margin:0 !important;
+    text-align:right;
 }
 .cart_item .price {
-    display: inline-block;
-    width: 7em;
+    display:inline-block;
+    width:7em;
 }
 .cart_item .cart_item_quantity_unit {
-    margin-right: 2em;
+    margin-right:2em;
 }

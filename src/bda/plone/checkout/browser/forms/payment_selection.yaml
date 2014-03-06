@@ -4,7 +4,6 @@ widgets:
 - heading:
     factory: tag
     props:
-        structural: True
         tag: h2
         text: i18n:heading_payment_selection
 - payment:

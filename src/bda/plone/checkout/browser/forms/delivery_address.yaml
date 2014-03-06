@@ -4,7 +4,6 @@ widgets:
 - heading:
     factory: tag
     props:
-        structural: True
         tag: h2
         text: i18n:heading_delivery_address
         class_add: expr:context.hidden_class
