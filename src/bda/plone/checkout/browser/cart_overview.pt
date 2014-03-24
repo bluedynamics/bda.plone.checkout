@@ -1,9 +1,9 @@
 <div id="cart"
      i18n:domain="bda.plone.cart">
-  
+
   <span style="display:none;"
         class="cart_execution_context">checkout</span>
-  
+
   <span id="cart_item_template" style="display: none;">
     <div class="cart_item cart_overview">
       <h3 class="cart_item_title">Title</h3>
@@ -29,34 +29,58 @@
       <div class="visualClear"></div>
     </div>
   </span>
-  
+
   <div id="cart_items" style="display: none;">
     <div id="cart_no_items" style="display: none;">
       <p i18n:translate="empty_cart">Cart is empty</p>
     </div>
   </div>
-  
+
   <div id="cart_summary" style="display: none;" class="summary_wrapper">
-    <table class="cart_sum_content">
+    <table class="cart_sum_content"
+           tal:define="currency view/currency">
       <tal:details condition="not:view/summary_total_only">
         <tr>
           <td i18n:translate="summary_net">Net:</td>
           <td class="cart_net">0.00</td>
+          <td tal:content="currency" tal:condition="currency">EUR</td>
         </tr>
         <tr>
           <td i18n:translate="summary_vat">VAT.:</td>
           <td class="cart_vat">0.00</td>
+          <td tal:content="currency" tal:condition="currency">EUR</td>
+        </tr>
+        <tr class="discount" style="display: none;">
+          <td i18n:translate="discount_net">Discount Net:</td>
+          <td class="discount_net">0.00</td>
+          <td tal:content="currency" tal:condition="currency">EUR</td>
+        </tr>
+        <tr class="discount" style="display: none;">
+          <td i18n:translate="discount_vat">Discount VAT.:</td>
+          <td class="discount_vat">0.00</td>
+          <td tal:content="currency" tal:condition="currency">EUR</td>
         </tr>
       </tal:details>
+      <tr class="discount" style="display: none;">
+        <td><strong i18n:translate="discount_total">Discount Total:</strong></td>
+        <td><strong class="discount_total">Total</strong></td>
+        <td tal:condition="currency">
+          <strong tal:content="currency">EUR</strong>
+        </td>
+      </tr>
       <tal:shipping condition="view/include_shipping_costs">
         <tr>
           <td i18n:translate="summary_shipping">Shipping:</td>
           <td class="cart_shipping">0.00</td>
+          <td tal:content="currency" tal:condition="currency">EUR</td>
         </tr>
       </tal:shipping>
       <tr>
         <td><strong i18n:translate="summary_total">Total:</strong></td>
         <td><strong class="cart_total">Total</strong></td>
+        <td tal:condition="currency">
+          <strong tal:content="currency">EUR</strong>
+        </td>
       </tr>
     </table>
     <div class="visualClear"></div>
