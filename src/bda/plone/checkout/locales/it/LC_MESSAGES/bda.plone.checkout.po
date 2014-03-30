@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bda.plone.checkout\n"
-"POT-Creation-Date: 2014-03-30 12:27+0000\n"
+"POT-Creation-Date: 2014-03-30 12:37+0000\n"
 "PO-Revision-Date: 2013-07-08 14:55+0100\n"
 "Last-Translator: Peter Holzer <peter.holzer@agitator.com>\n"
 "Language-Team: \n"
