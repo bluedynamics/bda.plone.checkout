@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bda.plone.checkout\n"
-"POT-Creation-Date: 2013-12-12 15:29+0000\n"
+"POT-Creation-Date: 2014-03-30 12:27+0000\n"
 "PO-Revision-Date: 2013-07-08 14:55+0100\n"
 "Last-Translator: Peter Holzer <peter.holzer@agitator.com>\n"
 "Language-Team: \n"
@@ -16,7 +16,7 @@ msgstr ""
 "X-Is-Fallback-For: it-ch it-it\n"
 
 #. Default: "Back"
-#: ./browser/form.py:270
+#: ./browser/form.py:273
 msgid "back"
 msgstr "Indietro"
 
@@ -38,17 +38,17 @@ msgid "email_is_required"
 msgstr "e-mail > campo obbligatorio"
 
 #. Default: "Please accept our terms and conditions."
-#: ./browser/form.py:244
+#: ./browser/form.py:247
 msgid "error_accept_terms_and_conditiond"
 msgstr "Errore durante accettando le condizioni"
 
 #. Default: "Female"
-#: ./vocabularies.py:10
+#: ./vocabularies.py:8
 msgid "female"
 msgstr "Signora"
 
 #. Default: "Order now"
-#: ./browser/form.py:289
+#: ./browser/form.py:292
 msgid "finish"
 msgstr "Completare"
 
@@ -65,7 +65,7 @@ msgid "heading_billing_address"
 msgstr "Indirizzo di fatturazione"
 
 #. Default: "Cart"
-#: ./browser/form.py:102
+#: ./browser/form.py:105
 msgid "heading_cart_summary"
 msgstr "Panoramica carrello"
 
@@ -142,22 +142,22 @@ msgid "lastname_is_required"
 msgstr "Nome > campo obbligatorio"
 
 #. Default: "Male"
-#: ./vocabularies.py:9
+#: ./vocabularies.py:7
 msgid "male"
 msgstr "Signor"
 
 #. Default: "Next"
-#: ./browser/form.py:276
+#: ./browser/form.py:279
 msgid "next"
 msgstr "Avanti"
 
 #. Default: "No"
-#: ./browser/form.py:157
+#: ./browser/form.py:160
 msgid "no"
 msgstr "No"
 
 #. Default: "not set"
-#: ./browser/form.py:158
+#: ./browser/form.py:161
 msgid "not set"
 msgstr "Non impostato"
 
@@ -170,17 +170,17 @@ msgid "street_is_required"
 msgstr "Indirizzo > campo obbligatorio"
 
 #. Default: "Terms and conditions"
-#: ./browser/form.py:226
+#: ./browser/form.py:229
 msgid "terms_and_conditions"
 msgstr "termini e le condizioni"
 
 #. Default: "I have read and accept the ${terms_and_conditions}"
-#: ./browser/form.py:230
+#: ./browser/form.py:233
 msgid "terms_and_conditions_text"
 msgstr "termini e le condizioni di testo"
 
 #. Default: "Yes"
-#: ./browser/form.py:156
+#: ./browser/form.py:159
 msgid "yes"
 msgstr "Sě"
 

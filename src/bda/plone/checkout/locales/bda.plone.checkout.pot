@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-12-12 15:29+0000\n"
+"POT-Creation-Date: 2014-03-30 12:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Domain: DOMAIN\n"
 
 #. Default: "Back"
-#: ./browser/form.py:270
+#: ./browser/form.py:273
 msgid "back"
 msgstr ""
 
@@ -37,17 +37,17 @@ msgid "email_is_required"
 msgstr ""
 
 #. Default: "Please accept our terms and conditions."
-#: ./browser/form.py:244
+#: ./browser/form.py:247
 msgid "error_accept_terms_and_conditiond"
 msgstr ""
 
 #. Default: "Female"
-#: ./vocabularies.py:10
+#: ./vocabularies.py:8
 msgid "female"
 msgstr ""
 
 #. Default: "Order now"
-#: ./browser/form.py:289
+#: ./browser/form.py:292
 msgid "finish"
 msgstr ""
 
@@ -64,7 +64,7 @@ msgid "heading_billing_address"
 msgstr ""
 
 #. Default: "Cart"
-#: ./browser/form.py:102
+#: ./browser/form.py:105
 msgid "heading_cart_summary"
 msgstr ""
 
@@ -141,22 +141,22 @@ msgid "lastname_is_required"
 msgstr ""
 
 #. Default: "Male"
-#: ./vocabularies.py:9
+#: ./vocabularies.py:7
 msgid "male"
 msgstr ""
 
 #. Default: "Next"
-#: ./browser/form.py:276
+#: ./browser/form.py:279
 msgid "next"
 msgstr ""
 
 #. Default: "No"
-#: ./browser/form.py:157
+#: ./browser/form.py:160
 msgid "no"
 msgstr ""
 
 #. Default: "not set"
-#: ./browser/form.py:158
+#: ./browser/form.py:161
 msgid "not set"
 msgstr ""
 
@@ -169,17 +169,17 @@ msgid "street_is_required"
 msgstr ""
 
 #. Default: "Terms and conditions"
-#: ./browser/form.py:226
+#: ./browser/form.py:229
 msgid "terms_and_conditions"
 msgstr ""
 
 #. Default: "I have read and accept the ${terms_and_conditions}"
-#: ./browser/form.py:230
+#: ./browser/form.py:233
 msgid "terms_and_conditions_text"
 msgstr ""
 
 #. Default: "Yes"
-#: ./browser/form.py:156
+#: ./browser/form.py:159
 msgid "yes"
 msgstr ""
 

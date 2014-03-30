@@ -5,7 +5,7 @@ widgets:
     factory: tag
     props:
         tag: h2
-        text: i18n:heading_payment_selection
+        text: i18n:heading_payment_selection:Payment
 - payment:
     factory: "field:error:select"
     value: context.get_payment

@@ -5,7 +5,7 @@ widgets:
     factory: tag
     props:
         tag: h2
-        text: i18n:heading_shipping_selection
+        text: i18n:heading_shipping_selection:Shipping
 - shipping:
     factory: "field:error:select"
     value: context.get_shipping
