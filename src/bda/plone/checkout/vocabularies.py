@@ -1,6 +1,10 @@
 import pycountry
 from Products.CMFPlone.utils import safe_unicode
 from bda.plone.checkout import message_factory as _
+from zope.i18nmessageid import MessageFactory
+
+
+_c = MessageFactory('iso3166')
 
 
 def gender_vocabulary():
@@ -11,11 +15,11 @@ def gender_vocabulary():
 def country_vocabulary():
     """Vocabulary for countries from ISO3166 source.
     """
-    return [(it.numeric, safe_unicode(it.name)) for it in pycountry.countries]
+    return [(_.numeric, safe_unicode(_c(_.name))) for _ in pycountry.countries]
 
 
 def get_pycountry_name(country_id):
     if not country_id:
         return None
     country = pycountry.countries.get(numeric=country_id)
-    return country.name
+    return _c(country.name)

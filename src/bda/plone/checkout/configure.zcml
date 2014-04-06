@@ -7,7 +7,11 @@
   <include package="bda.plone.payment" />
 
   <i18n:registerTranslations directory="locales" />
-  
+
+  <configure package="pycountry">
+    <i18n:registerTranslations directory="locales" />
+  </configure>
+
   <include file="profiles.zcml" />
   <include package=".browser" />
 

@@ -5,6 +5,9 @@ Changelog
 0.3dev
 ------
 
+- Register pycountry translations and use them.
+  [rnix]
+
 - Adopt checkout summary to consider currency and discount.
   [rnix]
 
