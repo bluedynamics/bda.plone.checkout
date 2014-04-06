@@ -12,10 +12,27 @@ def gender_vocabulary():
             ('female', _('female', 'Female'))]
 
 
+AVAILABLE_COUNTRIES = [
+    (country.numeric, safe_unicode(_c(country.name))) \
+        for country in pycountry.countries
+]
+# patch this list to modify available countries
+ENABLED_COUNTRIES = [
+    '040', # Austria
+    '756', # Switzerland
+    '276', # Germany
+    '380', # Italy
+]
+
+
 def country_vocabulary():
     """Vocabulary for countries from ISO3166 source.
     """
-    return [(_.numeric, safe_unicode(_c(_.name))) for _ in pycountry.countries]
+    ret = list()
+    for cid, name in AVAILABLE_COUNTRIES:
+        if cid in ENABLED_COUNTRIES:
+            ret.append((cid, name))
+    return ret
 
 
 def get_pycountry_name(country_id):
