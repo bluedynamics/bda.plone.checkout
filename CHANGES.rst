@@ -2,6 +2,16 @@
 Changelog
 =========
 
+dev
+---
+
+- Do not rely on acquisition and base link for `terms and conditions`
+  on the navigation root. (path/to/navroot/<ID>)
+
+  `ID` is configurable by patching
+  ``bda.plone.checkout.browser.form.TERMS_AND_CONDITONS_ID``
+  [fRiSi]
+
 0.3
 ---
 
