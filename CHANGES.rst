@@ -2,8 +2,8 @@
 Changelog
 =========
 
-0.3dev
-------
+0.3
+---
 
 - Register pycountry translations and use them.
   [rnix]
