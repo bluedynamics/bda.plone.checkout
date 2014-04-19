@@ -19,22 +19,25 @@ Customizing the checkout form
 To customize the checkout form you'll typically start off with your own
 form having a custom ``provider_registry``.
 
-You'll use the provides that you're happy with and replace those that need an adaption.
+You'll use the ``FieldsProvider`` objects that you're happy with and replace
+those that need an adaption.
 
-In this example, we'll add an additional field ``uid`` to the ``PersonalData`` provider
-an re-use the others.
+In this example, we'll add an additional field ``uid`` to the ``PersonalData``
+provider an re-use the others.::
 
-::
+    from zope.i18nmessageid import MessageFactory
+    from bda.plone.checkout.browser import form as coform
 
-    from bda.plone.checkout.browser import form coform
-    
+
+    _ = MessageFactory('my.package')
     my_provider_registry = coform.ProviderRegistry()
-    
+
+
     class MyPersonalData(coform.PersonalData):
-    
         fields_template = 'my.package.shop:forms/personal_data.yaml'
-        #message_factory = zope.i18nmessageid.MessageFactory('my.package')
-    
+        message_factory = _
+
+
     my_provider_registry.add(coform.CartSummary)
     my_provider_registry.add(MyPersonalData)
     my_provider_registry.add(coform.BillingAddress)
@@ -43,14 +46,12 @@ an re-use the others.
     my_provider_registry.add(coform.PaymentSelection)
     my_provider_registry.add(coform.OrderComment)
     my_provider_registry.add(coform.AcceptTermsAndConditions)
-    
-    class MyCheckoutForm(coform.CheckoutForm):
-        """customized checkout form
-        to add UID field for company
-        """
-    
-        provider_registry = my_provider_registry
 
+
+    class MyCheckoutForm(coform.CheckoutForm):
+        """Customized checkout form to add UID field for company.
+        """
+        provider_registry = my_provider_registry
 
 Copy ``bda/plone/checkout/browser/forms/personal_data.yaml`` to
 ``my/package/shop/forms/personal_data.yaml`` and make your changes.
@@ -60,7 +61,7 @@ for rendering the checkout form.
 
 .. _`Yet Another FOrm WIdget Library`: http://docs.yafowil.info/
 
-We'll append a new field `uid` at the end of the `personal data`
+We'll append a new field `uid` at the end of the ``personal data``
 section::
 
     ...
@@ -81,26 +82,24 @@ section::
 
 (NOTE: it's not possible to mix i18n domains within a yaml file so
 you're better off to add you translations to a separtate
-`bda.plone.checkout.po` file in your package's locales)
-
+``bda.plone.checkout.po`` file in your package's locales)
 
 Now register your customized form by overriding the browser page
 for your browserlayer or skinlayer::
 
     <browser:page
-        for="*"
-        name="checkoutform"
-        class=".checkout.MyCheckoutForm"
-        permission="zope2.View"
-        layer=".browser.interfaces.IThemeSpecific" />
-
+      for="*"
+      name="checkoutform"
+      class=".checkout.MyCheckoutForm"
+      permission="zope2.View"
+      layer=".browser.interfaces.IThemeSpecific" />
 
 .. NOTE:: Your new field will automatically be included in the order data.
 
-    However, by default, it will not show up in order emails,
-    the order export (``@@exportorders``) or the order summary (``@@orders``).
+    However, by default, it will not show up in order emails, the order export
+    (``@@exportorders``) or the order summary (``@@orders``).
     See `bda.plone.orders`_ for instructions how to add them there.
-    
+
     .. _`bda.plone.orders`: https://github.com/bluedynamics/bda.plone.orders
 
 
