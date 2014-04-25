@@ -180,7 +180,22 @@ class ShippingSelection(FieldsProvider):
         return self.shippings.vocab
 
     def get_shipping(self, widget, data):
-        return self.request.get(widget.dottedpath, self.shippings.default)
+        default_shipping = self.shippings.default
+        request = self.request
+        from_request = request.get(widget.dottedpath)
+        from_cookie = request.cookies.get('shipping_method')
+        # got selection from request which differs from cookie, set cookie
+        if from_request and from_cookie != from_request:
+            request.response.setCookie(
+                'shipping_method', from_request, quoted=False, path='/')
+        # no shipping from request or cookie, return default
+        if not from_request and not from_cookie:
+            return self.shippings.default
+        # shipping from cookie, but not from request, return cookie
+        if from_cookie and not from_request:
+            return from_cookie
+        # return from request
+        return from_request
 
 provider_registry.add(ShippingSelection)
 

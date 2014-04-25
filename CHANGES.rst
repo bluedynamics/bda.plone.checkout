@@ -5,6 +5,9 @@ Changelog
 0.4dev
 ------
 
+- Consider shipping method from cookie in checkout form.
+  [rnix]
+
 - Do not rely on acquisition and base link for `terms and conditions`
   on the navigation root. (path/to/navroot/<ID>)
 
