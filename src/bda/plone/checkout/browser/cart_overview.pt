@@ -70,7 +70,11 @@
       </tr>
       <tal:shipping condition="view/include_shipping_costs">
         <tr>
-          <td i18n:translate="summary_shipping">Shipping:</td>
+          <td>
+            <span i18n:translate="summary_shipping">Shipping</span>:
+            <span class="shipping_label"></span>
+            <span class="shipping_description"></span>:
+          </td>
           <td class="cart_shipping">0.00</td>
           <td tal:content="currency" tal:condition="currency">EUR</td>
         </tr>

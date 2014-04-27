@@ -5,6 +5,9 @@ Changelog
 0.4dev
 ------
 
+- Adopt shipping handling to ``bda.plone.shipping`` >= 0.4.
+  [rnix]
+
 - Consider shipping method from cookie in checkout form.
   [rnix]
 

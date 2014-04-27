@@ -177,7 +177,18 @@ class ShippingSelection(FieldsProvider):
 
     @property
     def shipping_vocabulary(self):
-        return self.shippings.vocab
+        vocab = list()
+        for sh in self.shippings.shippings:
+            if not sh.available:
+                continue
+            if sh.description:
+                label = translate(sh.label, context=self.request)
+                desc = translate(sh.description, context=self.request)
+                title = '%s (%s)' % (label, desc)
+            else:
+                title = translate(sh.label, context=self.request)
+            vocab.append((sh.sid, title))
+        return vocab
 
     def get_shipping(self, widget, data):
         default_shipping = self.shippings.default
