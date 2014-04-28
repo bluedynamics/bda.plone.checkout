@@ -8,8 +8,8 @@ _c = MessageFactory('iso3166')
 
 
 def gender_vocabulary():
-    return [('male', _('male', 'Male')),
-            ('female', _('female', 'Female'))]
+    return [('male', _('male', default=u'Male')),
+            ('female', _('female', default=u'Female'))]
 
 
 AVAILABLE_COUNTRIES = [
