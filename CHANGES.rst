@@ -5,6 +5,13 @@ Changelog
 0.4dev
 ------
 
+- Implement ``skip`` property on ``PaymentSelection`` fields provider and
+  skip payment selection if total cart price is 0.
+  [rnix]
+
+- Add ``bda.plone.checkout.interfaces.IFieldsProvider.skip`` attribute.
+  [rnix]
+
 - Adopt shipping handling to ``bda.plone.shipping`` >= 0.4.
   [rnix]
 

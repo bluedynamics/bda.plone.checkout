@@ -36,6 +36,8 @@ class IFieldsProvider(Interface):
     """
     fields_name = Attribute(u"Name of this fields provider.")
 
+    skip = Attribute(u"Flag whether to skip form extension")
+
     def extend(form):
         """Extend form with arbitrary fields.
         """
