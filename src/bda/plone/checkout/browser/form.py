@@ -15,6 +15,7 @@ from bda.plone.checkout import CheckoutDone
 from bda.plone.checkout import message_factory as _
 from bda.plone.checkout.interfaces import CheckoutError
 from bda.plone.checkout.interfaces import ICheckoutAdapter
+from bda.plone.checkout.interfaces import ICheckoutSettings
 from bda.plone.checkout.interfaces import ICheckoutFormPresets
 from bda.plone.checkout.interfaces import IFieldsProvider
 from bda.plone.checkout.vocabularies import country_vocabulary
@@ -359,9 +360,10 @@ class CheckoutForm(Form, FormContext):
             transaction.abort()
             self.checkout_back(self.request)
         checkout_adapter.clear_session()
-        if checkout_adapter.skip_payment:
+        checkout_settings = ICheckoutSettings(self.context)
+        if checkout_settings.skip_payment(uid):
             self.finish_redirect_url = \
-                checkout_adapter.skip_payment_redirect_url
+                checkout_settings.skip_payment_redirect_url(uid)
         else:
             p_name = data.fetch('checkout.payment_selection.payment').extracted
             payments = Payments(self.context)

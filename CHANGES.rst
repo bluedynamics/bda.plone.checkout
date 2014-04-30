@@ -5,6 +5,20 @@ Changelog
 0.4dev
 ------
 
+- Use ``bda.plone.checkout.interfaces.ICheckoutSettings`` adapter instead
+  of self in ``bda.plone.checkout.browser.form.CheckoutForm`` to handle
+  ``skip_payment`` and ``skip_payment_redirect_url``.
+  [rnix]
+
+- Remove ``skip_payment`` and ``skip_payment_redirect_url`` attributes
+  from ``bda.plone.checkout.interfaces.ICheckoutAdapter`` interface. They exist
+  now as functions accepting data uid on
+  ``bda.plone.checkout.interfaces.ICheckoutSettings``.
+  [rnix]
+
+- Introduce ``bda.plone.checkout.interfaces.ICheckoutSettings`` interface.
+  [rnix]
+
 - Implement ``skip`` property on ``PaymentSelection`` fields provider and
   skip payment selection if total cart price is 0.
   [rnix]
