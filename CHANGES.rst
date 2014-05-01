@@ -5,6 +5,10 @@ Changelog
 0.4dev
 ------
 
+- Always deliver shipping markup for cart overview. Displaying gets controlled
+  by cart JS.
+  [rnix]
+
 - Implement ``skip`` property on ``ShippingSelection`` fields provider and
   skip shipping selection if not item in cart is shippable.
   [rnix]

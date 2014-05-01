@@ -68,17 +68,15 @@
           <strong tal:content="currency">EUR</strong>
         </td>
       </tr>
-      <tal:shipping condition="view/include_shipping_costs">
-        <tr>
-          <td>
-            <span i18n:translate="summary_shipping">Shipping</span>:
-            <span class="shipping_label"></span>
-            <span class="shipping_description"></span>:
-          </td>
-          <td class="cart_shipping">0.00</td>
-          <td tal:content="currency" tal:condition="currency">EUR</td>
-        </tr>
-      </tal:shipping>
+      <tr class="shipping" style="display: none;">
+        <td>
+          <span i18n:translate="summary_shipping">Shipping</span>:
+          <span class="shipping_label"></span>
+          <span class="shipping_description"></span>:
+        </td>
+        <td class="cart_shipping">0.00</td>
+        <td tal:content="currency" tal:condition="currency">EUR</td>
+      </tr>
       <tr>
         <td><strong i18n:translate="summary_total">Total:</strong></td>
         <td><strong class="cart_total">Total</strong></td>
