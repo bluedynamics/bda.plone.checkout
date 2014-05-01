@@ -5,6 +5,10 @@ Changelog
 0.4dev
 ------
 
+- Implement ``skip`` property on ``ShippingSelection`` fields provider and
+  skip shipping selection if not item in cart is shippable.
+  [rnix]
+
 - Use ``bda.plone.checkout.interfaces.ICheckoutSettings`` adapter instead
   of self in ``bda.plone.checkout.browser.form.CheckoutForm`` to handle
   ``skip_payment`` and ``skip_payment_redirect_url``.

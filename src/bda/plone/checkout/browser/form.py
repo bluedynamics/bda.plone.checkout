@@ -177,6 +177,11 @@ class ShippingSelection(FieldsProvider):
     fields_name = 'shipping_selection'
 
     @property
+    def skip(self):
+        cart_data = get_data_provider(self.context, self.request)
+        return not cart_data.include_shipping_costs
+
+    @property
     def shippings(self):
         return Shippings(self.context)
 
