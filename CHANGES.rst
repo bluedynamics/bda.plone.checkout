@@ -2,8 +2,8 @@
 Changelog
 =========
 
-0.4dev
-------
+0.4
+---
 
 - Always deliver shipping markup for cart overview. Displaying gets controlled
   by cart JS.
