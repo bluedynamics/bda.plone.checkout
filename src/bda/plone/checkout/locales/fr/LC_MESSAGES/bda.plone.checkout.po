@@ -170,14 +170,14 @@ msgid "street_is_required"
 msgstr "Rue obligatoire"
 
 #. Default: "Terms and conditions"
-#: ./browser/form.py:268
+#: ./browser/form.py:226
 msgid "terms_and_conditions"
-msgstr ""
+msgstr "termes et conditions"
 
 #. Default: "I have read and accept the ${terms_and_conditions}"
-#: ./browser/form.py:272
+#: ./browser/form.py:230
 msgid "terms_and_conditions_text"
-msgstr ""
+msgstr "J'ai lu et j'accepte les ${terms_and_conditions}"
 
 #. Default: "Yes"
 #: ./browser/form.py:166
