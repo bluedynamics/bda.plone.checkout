@@ -111,7 +111,7 @@ label.radioType input {
 }
 #field-checkout-delivery_address-alternative_delivery label,
 #form-checkout #field-checkout-accept_terms_and_conditions-accept label {
-    display:inline-block;
+    display:inline;
 }
 #field-checkout-delivery_address-alternative_delivery .display-checkbox {
     display:none;
