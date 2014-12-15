@@ -58,7 +58,7 @@ msgstr "Nome > campo obbligatorio"
 
 # Accept terms
 msgid "heading_accept_terms"
-msgstr ""
+msgstr "Termini e Condizioni"
 
 #. Default: "Billing Address"
 msgid "heading_billing_address"
@@ -177,7 +177,7 @@ msgstr "termini e le condizioni"
 #. Default: "I have read and accept the ${terms_and_conditions}"
 #: ./browser/form.py:272
 msgid "terms_and_conditions_text"
-msgstr "termini e le condizioni di testo"
+msgstr "Accetto i termini e condizioni"
 
 #. Default: "Yes"
 #: ./browser/form.py:166

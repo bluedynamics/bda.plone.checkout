@@ -58,7 +58,7 @@ msgstr "Nom obligatoire"
 
 # Accept terms
 msgid "heading_accept_terms"
-msgstr ""
+msgstr "Termes et conditions"
 
 # Billing Address
 msgid "heading_billing_address"
