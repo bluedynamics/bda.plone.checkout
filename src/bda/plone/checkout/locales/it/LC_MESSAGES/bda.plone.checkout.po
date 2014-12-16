@@ -95,7 +95,7 @@ msgstr "Indirizzo di spedizione"
 
 #. Default: "City"
 msgid "label_city"
-msgstr "Stato"
+msgstr "Città"
 
 #. Default: "Comment"
 msgid "label_comment"
@@ -107,15 +107,15 @@ msgstr "Ditta"
 
 #. Default: "Country"
 msgid "label_country"
-msgstr "Stato"
+msgstr "Paese"
 
 #. Default: "Email"
 msgid "label_email"
-msgstr "e-mail"
+msgstr "E-mail"
 
 #. Default: "First Name"
 msgid "label_firstname"
-msgstr "prenome"
+msgstr "Prenome"
 
 #. Default: "Gender"
 msgid "label_gender"
@@ -172,7 +172,7 @@ msgstr "Indirizzo > campo obbligatorio"
 #. Default: "Terms and conditions"
 #: ./browser/form.py:268
 msgid "terms_and_conditions"
-msgstr "termini e le condizioni"
+msgstr "Termini e le condizioni"
 
 #. Default: "I have read and accept the ${terms_and_conditions}"
 #: ./browser/form.py:272

@@ -45,7 +45,7 @@ msgstr "Please accept our terms and conditions."
 #. Default: "Female"
 #: ./vocabularies.py:12
 msgid "female"
-msgstr "Female"
+msgstr "Mrs."
 
 #. Default: "Order now"
 #: ./browser/form.py:331
@@ -119,7 +119,7 @@ msgstr "First Name"
 
 #. Default: "Gender"
 msgid "label_gender"
-msgstr "Gender"
+msgstr "Salutation"
 
 #. Default: "Name"
 msgid "label_lastname"
@@ -144,7 +144,7 @@ msgstr "Last Name is required"
 #. Default: "Male"
 #: ./vocabularies.py:11
 msgid "male"
-msgstr "Male"
+msgstr "Mr."
 
 #. Default: "Next"
 #: ./browser/form.py:318
@@ -172,7 +172,7 @@ msgstr "Street is required"
 #. Default: "Terms and conditions"
 #: ./browser/form.py:268
 msgid "terms_and_conditions"
-msgstr "Terms and conditions"
+msgstr "terms and conditions"
 
 #. Default: "I have read and accept the ${terms_and_conditions}"
 #: ./browser/form.py:272
