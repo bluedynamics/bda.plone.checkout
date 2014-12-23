@@ -172,12 +172,12 @@ msgstr "Indirizzo > campo obbligatorio"
 #. Default: "Terms and conditions"
 #: ./browser/form.py:268
 msgid "terms_and_conditions"
-msgstr "Termini e le condizioni"
+msgstr "termini e le condizioni"
 
 #. Default: "I have read and accept the ${terms_and_conditions}"
 #: ./browser/form.py:272
 msgid "terms_and_conditions_text"
-msgstr "Accetto i termini e condizioni"
+msgstr "Accetto i ${terms_and_conditions}"
 
 #. Default: "Yes"
 #: ./browser/form.py:166
