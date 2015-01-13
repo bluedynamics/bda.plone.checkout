@@ -144,7 +144,7 @@ msgstr "Nome > campo obbligatorio"
 #. Default: "Male"
 #: ./vocabularies.py:11
 msgid "male"
-msgstr "Signor"
+msgstr "Signore"
 
 #. Default: "Next"
 #: ./browser/form.py:318
