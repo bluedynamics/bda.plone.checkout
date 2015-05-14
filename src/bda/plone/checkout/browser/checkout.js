@@ -1,4 +1,7 @@
-(function($) {
+/* jslint browser: true */
+/* global jQuery, common_content_filter */
+(function($, common_content_filter) {
+    "use strict";
 
     $(document).ready(function() {
         var delivery_address = $('div.delivery_address');
@@ -19,14 +22,14 @@
         input.change(function(event) {
             toggle($(this));
         });
-        
+
         // terms and conditions overlay
         $('a.terms_and_conditions').prepOverlay({
             subtype: 'ajax',
             filter: common_content_filter,
             cssclass: 'overlay-terms-and-condition',
         });
-        
+
     });
 
-})(jQuery);
+}(jQuery, common_content_filter));

@@ -5,8 +5,8 @@ Changelog
 0.5.dev0
 --------
 
-- No changes yet.
-  [rnix]
+- JSHint JavaScript.
+  [thet]
 
 
 0.4
