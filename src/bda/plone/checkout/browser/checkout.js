@@ -1,6 +1,6 @@
 /* jslint browser: true */
 /* global jQuery, common_content_filter */
-(function($, common_content_filter) {
+(function($) {
     "use strict";
 
     $(document).ready(function() {
@@ -32,4 +32,4 @@
 
     });
 
-}(jQuery, common_content_filter));
+}(jQuery));
