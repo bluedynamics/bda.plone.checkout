@@ -317,12 +317,14 @@ class CheckoutForm(Form, FormContext):
             self.form['checkout_back'] = factory('submit', props={
                 'label': _('back', 'Back'),
                 'action': 'checkout_back',
+                'class_add': 'standalone',
                 'handler': None,
                 'next': self.checkout_back,
                 'skip': True})
             self.form['next'] = factory('submit', props={
                 'label': _('next', 'Next'),
                 'action': 'next',
+                'class_add': 'context',
                 'handler': None,
                 'next': self.checkout_summary})
         # checkout confirmation
