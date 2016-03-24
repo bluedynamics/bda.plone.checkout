@@ -11,6 +11,16 @@
       file="checkout.css"
       layer="..interfaces.ICheckoutExtensionLayer"/>
 
+  <browser:resource
+      name="bda.plone.checkout-compiled.css"
+      file="checkout-compiled.css"
+      layer="..interfaces.ICheckoutExtensionLayer" />
+
+  <browser:resource
+      name="bda.plone.checkout.less"
+      file="checkout.less"
+      layer="..interfaces.ICheckoutExtensionLayer" />
+
   <browser:page
       for="*"
       name="checkout"

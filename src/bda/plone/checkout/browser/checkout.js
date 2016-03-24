@@ -23,12 +23,13 @@
             toggle($(this));
         });
 
-        // terms and conditions overlay
-        $('a.terms_and_conditions').prepOverlay({
-            subtype: 'ajax',
-            filter: common_content_filter,
-            cssclass: 'overlay-terms-and-condition',
-        });
+        // DISABLED FOR PLONE 5
+        // // terms and conditions overlay
+        // $('a.terms_and_conditions').prepOverlay({
+        //     subtype: 'ajax',
+        //     filter: common_content_filter,
+        //     cssclass: 'overlay-terms-and-condition',
+        // });
 
     });
 

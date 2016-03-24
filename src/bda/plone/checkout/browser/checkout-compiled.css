@@ -1,0 +1,32 @@
+#form-checkout h2 {
+  font-size: 24px;
+}
+#form-checkout div.field input[type="text"],
+#form-checkout div.field input[type="email"],
+#form-checkout div.field select {
+  width: unset;
+}
+#form-checkout div.field input[type="radio"],
+#form-checkout div.field input[type="chackbox"] {
+  margin-right: 0.5em;
+}
+#form-checkout #field-checkout-personal_data-firstname,
+#form-checkout #field-checkout-personal_data-email,
+#form-checkout #field-checkout-billing_address-zip {
+  float: left;
+  margin-right: 1em;
+}
+#input-checkout-checkout_back:after {
+  font-family: 'cart';
+  content: '\e812';
+  margin-left: 0.5em;
+}
+#input-checkout-next {
+  float: right;
+}
+#input-checkout-next[value]:before {
+  font-family: 'cart';
+  content: '\e811';
+  margin-right: 0.5em;
+}
+/*# sourceMappingURL=++resource++bda.plone.checkout-compiled.css.map */

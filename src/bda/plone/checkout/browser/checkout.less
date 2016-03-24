@@ -1,0 +1,53 @@
+// Plone 5 Styles
+
+// get Plone variables
+@import url("https://raw.githubusercontent.com/plone/Products.CMFPlone/master/Products/CMFPlone/static/patterns/toolbar/src/css/variables.less");
+@import url("https://raw.githubusercontent.com/plone/plonetheme.barceloneta/master/plonetheme/barceloneta/theme/less/variables.plone.less");
+
+// icon fonts from bda.plone.cart for now
+
+#form-checkout {
+  h2 {
+    font-size: @plone-font-size-h3;
+  }
+  div.field input[type="text"],
+  div.field input[type="email"],
+  div.field select {
+    width: unset;
+  }
+  div.field input[type="radio"],
+  div.field input[type="chackbox"] {
+    margin-right: 0.5em;
+  }
+  #field-checkout-personal_data-firstname,
+  #field-checkout-personal_data-email,
+  #field-checkout-billing_address-zip {
+    float:left;
+    margin-right: 1em;
+  }
+
+
+}
+
+
+#input-checkout-checkout_back:after {
+  font-family: 'cart';
+  content: '\e812';
+  margin-left: 0.5em;
+}
+
+
+#input-checkout-next {
+  float: right;
+}
+#input-checkout-next[value]:before {
+  font-family: 'cart';
+  content: '\e811';
+  margin-right: 0.5em;
+}
+
+// #input-checkout-next[value] {
+//   color: red;
+// }
+
+
