@@ -3,3 +3,4 @@ src/bda.plone.checkout.egg-info/
 *.mo
 .DS_Store
 dist/
+node_modules
