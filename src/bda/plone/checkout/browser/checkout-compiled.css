@@ -35,6 +35,10 @@
 .template-checkout .mode_display #field-checkout-accept_terms_and_conditions-accept label {
   display: unset;
 }
+.template-checkout .mode_display ul.cart_item_content li {
+  display: inline-block;
+  margin-left: 1em;
+}
 #input-checkout-checkout_back,
 #input-checkout-confirm_back {
   margin-top: 1em;
