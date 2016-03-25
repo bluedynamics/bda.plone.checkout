@@ -1,30 +1,57 @@
-#form-checkout h2 {
+.template-checkout h2 {
   font-size: 24px;
 }
-#form-checkout div.field input[type="text"],
-#form-checkout div.field input[type="email"],
-#form-checkout div.field select {
+.template-checkout .field input[type="text"],
+.template-checkout .field input[type="email"],
+.template-checkout .field select {
   width: unset;
 }
-#form-checkout div.field input[type="radio"],
-#form-checkout div.field input[type="chackbox"] {
+.template-checkout .field input[type="radio"],
+.template-checkout .field input[type="checkbox"] {
   margin-right: 0.5em;
 }
-#form-checkout #field-checkout-personal_data-firstname,
-#form-checkout #field-checkout-personal_data-email,
-#form-checkout #field-checkout-billing_address-zip {
+.template-checkout #field-checkout-personal_data-firstname,
+.template-checkout #field-checkout-personal_data-email,
+.template-checkout #field-checkout-billing_address-zip,
+.template-checkout #field-checkout-delivery_address-firstname,
+.template-checkout #field-checkout-delivery_address-zip {
   float: left;
   margin-right: 1em;
 }
-#input-checkout-checkout_back:after {
+.template-checkout .mode_display .checkout_cart_overview {
+  border: 1px solid #e5e5e5;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  padding: 0 1.5em;
+  background: #fff;
+}
+.template-checkout .mode_display label {
+  display: none;
+}
+.template-checkout .mode_display .field {
+  margin-bottom: 0.35em;
+}
+.template-checkout .mode_display #field-checkout-accept_terms_and_conditions-accept label {
+  display: unset;
+}
+#input-checkout-checkout_back,
+#input-checkout-confirm_back {
+  margin-top: 1em;
+}
+#input-checkout-checkout_back:after,
+#input-checkout-confirm_back:after {
   font-family: 'cart';
   content: '\e812';
   margin-left: 0.5em;
 }
-#input-checkout-next {
+#input-checkout-next,
+#input-checkout-finish {
   float: right;
+  margin-top: 1em;
 }
-#input-checkout-next[value]:before {
+#input-checkout-next:before,
+#input-checkout-finish:before {
   font-family: 'cart';
   content: '\e811';
   margin-right: 0.5em;

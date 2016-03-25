@@ -37,7 +37,7 @@
   </div>
 
   <div id="cart_summary" style="display: none;" class="summary_wrapper">
-    <table class="cart_sum_content"
+    <table class="cart_sum_content invisible-grid"
            tal:define="currency view/currency">
       <tal:details condition="not:view/summary_total_only">
         <tr>

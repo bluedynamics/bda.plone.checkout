@@ -6,41 +6,69 @@
 
 // icon fonts from bda.plone.cart for now
 
-#form-checkout {
+.template-checkout {
   h2 {
     font-size: @plone-font-size-h3;
   }
-  div.field input[type="text"],
-  div.field input[type="email"],
-  div.field select {
+  .field input[type="text"],
+  .field input[type="email"],
+  .field select {
     width: unset;
   }
-  div.field input[type="radio"],
-  div.field input[type="chackbox"] {
+  .field input[type="radio"],
+  .field input[type="checkbox"] {
     margin-right: 0.5em;
   }
   #field-checkout-personal_data-firstname,
   #field-checkout-personal_data-email,
-  #field-checkout-billing_address-zip {
+  #field-checkout-billing_address-zip,
+  #field-checkout-delivery_address-firstname,
+  #field-checkout-delivery_address-zip {
     float:left;
     margin-right: 1em;
   }
 
-
+  .mode_display {
+    .checkout_cart_overview {
+      border: @plone-portlet-border;
+      margin-bottom: 20px;
+      border-radius: @plone-border-radius-base;
+      box-shadow:  0 1px 3px rgba(0,0,0,.05);
+      padding: 0 1.5em;
+      background: @plone-input-bg;
+    }
+    label {
+      display: none;
+    }
+    .field {
+      margin-bottom: 0.35em;
+    }
+    #field-checkout-accept_terms_and_conditions-accept label {
+      display: unset;
+    }
+  }
 }
 
+#input-checkout-checkout_back,
+#input-checkout-confirm_back {
+  margin-top: 1em;
+}
 
-#input-checkout-checkout_back:after {
+#input-checkout-checkout_back:after,
+#input-checkout-confirm_back:after {
   font-family: 'cart';
   content: '\e812';
   margin-left: 0.5em;
 }
 
 
-#input-checkout-next {
+#input-checkout-next,
+#input-checkout-finish {
   float: right;
+  margin-top: 1em;
 }
-#input-checkout-next[value]:before {
+#input-checkout-next:before,
+#input-checkout-finish:before {
   font-family: 'cart';
   content: '\e811';
   margin-right: 0.5em;

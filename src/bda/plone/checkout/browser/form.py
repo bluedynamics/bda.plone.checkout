@@ -113,7 +113,7 @@ class CartSummary(FieldsProvider):
             'text': _('heading_cart_summary', 'Cart')})
         compound['overview'] = factory('tag', props={
             'structural': True,
-            'class': 'cart_overview',
+            'class': 'cart_overview checkout_cart_overview clearfix',
             'tag': 'div',
             'text': self.context.restrictedTraverse('@@cart_overview')()})
 
@@ -335,7 +335,7 @@ class CheckoutForm(Form, FormContext):
                 'handler': None,
                 'next': self.confirm_back})
             self.form['finish'] = factory('submit', props={
-                'class': 'prevent_if_no_longer_available',
+                'class': 'prevent_if_no_longer_available context',
                 'label': _('finish', 'Order now'),
                 'action': 'finish',
                 'handler': self.finish,
