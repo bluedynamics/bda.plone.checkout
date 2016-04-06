@@ -3,23 +3,23 @@
           i18n:domain="bda.plone.checkout">
 
   <records prefix="plone.resources/bda-plone-checkout"
-            interface='Products.CMFPlone.interfaces.IResourceRegistry'>
-     <value key="js">++resource++bda.plone.checkout.js</value>
-     <value key="css">
-        <element>++resource++bda.plone.checkout.less</element>
-     </value>
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="js">++resource++bda.plone.checkout.js</value>
+    <value key="css">
+      <element>++resource++bda.plone.checkout.less</element>
+    </value>
   </records>
 
-  <records prefix="plone.bundles/bda-plone-checkout-bundle"
-            interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+  <records prefix="plone.bundles/bda-plone-checkout"
+           interface='Products.CMFPlone.interfaces.IBundleRegistry'>
     <value key="resources">
       <element>bda-plone-checkout</element>
     </value>
     <value key="enabled">True</value>
     <value key="compile">True</value>
-    <value key="jscompilation">++plone++bda.plone.checkout.compiled/checkout.css</value>
-    <value key="csscompilation">++plone++bda.plone.checkout.compiled/checkout.js</value>
+    <value key="jscompilation">++plone++bda.plone.checkout/checkout.css</value>
+    <value key="csscompilation">++plone++bda.plone.checkout/checkout.js</value>
     <value key="last_compilation">2016-03-11 18:00:00</value>
-   </records>
+  </records>
 
 </registry>

@@ -1,49 +1,55 @@
 <configure xmlns="http://namespaces.zope.org/zope"
            xmlns:plone="http://namespaces.plone.org/plone"
-           xmlns:browser="http://namespaces.zope.org/browser">
+           xmlns:browser="http://namespaces.zope.org/browser"
+           xmlns:zcml="http://namespaces.zope.org/zcml">
 
-  <!-- publish resource files -->
+  <!-- checkout views -->
+  <browser:page
+    for="*"
+    name="checkout"
+    template="view.pt"
+    permission="zope2.View"
+    layer="..interfaces.ICheckoutExtensionLayer"/>
+
+  <browser:page
+    for="*"
+    name="checkoutform"
+    class=".form.CheckoutForm"
+    permission="zope2.View"
+    layer="..interfaces.ICheckoutExtensionLayer"/>
+
+  <browser:page
+    for="*"
+    name="cart_overview"
+    class="bda.plone.cart.browser.CartView"
+    template="cart_overview.pt"
+    permission="zope2.View"
+    layer="..interfaces.ICheckoutExtensionLayer"/>
+
+  <!-- generic resources -->
+  <browser:resource
+    name="bda.plone.checkout.js"
+    file="checkout.js"
+    layer="..interfaces.ICheckoutExtensionLayer"/>
+
+  <!-- plone 4 resources -->
+  <browser:resource
+    zcml:condition="not-have plone-5"
+    name="bda.plone.checkout.css"
+    file="checkout_p4.css"
+    layer="..interfaces.ICheckoutExtensionLayer"/>
+
+  <!-- plone 5 resources -->
+  <browser:resource
+    zcml:condition="have plone-5"
+    name="bda.plone.checkout.less"
+    file="checkout_p5.less"
+    layer="..interfaces.ICheckoutExtensionLayer" />
+
   <plone:static
-      directory="compiled"
-      type="plone"
-      name="bda.plone.checkout.compiled"
-  />
-
-  <browser:resource
-      name="bda.plone.checkout.js"
-      file="checkout.js"
-      layer="..interfaces.ICheckoutExtensionLayer"/>
-
-  <browser:resource
-      name="bda.plone.checkout.css"
-      file="checkout.css"
-      layer="..interfaces.ICheckoutExtensionLayer"/>
-
-  <browser:resource
-      name="bda.plone.checkout.less"
-      file="checkout.less"
-      layer="..interfaces.ICheckoutExtensionLayer" />
-
-  <browser:page
-      for="*"
-      name="checkout"
-      template="view.pt"
-      permission="zope2.View"
-      layer="..interfaces.ICheckoutExtensionLayer"/>
-
-  <browser:page
-      for="*"
-      name="checkoutform"
-      class=".form.CheckoutForm"
-      permission="zope2.View"
-      layer="..interfaces.ICheckoutExtensionLayer"/>
-
-  <browser:page
-      for="*"
-      name="cart_overview"
-      class="bda.plone.cart.browser.CartView"
-      template="cart_overview.pt"
-      permission="zope2.View"
-      layer="..interfaces.ICheckoutExtensionLayer"/>
+    zcml:condition="have plone-5"
+    directory="compiled"
+    type="plone"
+    name="bda.plone.checkout" />
 
 </configure>
