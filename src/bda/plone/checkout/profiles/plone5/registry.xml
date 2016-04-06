@@ -17,8 +17,8 @@
     </value>
     <value key="enabled">True</value>
     <value key="compile">True</value>
-    <value key="jscompilation">++plone++bda.plone.checkout/checkout.css</value>
-    <value key="csscompilation">++plone++bda.plone.checkout/checkout.js</value>
+    <value key="jscompilation">++plone++bda.plone.checkout/checkout.js</value>
+    <value key="csscompilation">++plone++bda.plone.checkout/checkout.css</value>
     <value key="last_compilation">2016-03-11 18:00:00</value>
   </records>
 
