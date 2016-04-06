@@ -46,10 +46,16 @@
     file="checkout_p5.less"
     layer="..interfaces.ICheckoutExtensionLayer" />
 
-  <plone:static
+  <browser:resource
     zcml:condition="have plone-5"
-    directory="compiled"
-    type="plone"
-    name="bda.plone.checkout" />
+    name="bda.plone.checkout.css"
+    file="checkout_p5.css"
+    layer="..interfaces.ICheckoutExtensionLayer" />
+
+  <browser:resource
+    zcml:condition="have plone-5"
+    name="bda.plone.checkout.css.map"
+    file="checkout_p5.css.map"
+    layer="..interfaces.ICheckoutExtensionLayer" />
 
 </configure>
