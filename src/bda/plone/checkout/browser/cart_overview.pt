@@ -1,6 +1,6 @@
 <div id="cart"
      i18n:domain="bda.plone.cart"
-     tal:attributes="data-context-url context/absolute_url">
+     tal:attributes="data-context-url view/context_url">
 
   <span style="display:none;"
         class="cart_execution_context">checkout</span>
