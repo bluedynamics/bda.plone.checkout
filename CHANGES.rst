@@ -5,9 +5,13 @@ Changelog
 0.6.dev0
 --------
 
-- added data-context-url for sane cartData and validate_cart_item calls on Plone 5
-- Plone 5 update
+- added ``data-context-url`` for sane ``cartData`` and ``validate_cart_item``
+  calls on Plone 5.
   [agitator]
+
+
+- Plone 5 update.
+  [rnix, agitator]
 
 
 0.5.dev0
