@@ -39,6 +39,9 @@
   display: inline-block;
   margin-left: 1em;
 }
+.template-checkout .plone-modal-footer {
+  display: none!important;
+}
 #input-checkout-checkout_back,
 #input-checkout-confirm_back {
   margin-top: 1em;
