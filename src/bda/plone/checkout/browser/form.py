@@ -270,14 +270,19 @@ class AcceptTermsAndConditions(FieldsProvider):
         nav_root = plone.api.portal.get_navigation_root(self.context)
         base = nav_root.absolute_url()
         # XXX: url from config
-        tac_url = '%s/%s' % (base, TERMS_AND_CONDITONS_ID)
+        tac_url = '{}/{}'.format(base, TERMS_AND_CONDITONS_ID)
         tac_label = _('terms_and_conditions', 'Terms and conditions')
         tac_label = translate(tac_label, context=self.request)
-        tac_link = '<a href="%s" class="terms_and_conditions">%s</a>'
-        tac_link = tac_link % (tac_url, tac_label)
-        tac_text = _('terms_and_conditions_text',
-                     'I have read and accept the ${terms_and_conditions}',
-                     mapping={'terms_and_conditions': tac_link})
+        tac_link = (
+            '<a href="{}"'
+            '   class="terms_and_conditions pat-plone-modal"'
+            '   data-pat-plone-modal="width: 75%;">{}</a>'
+        ).format(tac_url, tac_label)
+        tac_text = _(
+            'terms_and_conditions_text',
+            'I have read and accept the ${terms_and_conditions}',
+            mapping={'terms_and_conditions': tac_link}
+        )
         return tac_text
 
     @property
