@@ -274,9 +274,9 @@ class AcceptTermsAndConditions(FieldsProvider):
         tac_label = _('terms_and_conditions', 'Terms and conditions')
         tac_label = translate(tac_label, context=self.request)
         tac_link = (
-            '<a href="{}"'
-            '   class="terms_and_conditions pat-plone-modal"'
-            '   data-pat-plone-modal="width: 75%;">{}</a>'
+            u'<a href="{}"'
+            u'   class="terms_and_conditions pat-plone-modal"'
+            u'   data-pat-plone-modal="width: 75%;">{}</a>'
         ).format(tac_url, tac_label)
         tac_text = _(
             'terms_and_conditions_text',
