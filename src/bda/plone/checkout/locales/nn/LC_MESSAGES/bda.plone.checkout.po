@@ -1,0 +1,190 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Bda plone checkout norsk\n"
+"POT-Creation-Date: 2014-04-30 09:09+0000\n"
+"PO-Revision-Date: 2017-02-06 15:39+0100\n"
+"Last-Translator: Espen Moe-Nilssen <espen@medialog.no>\n"
+"Language-Team: Espen Moe-Nilssen <espen@medialog.no>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language-Code: no\n"
+"Language-Name: Norsk\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+"Language: nn_NO\n"
+"X-Generator: Poedit 1.5.7\n"
+
+#. Default: "Back"
+#: browser/form.py:312
+msgid "back"
+msgstr "Tilbake"
+
+#. Default: "Your Order"
+#: browser/view.pt:20
+msgid "checkout"
+msgstr "Din bestilling"
+
+# City is required
+msgid "city_is_required"
+msgstr "Poststed er påkrevd"
+
+# Country is required
+msgid "country_is_required"
+msgstr "Land er påkrevd"
+
+# Email is required
+msgid "email_is_required"
+msgstr "Epost er påkrevd"
+
+#. Default: "Please accept our terms and conditions."
+#: browser/form.py:286
+msgid "error_accept_terms_and_conditiond"
+msgstr "Vennligst aksepter betalingsvilkårene."
+
+#. Default: "Female"
+#: vocabularies.py:12
+msgid "female"
+msgstr "Fru"
+
+#. Default: "Order now"
+#: browser/form.py:331
+msgid "finish"
+msgstr "Bestill nå?"
+
+# First Name is required
+msgid "firstname_is_required"
+msgstr "Fornavn er påkrevd"
+
+# Accept terms
+msgid "heading_accept_terms"
+msgstr ""
+
+# Billing Address
+msgid "heading_billing_address"
+msgstr "Regningsadresse"
+
+#. Default: "Cart"
+#: browser/form.py:112
+msgid "heading_cart_summary"
+msgstr "Handlekurv"
+
+# Delivery Address
+msgid "heading_delivery_address"
+msgstr "Leveringsadresse"
+
+# Additional information
+msgid "heading_order_comment"
+msgstr "Ekstra informasjon"
+
+# Payment Selection
+msgid "heading_payment_selection"
+msgstr "Betalingsmåte"
+
+# Personal Data
+msgid "heading_personal_data"
+msgstr "Personlige data"
+
+# Shipping
+msgid "heading_shipping_selection"
+msgstr "Frakt"
+
+# Delivery address differs from shipping address?
+msgid "label_alternative_delivery"
+msgstr "Leveringsadressen er forskjellig fra betalingsadr."
+
+# City
+msgid "label_city"
+msgstr "Poststed"
+
+# Comment
+msgid "label_comment"
+msgstr "Kommentar"
+
+# Company
+msgid "label_company"
+msgstr "Firma"
+
+# Country
+msgid "label_country"
+msgstr "Land"
+
+# Email
+msgid "label_email"
+msgstr "E-post"
+
+# Vorname
+msgid "label_firstname"
+msgstr "Fornavn"
+
+# Gender
+msgid "label_gender"
+msgstr "Kjønn"
+
+# Last Name
+msgid "label_lastname"
+msgstr "Etternavn"
+
+# Phone
+msgid "label_phone"
+msgstr "Telefon"
+
+# Street
+msgid "label_street"
+msgstr "Adresse"
+
+# ZIP
+msgid "label_zip"
+msgstr "Postnummer"
+
+# Last Name is required
+msgid "lastname_is_required"
+msgstr "Etternavn er påkrevd"
+
+#. Default: "Male"
+#: vocabularies.py:11
+msgid "male"
+msgstr "Her"
+
+#. Default: "Next"
+#: browser/form.py:318
+msgid "next"
+msgstr "Videre"
+
+#. Default: "No"
+#: browser/form.py:167
+msgid "no"
+msgstr "Nei"
+
+#. Default: "not set"
+#: browser/form.py:168
+msgid "not set"
+msgstr "Ikke valgt"
+
+# Phone is required
+msgid "phone_is_required"
+msgstr "Telefonnr. er påkrevd"
+
+# Street is required
+msgid "street_is_required"
+msgstr "Gateadresse er påkrevd"
+
+#. Default: "Terms and conditions"
+#: browser/form.py:268
+msgid "terms_and_conditions"
+msgstr "Salgsbetingelsene"
+
+#. Default: "I have read and accept the ${terms_and_conditions}"
+#: browser/form.py:272
+msgid "terms_and_conditions_text"
+msgstr "Jeg har lest og forstått ${terms_and_conditions}"
+
+#. Default: "Yes"
+#: browser/form.py:166
+msgid "yes"
+msgstr "Ja"
+
+# ZIP is required
+msgid "zip_is_required"
+msgstr "Postnummer er påkrevd"
