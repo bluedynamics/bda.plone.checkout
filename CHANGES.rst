@@ -2,20 +2,23 @@
 Changelog
 =========
 
-0.6.dev0
---------
+1.0a1 (unreleased)
+------------------
+
+- Introduce ``bda.plone.checkout: Perform Checkout`` permission and bind
+  checkout related views to it.
+  [rnix]
 
 - added ``data-context-url`` for sane ``cartData`` and ``validate_cart_item``
   calls on Plone 5.
   [agitator]
 
-
 - Plone 5 update.
   [rnix, agitator]
 
 
-0.5.dev0
---------
+0.5
+---
 
 - JSHint JavaScript.
   [thet]

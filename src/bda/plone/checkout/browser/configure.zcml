@@ -8,14 +8,14 @@
     for="*"
     name="checkout"
     template="view.pt"
-    permission="zope2.View"
+    permission="bda.plone.checkout.PerformCheckout"
     layer="..interfaces.ICheckoutExtensionLayer"/>
 
   <browser:page
     for="*"
     name="checkoutform"
     class=".form.CheckoutForm"
-    permission="zope2.View"
+    permission="bda.plone.checkout.PerformCheckout"
     layer="..interfaces.ICheckoutExtensionLayer"/>
 
   <browser:page
@@ -23,7 +23,7 @@
     name="cart_overview"
     class="bda.plone.cart.browser.CartView"
     template="cart_overview.pt"
-    permission="zope2.View"
+    permission="bda.plone.checkout.PerformCheckout"
     layer="..interfaces.ICheckoutExtensionLayer"/>
 
   <!-- generic resources -->

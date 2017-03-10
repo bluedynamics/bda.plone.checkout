@@ -1,0 +1,9 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  i18n_domain="bda.plone.checkout">
+
+  <permission
+    id="bda.plone.checkout.PerformCheckout"
+    title="bda.plone.checkout: Perform Checkout" />
+
+</configure>
