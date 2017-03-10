@@ -12,6 +12,7 @@
     <i18n:registerTranslations directory="locales" />
   </configure>
 
+  <include file="permissions.zcml" />
   <include file="profiles.zcml" />
   <include package=".browser" />
 

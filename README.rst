@@ -103,6 +103,27 @@ for your browserlayer or skinlayer::
     .. _`bda.plone.orders`: https://github.com/bluedynamics/bda.plone.orders
 
 
+Permissions
+===========
+
+bda.plone.checkout.PerformCheckout
+----------------------------------
+
+This permission controls whether a user can actually perform the checkout
+process. Checkout related views are bound to this permission, thus, a visitor
+without this permission granted gets redirected to the login / registration
+form.
+
+By default, this permission is set for roles:
+
+* Manager
+* Site Administrator
+* Customer
+
+In order to enable non-customers or anonymous users to perform the checkout,
+edit ``rolemap.xml`` in your integration package as needed.
+
+
 Create translations
 ===================
 
