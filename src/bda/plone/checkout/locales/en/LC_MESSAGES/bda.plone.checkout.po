@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bda.plone.checkout\n"
-"POT-Creation-Date: 2014-04-30 09:09+0000\n"
+"POT-Creation-Date: 2017-03-11 12:46+0000\n"
 "PO-Revision-Date: 2013-06-10 11:40+0100\n"
 "Last-Translator: Espen Moe-Nilssen <espen@medialog.no>\n"
 "Language-Team: \n"
@@ -16,9 +16,17 @@ msgstr ""
 "X-Generator: Poedit 1.5.5\n"
 
 #. Default: "Back"
-#: ./browser/form.py:312
+#: ./browser/form.py:323
 msgid "back"
 msgstr "Back"
+
+#: ./profiles.zcml:14
+msgid "bda.plone.checkout"
+msgstr ""
+
+#: ./profiles.zcml:29
+msgid "bda.plone.checkout base"
+msgstr ""
 
 #. Default: "Your Order"
 #: ./browser/view.pt:20
@@ -38,7 +46,7 @@ msgid "email_is_required"
 msgstr "Email is required"
 
 #. Default: "Please accept our terms and conditions."
-#: ./browser/form.py:286
+#: ./browser/form.py:297
 msgid "error_accept_terms_and_conditiond"
 msgstr "Please accept our terms and conditions."
 
@@ -48,7 +56,7 @@ msgid "female"
 msgstr "Mrs."
 
 #. Default: "Order now"
-#: ./browser/form.py:331
+#: ./browser/form.py:344
 msgid "finish"
 msgstr "Order now"
 
@@ -65,7 +73,7 @@ msgid "heading_billing_address"
 msgstr "Billing Address"
 
 #. Default: "Cart"
-#: ./browser/form.py:112
+#: ./browser/form.py:113
 msgid "heading_cart_summary"
 msgstr "Cart"
 
@@ -147,17 +155,17 @@ msgid "male"
 msgstr "Mr."
 
 #. Default: "Next"
-#: ./browser/form.py:318
+#: ./browser/form.py:330
 msgid "next"
 msgstr "Next"
 
 #. Default: "No"
-#: ./browser/form.py:167
+#: ./browser/form.py:168
 msgid "no"
 msgstr "No"
 
 #. Default: "not set"
-#: ./browser/form.py:168
+#: ./browser/form.py:169
 msgid "not set"
 msgstr "not set"
 
@@ -170,21 +178,20 @@ msgid "street_is_required"
 msgstr "Street is required"
 
 #. Default: "Terms and conditions"
-#: ./browser/form.py:268
+#: ./browser/form.py:274
 msgid "terms_and_conditions"
 msgstr "terms and conditions"
 
 #. Default: "I have read and accept the ${terms_and_conditions}"
-#: ./browser/form.py:272
+#: ./browser/form.py:281
 msgid "terms_and_conditions_text"
 msgstr "I have read and accept the ${terms_and_conditions}"
 
 #. Default: "Yes"
-#: ./browser/form.py:166
+#: ./browser/form.py:167
 msgid "yes"
 msgstr "Yes"
 
 #. Default: "ZIP is required"
 msgid "zip_is_required"
 msgstr "ZIP is required"
-

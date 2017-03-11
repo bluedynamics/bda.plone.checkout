@@ -5,6 +5,9 @@ Changelog
 1.0a1 (unreleased)
 ------------------
 
+- Display cart item discount in cart overview.
+  [rnix]
+
 - Introduce ``bda.plone.checkout: Perform Checkout`` permission and bind
   checkout related views to it.
   [rnix]

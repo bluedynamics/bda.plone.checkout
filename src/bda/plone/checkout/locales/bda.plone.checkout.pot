@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-04-30 09:09+0000\n"
+"POT-Creation-Date: 2017-03-11 12:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,8 +15,16 @@ msgstr ""
 "Domain: DOMAIN\n"
 
 #. Default: "Back"
-#: ./browser/form.py:312
+#: ./browser/form.py:323
 msgid "back"
+msgstr ""
+
+#: ./profiles.zcml:14
+msgid "bda.plone.checkout"
+msgstr ""
+
+#: ./profiles.zcml:29
+msgid "bda.plone.checkout base"
 msgstr ""
 
 #. Default: "Your Order"
@@ -37,7 +45,7 @@ msgid "email_is_required"
 msgstr ""
 
 #. Default: "Please accept our terms and conditions."
-#: ./browser/form.py:286
+#: ./browser/form.py:297
 msgid "error_accept_terms_and_conditiond"
 msgstr ""
 
@@ -47,7 +55,7 @@ msgid "female"
 msgstr ""
 
 #. Default: "Order now"
-#: ./browser/form.py:331
+#: ./browser/form.py:344
 msgid "finish"
 msgstr ""
 
@@ -64,7 +72,7 @@ msgid "heading_billing_address"
 msgstr ""
 
 #. Default: "Cart"
-#: ./browser/form.py:112
+#: ./browser/form.py:113
 msgid "heading_cart_summary"
 msgstr ""
 
@@ -146,17 +154,17 @@ msgid "male"
 msgstr ""
 
 #. Default: "Next"
-#: ./browser/form.py:318
+#: ./browser/form.py:330
 msgid "next"
 msgstr ""
 
 #. Default: "No"
-#: ./browser/form.py:167
+#: ./browser/form.py:168
 msgid "no"
 msgstr ""
 
 #. Default: "not set"
-#: ./browser/form.py:168
+#: ./browser/form.py:169
 msgid "not set"
 msgstr ""
 
@@ -169,21 +177,20 @@ msgid "street_is_required"
 msgstr ""
 
 #. Default: "Terms and conditions"
-#: ./browser/form.py:268
+#: ./browser/form.py:274
 msgid "terms_and_conditions"
 msgstr ""
 
 #. Default: "I have read and accept the ${terms_and_conditions}"
-#: ./browser/form.py:272
+#: ./browser/form.py:281
 msgid "terms_and_conditions_text"
 msgstr ""
 
 #. Default: "Yes"
-#: ./browser/form.py:166
+#: ./browser/form.py:167
 msgid "yes"
 msgstr ""
 
 # ZIP is required
 msgid "zip_is_required"
 msgstr ""
-
