@@ -37,11 +37,20 @@
       padding: 0 1.5em;
       background: @plone-input-bg;
     }
-    label {
+    #field-checkout-personal_data-firstname,
+    #field-checkout-personal_data-email,
+    #field-checkout-billing_address-zip,
+    #field-checkout-delivery_address-firstname,
+    #field-checkout-delivery_address-zip {
+      float:left;
+      margin-right: 0.5em;
+    }
+  label {
       display: none;
     }
     .field {
       margin-bottom: 0.35em;
+      margin-right: 0.5em;
     }
     #field-checkout-accept_terms_and_conditions-accept label {
       display: unset;

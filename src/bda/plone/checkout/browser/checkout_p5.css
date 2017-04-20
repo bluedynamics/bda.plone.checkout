@@ -26,11 +26,20 @@
   padding: 0 1.5em;
   background: #fff;
 }
+.template-checkout .mode_display #field-checkout-personal_data-firstname,
+.template-checkout .mode_display #field-checkout-personal_data-email,
+.template-checkout .mode_display #field-checkout-billing_address-zip,
+.template-checkout .mode_display #field-checkout-delivery_address-firstname,
+.template-checkout .mode_display #field-checkout-delivery_address-zip {
+  float: left;
+  margin-right: 0.5em;
+}
 .template-checkout .mode_display label {
   display: none;
 }
 .template-checkout .mode_display .field {
   margin-bottom: 0.35em;
+  margin-right: 0.5em;
 }
 .template-checkout .mode_display #field-checkout-accept_terms_and_conditions-accept label {
   display: unset;
