@@ -23,7 +23,9 @@ You'll use the ``FieldsProvider`` objects that you're happy with and replace
 those that need an adaption.
 
 In this example, we'll add an additional field ``uid`` to the ``PersonalData``
-provider an re-use the others.::
+provider an re-use the others:
+
+.. code-block:: python
 
     from zope.i18nmessageid import MessageFactory
     from bda.plone.checkout.browser import form as coform
@@ -62,9 +64,10 @@ for rendering the checkout form.
 .. _`Yet Another FOrm WIdget Library`: http://docs.yafowil.info/
 
 We'll append a new field `uid` at the end of the ``personal data``
-section::
+section:
 
-    ...
+.. code-block:: yaml
+
     - company:
         factory: "#field:text"
         value: context.get_value
@@ -85,7 +88,9 @@ you're better off to add you translations to a separtate
 ``bda.plone.checkout.po`` file in your package's locales)
 
 Now register your customized form by overriding the browser page
-for your browserlayer or skinlayer::
+for your browserlayer or skinlayer:
+
+.. code-block:: xml
 
     <browser:page
       for="*"
