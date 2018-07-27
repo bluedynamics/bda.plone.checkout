@@ -1,4 +1,4 @@
-import unittest2 as unittest
+import unittest
 from bda.plone.checkout.tests import Checkout_INTEGRATION_TESTING
 from bda.plone.checkout.tests import set_browserlayer
 

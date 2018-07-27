@@ -5,6 +5,9 @@ Changelog
 1.0a1 (unreleased)
 ------------------
 
+- Replace unittest2 with untittest
+  [llisa123]
+  
 - Display cart item discount in cart overview.
   [rnix]
 
