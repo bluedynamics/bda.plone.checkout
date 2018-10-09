@@ -28,10 +28,11 @@ ENABLED_COUNTRIES = [
 def country_vocabulary():
     """Vocabulary for countries from ISO3166 source.
     """
+    countries_numeric = pycountry.countries.indices['numeric']
     ret = list()
-    for cid, name in AVAILABLE_COUNTRIES:
-        if cid in ENABLED_COUNTRIES:
-            ret.append((cid, name))
+    for country in ENABLED_COUNTRIES:
+        if country in countries_numeric:
+            ret.append((country, safe_unicode(countries_numeric[country].name)))
     return ret
 
 
