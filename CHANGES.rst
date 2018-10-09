@@ -5,9 +5,12 @@ Changelog
 1.0a1 (unreleased)
 ------------------
 
+- Use sort order of ENABLED_COUNTRIES
+  [agitator]
+
 - Replace unittest2 with untittest
   [llisa123]
-  
+
 - Display cart item discount in cart overview.
   [rnix]
 
