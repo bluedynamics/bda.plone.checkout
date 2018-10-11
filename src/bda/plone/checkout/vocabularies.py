@@ -32,7 +32,9 @@ def country_vocabulary():
     ret = list()
     for country in ENABLED_COUNTRIES:
         if country in countries_numeric:
-            ret.append((country, safe_unicode(countries_numeric[country].name)))
+            ret.append(
+                (country, safe_unicode(_c(countries_numeric[country].name)))
+            )
     return ret
 
 
