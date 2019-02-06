@@ -23,14 +23,6 @@
             toggle($(this));
         });
 
-        // terms and conditions overlay in P4.
-        if ($('body').data('pat-plone-model') !== undefined) {
-            $('a.terms_and_conditions').prepOverlay({
-                subtype: 'ajax',
-                filter: common_content_filter,
-                cssclass: 'overlay-terms-and-condition'
-            });
-        }
     });
 
 }(jQuery));
