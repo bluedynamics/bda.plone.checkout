@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bda.plone.checkout\n"
-"POT-Creation-Date: 2017-03-11 12:46+0000\n"
+"POT-Creation-Date: 2019-02-10 13:39+0000\n"
 "PO-Revision-Date: 2014-09-04 14:32+0100\n"
 "Last-Translator: Peter Holzer <peter.holzer@agitator.com>\n"
 "Language-Team: Peter Holzer <peter.holzer@agitator.com>\n"
@@ -22,10 +22,6 @@ msgstr "Retour"
 
 #: ./profiles.zcml:14
 msgid "bda.plone.checkout"
-msgstr ""
-
-#: ./profiles.zcml:29
-msgid "bda.plone.checkout base"
 msgstr ""
 
 #. Default: "Your Order"

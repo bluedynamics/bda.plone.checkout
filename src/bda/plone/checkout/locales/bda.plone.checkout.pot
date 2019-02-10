@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2017-03-11 12:46+0000\n"
+"POT-Creation-Date: 2019-02-10 13:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,10 +21,6 @@ msgstr ""
 
 #: ./profiles.zcml:14
 msgid "bda.plone.checkout"
-msgstr ""
-
-#: ./profiles.zcml:29
-msgid "bda.plone.checkout base"
 msgstr ""
 
 #. Default: "Your Order"
