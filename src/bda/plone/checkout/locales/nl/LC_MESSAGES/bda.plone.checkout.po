@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bda.plone.checkout\n"
-"POT-Creation-Date: 2017-03-11 12:46+0000\n"
+"POT-Creation-Date: 2019-02-10 13:39+0000\n"
 "PO-Revision-Date: 2015-01-28 15:13+0100\n"
 "Last-Translator: INTK <info@intk.com>\n"
 "Language-Team: \n"
@@ -23,10 +23,6 @@ msgstr "Terug"
 
 #: ./profiles.zcml:14
 msgid "bda.plone.checkout"
-msgstr ""
-
-#: ./profiles.zcml:29
-msgid "bda.plone.checkout base"
 msgstr ""
 
 #. Default: "Your Order"
