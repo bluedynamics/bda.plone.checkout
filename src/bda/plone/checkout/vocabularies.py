@@ -1,7 +1,8 @@
-import pycountry
-from Products.CMFPlone.utils import safe_unicode
 from bda.plone.checkout import message_factory as _
+from Products.CMFPlone.utils import safe_unicode
 from zope.i18nmessageid import MessageFactory
+
+import pycountry
 
 
 _c = MessageFactory("iso3166")

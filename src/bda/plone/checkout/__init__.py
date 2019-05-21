@@ -1,17 +1,18 @@
-import logging
-from node.utils import UNSET
-from node.utils import instance_property
-from zope.component import adapter
-from zope.i18nmessageid import MessageFactory
-from zope.interface import Interface
-from zope.interface import implementer
-from zope.publisher.interfaces.browser import IBrowserRequest
 from bda.plone.cart import deletecookie
 from bda.plone.checkout.interfaces import CheckoutError
 from bda.plone.checkout.interfaces import ICheckoutAdapter
 from bda.plone.checkout.interfaces import ICheckoutDone
 from bda.plone.checkout.interfaces import ICheckoutEvent
 from bda.plone.checkout.interfaces import ICheckoutFormPresets
+from node.utils import instance_property
+from node.utils import UNSET
+from zope.component import adapter
+from zope.i18nmessageid import MessageFactory
+from zope.interface import implementer
+from zope.interface import Interface
+from zope.publisher.interfaces.browser import IBrowserRequest
+
+import logging
 
 
 # what is this?

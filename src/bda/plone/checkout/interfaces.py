@@ -1,7 +1,7 @@
-from zope.interface import Attribute
-from zope.interface import Interface
 from bda.plone.cart.interfaces import ICartExtensionLayer
 from bda.plone.payment.interfaces import IPaymentExtensionLayer
+from zope.interface import Attribute
+from zope.interface import Interface
 
 
 class CheckoutError(Exception):

@@ -8,7 +8,7 @@ Changelog
 - Reflect latest changes in cart/shipping.
   [jensens]
 
-- Code style black.
+- Code style black. isort.
   [jensens]
 
 - Update version and classifiers - 2.x targets Plone 5.1/5.2 without Archetypes

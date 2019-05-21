@@ -25,6 +25,7 @@ from zope.interface import implementer
 import plone.api
 import transaction
 
+
 TERMS_AND_CONDITONS_ID = "agb"
 
 

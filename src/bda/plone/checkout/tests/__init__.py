@@ -1,8 +1,8 @@
-from zope.interface import alsoProvides
+from bda.plone.checkout.interfaces import ICheckoutExtensionLayer
 from plone.app.testing import IntegrationTesting
 from plone.app.testing import PLONE_FIXTURE
 from plone.app.testing import PloneSandboxLayer
-from bda.plone.checkout.interfaces import ICheckoutExtensionLayer
+from zope.interface import alsoProvides
 
 
 def set_browserlayer(request):

@@ -1,6 +1,7 @@
-import os
 from setuptools import find_packages
 from setuptools import setup
+
+import os
 
 
 version = "2.0.dev0"
