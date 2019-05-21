@@ -4,37 +4,36 @@ from bda.plone.checkout import message_factory as _
 from zope.i18nmessageid import MessageFactory
 
 
-_c = MessageFactory('iso3166')
+_c = MessageFactory("iso3166")
 
 
 def gender_vocabulary():
-    return [('male', _('male', default=u'Male')),
-            ('female', _('female', default=u'Female'))]
+    return [
+        ("male", _("male", default=u"Male")),
+        ("female", _("female", default=u"Female")),
+    ]
 
 
 AVAILABLE_COUNTRIES = [
-    (country.numeric, safe_unicode(_c(country.name))) \
-        for country in pycountry.countries
+    (country.numeric, safe_unicode(_c(country.name))) for country in pycountry.countries
 ]
 # patch this list to modify available countries
 ENABLED_COUNTRIES = [
-    '040', # Austria
-    '756', # Switzerland
-    '276', # Germany
-    '380', # Italy
+    "040",  # Austria
+    "756",  # Switzerland
+    "276",  # Germany
+    "380",  # Italy
 ]
 
 
 def country_vocabulary():
     """Vocabulary for countries from ISO3166 source.
     """
-    countries_numeric = pycountry.countries.indices['numeric']
+    countries_numeric = pycountry.countries.indices["numeric"]
     ret = list()
     for country in ENABLED_COUNTRIES:
         if country in countries_numeric:
-            ret.append(
-                (country, safe_unicode(_c(countries_numeric[country].name)))
-            )
+            ret.append((country, safe_unicode(_c(countries_numeric[country].name))))
     return ret
 
 

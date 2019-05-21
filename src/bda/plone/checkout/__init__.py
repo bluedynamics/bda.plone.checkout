@@ -18,13 +18,12 @@ from bda.plone.checkout.interfaces import ICheckoutFormPresets
 CheckoutError  # API import / pep 8 pleasure.
 
 
-message_factory = MessageFactory('bda.plone.checkout')
-logger = logging.getLogger('bda.plone.checkout')
+message_factory = MessageFactory("bda.plone.checkout")
+logger = logging.getLogger("bda.plone.checkout")
 
 
 @implementer(ICheckoutEvent)
 class CheckoutEvent(object):
-
     def __init__(self, context, request, uid):
         self.context = context
         self.request = request
@@ -39,7 +38,6 @@ class CheckoutDone(CheckoutEvent):
 @implementer(ICheckoutAdapter)
 @adapter(Interface, IBrowserRequest)
 class CheckoutAdapter(object):
-
     def __init__(self, context, request):
         self.context = context
         self.request = request
@@ -51,9 +49,9 @@ class CheckoutAdapter(object):
                 continue
             fields = data.get(provider.fields_name, dict())
             for key in fields:
-                name = '%s.%s' % (provider.fields_name, key)
+                name = "%s.%s" % (provider.fields_name, key)
                 vessel[name] = fields[key].extracted
-        return 'fake_uid'
+        return "fake_uid"
 
     def clear_session(self):
         deletecookie(self.request)
@@ -64,18 +62,22 @@ class CheckoutAdapter(object):
 
         Form data gets written to this object.
         """
-        raise NotImplementedError(u"Abstract CheckoutAdapter does not "
-                                  u"implement ``vessel``.")
+        raise NotImplementedError(
+            u"Abstract CheckoutAdapter does not " u"implement ``vessel``."
+        )
 
     @property
     def skip_payment(self):
-        raise NotImplementedError(u"Abstract CheckoutAdapter does not "
-                                  u"implement ``skip_payment``.")
+        raise NotImplementedError(
+            u"Abstract CheckoutAdapter does not " u"implement ``skip_payment``."
+        )
 
     @property
     def skip_payment_redirect_url(self):
-        raise NotImplementedError(u"Abstract CheckoutAdapter does not "
-                                  u"implement ``skip_payment_redirect_url``.")
+        raise NotImplementedError(
+            u"Abstract CheckoutAdapter does not "
+            u"implement ``skip_payment_redirect_url``."
+        )
 
 
 @implementer(ICheckoutFormPresets)

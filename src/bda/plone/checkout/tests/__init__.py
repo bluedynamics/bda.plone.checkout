@@ -19,11 +19,11 @@ class CheckoutLayer(PloneSandboxLayer):
 
     def setUpZope(self, app, configurationContext):
         import bda.plone.checkout
-        self.loadZCML(package=bda.plone.checkout,
-                      context=configurationContext)
+
+        self.loadZCML(package=bda.plone.checkout, context=configurationContext)
 
     def setUpPloneSite(self, portal):
-        self.applyProfile(portal, 'bda.plone.checkout:default')
+        self.applyProfile(portal, "bda.plone.checkout:default")
 
     def tearDownZope(self, app):
         pass
@@ -31,5 +31,5 @@ class CheckoutLayer(PloneSandboxLayer):
 
 Checkout_FIXTURE = CheckoutLayer()
 Checkout_INTEGRATION_TESTING = IntegrationTesting(
-    bases=(Checkout_FIXTURE,),
-    name="Checkout:Integration")
+    bases=(Checkout_FIXTURE,), name="Checkout:Integration"
+)

@@ -34,6 +34,7 @@ class ICheckoutFormPresets(Interface):
 class IFieldsProvider(Interface):
     """Form fields provider for checkout.
     """
+
     fields_name = Attribute(u"Name of this fields provider.")
 
     skip = Attribute(u"Flag whether to skip form extension")
@@ -60,8 +61,10 @@ class ICheckoutSettings(Interface):
 class ICheckoutAdapter(Interface):
     """Checkout persistence adapter.
     """
-    vessel = Attribute(u"``zope.interface.mapping.IWriteMapping providing`` "
-                       u"instance.")
+
+    vessel = Attribute(
+        u"``zope.interface.mapping.IWriteMapping providing`` " u"instance."
+    )
 
     def save(providers, widget, data):
         """Save fields specific data.
@@ -79,6 +82,7 @@ class ICheckoutAdapter(Interface):
 class ICheckoutEvent(Interface):
     """Checkout related event.
     """
+
     context = Attribute(u"Context in which this event was triggered.")
 
     request = Attribute(u"Current request.")
