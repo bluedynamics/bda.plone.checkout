@@ -1,28 +1,29 @@
-import transaction
+from bda.plone.cart import cookie
+from bda.plone.cart.cart import get_data_provider
+from bda.plone.cart.shipping import Shippings
+from bda.plone.checkout import CheckoutDone
+from bda.plone.checkout import message_factory as _
+from bda.plone.checkout.interfaces import CheckoutError
+from bda.plone.checkout.interfaces import ICheckoutAdapter
+from bda.plone.checkout.interfaces import ICheckoutFormPresets
+from bda.plone.checkout.interfaces import ICheckoutSettings
+from bda.plone.checkout.interfaces import IFieldsProvider
+from bda.plone.checkout.vocabularies import country_vocabulary
+from bda.plone.checkout.vocabularies import gender_vocabulary
+from bda.plone.payment import Payments
+from yafowil.base import ExtractionError
+from yafowil.base import factory
+from yafowil.base import UNSET
+from yafowil.plone.form import Form
+from yafowil.yaml import parse_from_YAML
 from zExceptions import Redirect
 from zope.component import getMultiAdapter
 from zope.event import notify
 from zope.i18n import translate
 from zope.interface import implementer
-from yafowil.base import ExtractionError
-from yafowil.base import UNSET
-from yafowil.base import factory
-from yafowil.plone.form import Form
-from yafowil.yaml import parse_from_YAML
-from bda.plone.cart import readcookie
-from bda.plone.cart import get_data_provider
-from bda.plone.checkout import CheckoutDone
-from bda.plone.checkout import message_factory as _
-from bda.plone.checkout.interfaces import CheckoutError
-from bda.plone.checkout.interfaces import ICheckoutAdapter
-from bda.plone.checkout.interfaces import ICheckoutSettings
-from bda.plone.checkout.interfaces import ICheckoutFormPresets
-from bda.plone.checkout.interfaces import IFieldsProvider
-from bda.plone.checkout.vocabularies import country_vocabulary
-from bda.plone.checkout.vocabularies import gender_vocabulary
-from bda.plone.payment import Payments
-from bda.plone.shipping import Shippings
+
 import plone.api
+import transaction
 
 TERMS_AND_CONDITONS_ID = "agb"
 
@@ -325,7 +326,7 @@ class CheckoutForm(Form, FormContext):
     provider_registry = provider_registry
 
     def prepare(self):
-        if not readcookie(self.request):
+        if not cookie.read(self.request):
             raise Redirect(self.context.absolute_url())
         checkout = self.form_context is CHECKOUT
         form_class = checkout and "mode_edit" or "mode_display"

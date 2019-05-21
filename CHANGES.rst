@@ -5,6 +5,9 @@ Changelog
 2.0.dev0 (unreleased)
 ---------------------
 
+- Reflect latest changes in cart/shipping.
+  [jensens]
+
 - Code style black.
   [jensens]
 
