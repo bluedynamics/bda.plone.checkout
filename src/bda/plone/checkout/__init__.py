@@ -1,4 +1,5 @@
-from bda.plone.cart import deletecookie
+# -*- coding: utf-8 -*-
+from bda.plone.cart.cartitem import purge_cart
 from bda.plone.checkout.interfaces import CheckoutError
 from bda.plone.checkout.interfaces import ICheckoutAdapter
 from bda.plone.checkout.interfaces import ICheckoutDone
@@ -55,7 +56,7 @@ class CheckoutAdapter(object):
         return "fake_uid"
 
     def clear_session(self):
-        deletecookie(self.request)
+        purge_cart(self.request)
 
     @property
     def vessel(self):
