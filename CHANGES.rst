@@ -5,6 +5,9 @@ Changelog
 2.0.dev0 (unreleased)
 ---------------------
 
+- More CSS classes on cart. 
+  [jensens]
+
 - Reflect latest changes in cart/shipping.
   [jensens]
 

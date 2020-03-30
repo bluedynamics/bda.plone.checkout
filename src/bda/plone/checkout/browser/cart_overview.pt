@@ -47,12 +47,12 @@
     <table class="cart_sum_content invisible-grid"
            tal:define="currency view/currency">
       <tal:details condition="not:view/summary_total_only">
-        <tr>
+        <tr class="summary_net">
           <td i18n:translate="summary_net" class="summary_label">Net:</td>
           <td class="cart_net summary_ammount">0.00</td>
           <td tal:content="currency" tal:condition="currency" class="sumary_currency">EUR</td>
         </tr>
-        <tr>
+        <tr class="summary_vat">
           <td i18n:translate="summary_vat" class="summary_label">VAT.:</td>
           <td class="cart_vat summary_ammount">0.00</td>
           <td tal:content="currency" tal:condition="currency" class="sumary_currency">EUR</td>
@@ -86,7 +86,7 @@
         <td class="cart_shipping summary_ammount">0.00</td>
         <td tal:content="currency" tal:condition="currency" class="sumary_currency">EUR</td>
       </tr>
-      <tr>
+      <tr class="summary_total">
         <td class="summary_label"><strong i18n:translate="summary_total">Total:</strong></td>
         <td class="summary_ammount"><strong class="cart_total">Total</strong></td>
         <td tal:condition="currency" class="sumary_currency">
