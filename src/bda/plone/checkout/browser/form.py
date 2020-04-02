@@ -330,11 +330,18 @@ class CheckoutForm(Form, FormContext):
         if not cookie.read(self.request):
             raise Redirect(self.context.absolute_url())
         checkout = self.form_context is CHECKOUT
-        form_class = checkout and "mode_edit" or "mode_display"
+        if checkout:
+            form_method, form_class = "get", "mode_edit"
+        else:
+            form_method, form_class = "post", "mode_display"
         self.form = factory(
             "#form",
             name="checkout",
-            props={"action": self.form_action, "class_add": form_class},
+            props={
+                "action": self.form_action,
+                "class_add": form_class,
+                "method": form_method,
+            },
         )
         for fields_factory in self.provider_registry:
             fields_factory(self.context, self.request).extend(self.form)

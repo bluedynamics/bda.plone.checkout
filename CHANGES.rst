@@ -5,6 +5,9 @@ Changelog
 2.0.dev0 (unreleased)
 ---------------------
 
+- At end of checkout post form to activate plone.protect CSRF authenticator.
+  [jensens]
+
 - No longer support for z3c.autoinclude. 
   [jensens]
 
