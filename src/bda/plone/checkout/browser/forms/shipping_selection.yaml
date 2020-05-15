@@ -6,11 +6,20 @@ widgets:
     props:
         tag: h2
         text: i18n:heading_shipping_selection:Shipping
-- shipping:
-    factory: "field:error:select"
-    value: context.get_shipping
+        class_add: "mt-4"
+
+- row-shipping:
+    factory: div
     props:
-        format: radio
-        vocabulary: expr:context.shipping_vocabulary
-        display_proxy: True
-    mode: expr:context.mode
+        class: "form-row"
+        structural: True
+    widgets:
+    - shipping:
+        factory: "field:error:select"
+        value: context.get_shipping
+        props:
+            format: radio
+            vocabulary: expr:context.shipping_vocabulary
+            field.class_add: "col-auto"
+            display_proxy: True
+        mode: expr:context.mode
