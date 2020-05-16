@@ -352,7 +352,7 @@ class CheckoutForm(Form, FormContext):
                 props={
                     "label": _("back", "Back"),
                     "action": "checkout_back",
-                    "class_add": "standalone",
+                    "class_add": "btn btn-secondary",
                     "handler": None,
                     "next": self.checkout_back,
                     "skip": True,
@@ -363,7 +363,7 @@ class CheckoutForm(Form, FormContext):
                 props={
                     "label": _("next", "Next"),
                     "action": "next",
-                    "class_add": "context",
+                    "class_add": "btn btn-primary",
                     "handler": None,
                     "next": self.checkout_summary,
                 },
