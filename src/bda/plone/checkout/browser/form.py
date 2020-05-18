@@ -346,22 +346,31 @@ class CheckoutForm(Form, FormContext):
         for fields_factory in self.provider_registry:
             fields_factory(self.context, self.request).extend(self.form)
         # checkout data input
+        self.form["form-controls"] = factory(
+            "div",
+            props={
+                "structural": True,
+                "class_add": "form-group"
+            }
+        )
         if checkout:
-            self.form["checkout_back"] = factory(
-                "submit",
+            self.form["form-controls"]["checkout_back"] = factory(
+                "button",
                 props={
-                    "label": _("back", "Back"),
+                    "type": "submit",
+                    "text": _("back", "Back"),
                     "action": "checkout_back",
-                    "class_add": "btn btn-secondary",
+                    "class_add": "btn btn-secondary mr-3",
                     "handler": None,
                     "next": self.checkout_back,
                     "skip": True,
                 },
             )
-            self.form["next"] = factory(
-                "submit",
+            self.form["form-controls"]["next"] = factory(
+                "button",
                 props={
-                    "label": _("next", "Next"),
+                    "type": "submit",
+                    "text": _("next", "Next"),
                     "action": "next",
                     "class_add": "btn btn-primary",
                     "handler": None,
@@ -370,20 +379,23 @@ class CheckoutForm(Form, FormContext):
             )
         # checkout confirmation
         else:
-            self.form["confirm_back"] = factory(
-                "submit",
+            self.form["form-controls"]["confirm_back"] = factory(
+                "button",
                 props={
-                    "label": _("back", "Back"),
+                    "type": "submit",
+                    "text": _("back", "Back"),
                     "action": "confirm_back",
+                    "class_add": "btn btn-secondary mr-3",
                     "handler": None,
                     "next": self.confirm_back,
                 },
             )
-            self.form["finish"] = factory(
-                "submit",
+            self.form["form-controls"]["finish"] = factory(
+                "button",
                 props={
-                    "class": "prevent_if_no_longer_available context",
-                    "label": _("finish", "Order now"),
+                    "type": "submit",
+                    "text": _("finish", "Order now"),
+                    "class_add": "prevent_if_no_longer_available btn btn-primary",
                     "action": "finish",
                     "handler": self.finish,
                     "next": self.checkout_done,
