@@ -331,7 +331,6 @@ class CheckoutForm(Form, FormContext):
             raise Redirect(self.context.absolute_url())
         checkout = self.form_context is CHECKOUT
         if checkout:
-            form_method, form_class = "get", "mode_edit"
             form_method, form_class = "post", "mode_edit"
         else:
             form_method, form_class = "post", "mode_display"
