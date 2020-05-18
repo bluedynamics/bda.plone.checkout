@@ -50,10 +50,12 @@ CONFIRM = 1
 class FormContext(object):
     @property
     def form_context(self):
-        confirm = self.request.get("checkout_confirm") or self.request.get(
-            "action.checkout.finish"
-        )
-        return confirm and CONFIRM or CHECKOUT
+        if (
+            self.request.get("checkout_confirm") is not None
+            or self.request.get("action.checkout.finish") is not None
+        ):
+            return CONFIRM
+        return CHECKOUT
 
     @property
     def mode(self):
