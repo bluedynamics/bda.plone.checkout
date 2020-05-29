@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-02-10 13:39+0000\n"
+"POT-Creation-Date: 2020-05-29 10:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,8 +14,8 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
 
-#. Default: "Back"
-#: ./browser/form.py:323
+#. Default: "${icon} Back"
+#: ./browser/form.py:379
 msgid "back"
 msgstr ""
 
@@ -41,17 +41,17 @@ msgid "email_is_required"
 msgstr ""
 
 #. Default: "Please accept our terms and conditions."
-#: ./browser/form.py:297
+#: ./browser/form.py:330
 msgid "error_accept_terms_and_conditiond"
 msgstr ""
 
 #. Default: "Female"
-#: ./vocabularies.py:12
+#: ./vocabularies.py:14
 msgid "female"
 msgstr ""
 
-#. Default: "Order now"
-#: ./browser/form.py:344
+#. Default: "Order now ${icon}"
+#: ./browser/form.py:415
 msgid "finish"
 msgstr ""
 
@@ -68,7 +68,7 @@ msgid "heading_billing_address"
 msgstr ""
 
 #. Default: "Cart"
-#: ./browser/form.py:113
+#: ./browser/form.py:134
 msgid "heading_cart_summary"
 msgstr ""
 
@@ -145,22 +145,22 @@ msgid "lastname_is_required"
 msgstr ""
 
 #. Default: "Male"
-#: ./vocabularies.py:11
+#: ./vocabularies.py:13
 msgid "male"
 msgstr ""
 
-#. Default: "Next"
-#: ./browser/form.py:330
+#. Default: "Next ${icon}"
+#: ./browser/form.py:391
 msgid "next"
 msgstr ""
 
 #. Default: "No"
-#: ./browser/form.py:168
+#: ./browser/form.py:197
 msgid "no"
 msgstr ""
 
 #. Default: "not set"
-#: ./browser/form.py:169
+#: ./browser/form.py:198
 msgid "not set"
 msgstr ""
 
@@ -173,17 +173,17 @@ msgid "street_is_required"
 msgstr ""
 
 #. Default: "Terms and conditions"
-#: ./browser/form.py:274
+#: ./browser/form.py:307
 msgid "terms_and_conditions"
 msgstr ""
 
 #. Default: "I have read and accept the ${terms_and_conditions}"
-#: ./browser/form.py:281
+#: ./browser/form.py:314
 msgid "terms_and_conditions_text"
 msgstr ""
 
 #. Default: "Yes"
-#: ./browser/form.py:167
+#: ./browser/form.py:196
 msgid "yes"
 msgstr ""
 

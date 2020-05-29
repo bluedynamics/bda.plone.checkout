@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Bda plone checkout norsk\n"
-"POT-Creation-Date: 2019-02-10 13:39+0000\n"
+"POT-Creation-Date: 2020-05-29 10:44+0000\n"
 "PO-Revision-Date: 2017-02-06 15:39+0100\n"
 "Last-Translator: Espen Moe-Nilssen <espen@medialog.no>\n"
 "Language-Team: Espen Moe-Nilssen <espen@medialog.no>\n"
@@ -16,8 +16,9 @@ msgstr ""
 "Language: nn_NO\n"
 "X-Generator: Poedit 1.5.7\n"
 
-#. Default: "Back"
-#: ./browser/form.py:323
+#. Default: "${icon} Back"
+#: ./browser/form.py:379
+#, fuzzy
 msgid "back"
 msgstr "Tilbake"
 
@@ -43,17 +44,18 @@ msgid "email_is_required"
 msgstr "Epost er påkrevd"
 
 #. Default: "Please accept our terms and conditions."
-#: ./browser/form.py:297
+#: ./browser/form.py:330
 msgid "error_accept_terms_and_conditiond"
 msgstr "Vennligst aksepter betalingsvilkårene."
 
 #. Default: "Female"
-#: ./vocabularies.py:12
+#: ./vocabularies.py:14
 msgid "female"
 msgstr "Fru"
 
-#. Default: "Order now"
-#: ./browser/form.py:344
+#. Default: "Order now ${icon}"
+#: ./browser/form.py:415
+#, fuzzy
 msgid "finish"
 msgstr "Bestill nå?"
 
@@ -70,7 +72,7 @@ msgid "heading_billing_address"
 msgstr "Regningsadresse"
 
 #. Default: "Cart"
-#: ./browser/form.py:113
+#: ./browser/form.py:134
 msgid "heading_cart_summary"
 msgstr "Handlekurv"
 
@@ -147,22 +149,23 @@ msgid "lastname_is_required"
 msgstr "Etternavn er påkrevd"
 
 #. Default: "Male"
-#: ./vocabularies.py:11
+#: ./vocabularies.py:13
 msgid "male"
 msgstr "Her"
 
-#. Default: "Next"
-#: ./browser/form.py:330
+#. Default: "Next ${icon}"
+#: ./browser/form.py:391
+#, fuzzy
 msgid "next"
 msgstr "Videre"
 
 #. Default: "No"
-#: ./browser/form.py:168
+#: ./browser/form.py:197
 msgid "no"
 msgstr "Nei"
 
 #. Default: "not set"
-#: ./browser/form.py:169
+#: ./browser/form.py:198
 msgid "not set"
 msgstr "Ikke valgt"
 
@@ -175,17 +178,17 @@ msgid "street_is_required"
 msgstr "Gateadresse er påkrevd"
 
 #. Default: "Terms and conditions"
-#: ./browser/form.py:274
+#: ./browser/form.py:307
 msgid "terms_and_conditions"
 msgstr "Salgsbetingelsene"
 
 #. Default: "I have read and accept the ${terms_and_conditions}"
-#: ./browser/form.py:281
+#: ./browser/form.py:314
 msgid "terms_and_conditions_text"
 msgstr "Jeg har lest og forstått ${terms_and_conditions}"
 
 #. Default: "Yes"
-#: ./browser/form.py:167
+#: ./browser/form.py:196
 msgid "yes"
 msgstr "Ja"
 

@@ -46,6 +46,22 @@ provider_registry = ProviderRegistry()
 CHECKOUT = 0
 CONFIRM = 1
 
+# SVG for buttons
+SVG_PREV = """<svg class="bi bi-chevron-left" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+              </svg>
+           """
+SVG_NEXT = """<svg class="bi bi-chevron-right" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http: // www.w3.org/2000/svg">
+                <path fill-rule = "evenodd" d = "M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+              </svg >
+           """
+SVG_FINISH = """<svg class="bi bi-credit-card" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M14 3H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2z"/>
+                  <rect width="3" height="3" x="2" y="9" rx="1"/>
+                  <path d="M1 5h14v2H1z"/>
+                </svg>
+             """
+
 
 class FormContext(object):
     @property
@@ -352,7 +368,7 @@ class CheckoutForm(Form, FormContext):
             "div",
             props={
                 "structural": True,
-                "class_add": "form-group"
+                "class_add": "form-group d-flex"
             }
         )
         if checkout:
@@ -360,9 +376,9 @@ class CheckoutForm(Form, FormContext):
                 "button",
                 props={
                     "type": "submit",
-                    "text": _("back", "Back"),
+                    "text": _("back", "${icon} Back", mapping={"icon": SVG_PREV}),
                     "action": "checkout_back",
-                    "class_add": "btn btn-secondary mr-3",
+                    "class": "btn btn-secondary mr-3",
                     "handler": None,
                     "next": self.checkout_back,
                     "skip": True,
@@ -372,9 +388,9 @@ class CheckoutForm(Form, FormContext):
                 "button",
                 props={
                     "type": "submit",
-                    "text": _("next", "Next"),
+                    "text": _("next", "Next ${icon}", mapping={"icon": SVG_NEXT}),
                     "action": "next",
-                    "class_add": "btn btn-primary",
+                    "class": "btn btn-primary",
                     "handler": None,
                     "next": self.checkout_summary,
                 },
@@ -385,9 +401,9 @@ class CheckoutForm(Form, FormContext):
                 "button",
                 props={
                     "type": "submit",
-                    "text": _("back", "Back"),
+                    "text": _("back", "${icon} Back", mapping={"icon": SVG_PREV}),
                     "action": "confirm_back",
-                    "class_add": "btn btn-secondary mr-3",
+                    "class": "btn btn-secondary mr-3",
                     "handler": None,
                     "next": self.confirm_back,
                 },
@@ -396,8 +412,8 @@ class CheckoutForm(Form, FormContext):
                 "button",
                 props={
                     "type": "submit",
-                    "text": _("finish", "Order now"),
-                    "class_add": "prevent_if_no_longer_available btn btn-primary",
+                    "text": _("finish", "Order now ${icon}", mapping={"icon": SVG_FINISH}),
+                    "class": "prevent_if_no_longer_available btn btn-primary",
                     "action": "finish",
                     "handler": self.finish,
                     "next": self.checkout_done,

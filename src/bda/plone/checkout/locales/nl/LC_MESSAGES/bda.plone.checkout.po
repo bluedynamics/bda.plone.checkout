@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bda.plone.checkout\n"
-"POT-Creation-Date: 2019-02-10 13:39+0000\n"
+"POT-Creation-Date: 2020-05-29 10:44+0000\n"
 "PO-Revision-Date: 2015-01-28 15:13+0100\n"
 "Last-Translator: INTK <info@intk.com>\n"
 "Language-Team: \n"
@@ -16,8 +16,9 @@ msgstr ""
 "X-Is-Fallback-For: nl-be nl-nl\n"
 "X-Generator: Poedit 1.7.4\n"
 
-#. Default: "Back"
-#: ./browser/form.py:323
+#. Default: "${icon} Back"
+#: ./browser/form.py:379
+#, fuzzy
 msgid "back"
 msgstr "Terug"
 
@@ -43,17 +44,18 @@ msgid "email_is_required"
 msgstr "E-mail is vereist"
 
 #. Default: "Please accept our terms and conditions."
-#: ./browser/form.py:297
+#: ./browser/form.py:330
 msgid "error_accept_terms_and_conditiond"
 msgstr "Accepteer onze algemene voorwaarden"
 
 #. Default: "Female"
-#: ./vocabularies.py:12
+#: ./vocabularies.py:14
 msgid "female"
 msgstr "Vrouw"
 
-#. Default: "Order now"
-#: ./browser/form.py:344
+#. Default: "Order now ${icon}"
+#: ./browser/form.py:415
+#, fuzzy
 msgid "finish"
 msgstr "Bestel nu"
 
@@ -70,7 +72,7 @@ msgid "heading_billing_address"
 msgstr "Factuuradres"
 
 #. Default: "Cart"
-#: ./browser/form.py:113
+#: ./browser/form.py:134
 msgid "heading_cart_summary"
 msgstr "Winkelwagen"
 
@@ -147,22 +149,23 @@ msgid "lastname_is_required"
 msgstr "Achternaam is vereist"
 
 #. Default: "Male"
-#: ./vocabularies.py:11
+#: ./vocabularies.py:13
 msgid "male"
 msgstr "Man"
 
-#. Default: "Next"
-#: ./browser/form.py:330
+#. Default: "Next ${icon}"
+#: ./browser/form.py:391
+#, fuzzy
 msgid "next"
 msgstr "Verder"
 
 #. Default: "No"
-#: ./browser/form.py:168
+#: ./browser/form.py:197
 msgid "no"
 msgstr "Nee"
 
 #. Default: "not set"
-#: ./browser/form.py:169
+#: ./browser/form.py:198
 msgid "not set"
 msgstr "Niet ingesteld"
 
@@ -175,17 +178,17 @@ msgid "street_is_required"
 msgstr "Straat is vereist"
 
 #. Default: "Terms and conditions"
-#: ./browser/form.py:274
+#: ./browser/form.py:307
 msgid "terms_and_conditions"
 msgstr "Algemene voorwaarden"
 
 #. Default: "I have read and accept the ${terms_and_conditions}"
-#: ./browser/form.py:281
+#: ./browser/form.py:314
 msgid "terms_and_conditions_text"
 msgstr "Ik heb de ${terms_and_conditions} gelezen en geaccepteerd"
 
 #. Default: "Yes"
-#: ./browser/form.py:167
+#: ./browser/form.py:196
 msgid "yes"
 msgstr "Ja"
 
