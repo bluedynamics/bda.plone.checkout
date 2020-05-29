@@ -20,6 +20,7 @@ widgets:
             vocabulary: expr:context.gender_vocabulary
             display_proxy: True
             field.class_add: "col-auto"
+            select.class_add: "custom-select"
         mode: expr:context.mode
 - row-name:
     factory: div
