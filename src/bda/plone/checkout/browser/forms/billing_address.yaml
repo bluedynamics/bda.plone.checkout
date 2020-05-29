@@ -61,4 +61,5 @@ widgets:
             display_proxy: True
             vocabulary: expr:context.country_vocabulary
             field.class_add: "col-auto"
+            select.class_add: "col-auto custom-select"
         mode: expr:context.mode
