@@ -35,5 +35,4 @@ widgets:
                 validate_accept:
                     extractors:
                         - context.validate_accept
-
             mode: expr:context.mode
