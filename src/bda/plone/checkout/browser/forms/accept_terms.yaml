@@ -7,14 +7,46 @@ widgets:
         tag: h2
         text: i18n:heading_accept_terms:Accept Terms and Conditions
     mode: expr:context.mode
-- accept:
-    factory: '#field:*validate_accept:checkbox'
+# - accept:
+#     factory: '#field:*validate_accept:checkbox'
+#     props:
+#         label: expr:context.accept_label
+#         position: 'after'
+#         format: bool
+#     custom:
+#         validate_accept:
+#             extractors:
+#                 - context.validate_accept
+#     mode: expr:context.mode
+
+
+- row-accept-conditions:
+    factory: div
     props:
-        label: expr:context.accept_label
-        position: 'after'
-        format: bool
-    custom:
-        validate_accept:
-            extractors:
-                - context.validate_accept
-    mode: expr:context.mode
+        class: "form-row"
+        structural: True
+    widgets:
+    - group-accept-conditions:
+        factory: div
+        props:
+            class: "form-group col-auto"
+            structural: True
+        widgets:
+        - accept:
+            factory: 'div:help:*validate_accept:label:checkbox'
+            value: context.get_value
+            props:
+                label: expr:context.accept_label
+                label.class: form-check-label
+                label.position: after
+                div.class: form-check
+                position: expr:context.mode == 'display' and 'before' or 'after'
+                format: bool
+                field.class_add: "col-auto"
+                display_proxy: True
+            custom:
+                validate_accept:
+                    extractors:
+                        - context.validate_accept
+
+            mode: expr:context.mode

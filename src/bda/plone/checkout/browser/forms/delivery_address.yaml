@@ -13,18 +13,27 @@ widgets:
         class: "form-row"
         structural: True
     widgets:
-    - alternative_delivery:
-        factory: '#field:checkbox'
-        value: context.get_value
+    - row-alternate-delivery:
+        factory: div
         props:
-            label: i18n:label_alternative_delivery:Delivery address differs from billing address?
-            position: expr:context.mode == 'display' and 'before' or 'after'
-            vocabulary: expr:context.alternative_delivery_vocab
-            format: bool
-            class_add: expr:context.hidden_class
-            field.class_add: "col-auto"
-            display_proxy: True
-        mode: expr:context.mode
+            class: "form-group col-auto"
+            structural: True
+        widgets:
+        - alternative_delivery:
+            factory: 'div:help:label:checkbox'
+            value: context.get_value
+            props:
+                label: i18n:label_alternative_delivery:Delivery address differs from billing address?
+                label.class: form-check-label
+                label.position: after
+                div.class: form-check
+                position: expr:context.mode == 'display' and 'before' or 'after'
+                vocabulary: expr:context.alternative_delivery_vocab
+                format: bool
+                class_add: expr:context.hidden_class
+                field.class_add: "col-auto"
+                display_proxy: True
+            mode: expr:context.mode
 - container:
     factory: div
     props:
