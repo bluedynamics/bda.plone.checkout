@@ -7,19 +7,6 @@ widgets:
         tag: h2
         text: i18n:heading_accept_terms:Accept Terms and Conditions
     mode: expr:context.mode
-# - accept:
-#     factory: '#field:*validate_accept:checkbox'
-#     props:
-#         label: expr:context.accept_label
-#         position: 'after'
-#         format: bool
-#     custom:
-#         validate_accept:
-#             extractors:
-#                 - context.validate_accept
-#     mode: expr:context.mode
-
-
 - row-accept-conditions:
     factory: div
     props:
@@ -33,7 +20,7 @@ widgets:
             structural: True
         widgets:
         - accept:
-            factory: 'div:help:*validate_accept:label:checkbox'
+            factory: 'div:help:error:*validate_accept:label:checkbox'
             value: context.get_value
             props:
                 label: expr:context.accept_label
