@@ -6,7 +6,7 @@ widgets:
     props:
         tag: h2
         text: i18n:heading_delivery_address:Delivery Address
-        class_add: expr:context.hidden_class + "mt-4"
+        class_add: expr:context.hidden_class + " mt-4"
 - row-alternate-delivery:
     factory: div
     props:
