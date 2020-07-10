@@ -6,6 +6,7 @@ widgets:
     props:
         tag: h2
         text: i18n:heading_accept_terms:Accept Terms and Conditions
+        class_add: "mt-2 mb-2"
     mode: expr:context.mode
 - row-accept-conditions:
     factory: div

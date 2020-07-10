@@ -6,7 +6,7 @@ widgets:
     props:
         tag: h2
         text: i18n:heading_payment_selection:Payment
-        class_add: "mt-4"
+        class_add: "mt-2 mb-2"
 - row-payment:
     factory: div
     props:
