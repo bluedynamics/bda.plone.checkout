@@ -11,13 +11,13 @@ widgets:
 - row-accept-conditions:
     factory: div
     props:
-        class: "form-row"
+        class: "row"
         structural: True
     widgets:
     - group-accept-conditions:
         factory: div
         props:
-            class: "form-group col-auto"
+            class: "mb-3 col-auto"
             structural: True
         widgets:
         - accept:

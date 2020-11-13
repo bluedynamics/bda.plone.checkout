@@ -10,7 +10,7 @@ widgets:
 - row-gender:
     factory: div
     props:
-        class: "form-row"
+        class: "row"
         structural: True
     widgets:
     - gender:
@@ -21,12 +21,12 @@ widgets:
             vocabulary: expr:context.gender_vocabulary
             display_proxy: True
             field.class_add: "col-auto"
-            select.class_add: "custom-select"
+            select.class_add: "form-select"
         mode: expr:context.mode
 - row-name:
     factory: div
     props:
-        class: "form-row"
+        class: "row"
         structural: True
     widgets:
     - firstname:
@@ -50,7 +50,7 @@ widgets:
 - row-contact:
     factory: div
     props:
-        class: "form-row"
+        class: "row"
         structural: True
     widgets:
     - email:
@@ -74,7 +74,7 @@ widgets:
 - row-company:
     factory: div
     props:
-        class: "form-row"
+        class: "row"
         structural: True
     widgets:
     - company:

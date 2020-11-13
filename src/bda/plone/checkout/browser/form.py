@@ -368,7 +368,7 @@ class CheckoutForm(Form, FormContext):
             "div",
             props={
                 "structural": True,
-                "class_add": "form-group d-flex"
+                "class_add": "mb-3 d-flex"
             }
         )
         if checkout:

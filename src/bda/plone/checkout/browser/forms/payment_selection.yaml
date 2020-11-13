@@ -10,7 +10,7 @@ widgets:
 - row-payment:
     factory: div
     props:
-        class: "form-row"
+        class: "row"
         structural: True
     widgets:
     - payment:

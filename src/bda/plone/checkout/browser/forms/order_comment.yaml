@@ -11,7 +11,7 @@ widgets:
 - row-shipping:
     factory: div
     props:
-        class: "form-row"
+        class: "row"
         structural: True
     widgets:
     - comment:
