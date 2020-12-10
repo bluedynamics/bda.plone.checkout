@@ -10,7 +10,7 @@ widgets:
 - row-alternate-delivery:
     factory: div
     props:
-        class: "row"
+        class: "row row-cols-lg-auto g-3 align-items-center mb-3"
         structural: True
     widgets:
     - row-alternate-delivery:
@@ -43,7 +43,7 @@ widgets:
     - row-delivery-name:
         factory: div
         props:
-            class: "row"
+            class: "row row-cols-lg-auto g-3 align-items-center mb-3"
             structural: True
         widgets:
         - firstname:
@@ -54,7 +54,7 @@ widgets:
                 conditional_required: i18n:firstname_is_required:First Name is required
                 required_bullet_trigger: conditional_required
                 display_proxy: True
-                field.class_add: "col-sm-4"
+                field.class_add: "col-auto"
             custom:
                 conditional_required:
                     extractors:
@@ -68,7 +68,7 @@ widgets:
                 conditional_required: i18n:lastname_is_required:Last Name is required
                 required_bullet_trigger: conditional_required
                 display_proxy: True
-                field.class_add: "col-sm-4"
+                field.class_add: "col-auto"
             custom:
                 conditional_required:
                     extractors:
@@ -77,7 +77,7 @@ widgets:
     - row-delivery-company:
         factory: div
         props:
-            class: "row"
+            class: "row row-cols-lg-auto g-3 align-items-center mb-3"
             structural: True
         widgets:
         - company:
@@ -86,12 +86,12 @@ widgets:
             props:
                 label: i18n:label_company:Company
                 display_proxy: True
-                field.class_add: "col-sm-4"
+                field.class_add: "col-auto"
             mode: expr:context.mode
     - row-delivery-street:
         factory: div
         props:
-            class: "row"
+            class: "row row-cols-lg-auto g-3 align-items-center mb-3"
             structural: True
         widgets:
         - street:
@@ -102,7 +102,7 @@ widgets:
                 conditional_required: i18n:street_is_required:Street is required
                 required_bullet_trigger: conditional_required
                 display_proxy: True
-                field.class_add: "col-sm-8"
+                field.class_add: "col-auto"
             custom:
                 conditional_required:
                     extractors:
@@ -111,7 +111,7 @@ widgets:
     - row-delivery-city:
         factory: div
         props:
-            class: "row"
+            class: "row row-cols-lg-auto g-3 align-items-center mb-3"
             structural: True
         widgets:
         - zip:
@@ -122,7 +122,7 @@ widgets:
                 conditional_required: i18n:zip_is_required:ZIP is required
                 required_bullet_trigger: conditional_required
                 display_proxy: True
-                field.class_add: "col-sm-2"
+                field.class_add: "col-auto"
             custom:
                 conditional_required:
                     extractors:
@@ -136,7 +136,7 @@ widgets:
                 conditional_required: i18n:city_is_required:City is required
                 required_bullet_trigger: conditional_required
                 display_proxy: True
-                field.class_add: "col-sm-6"
+                field.class_add: "col-auto"
             custom:
                 conditional_required:
                     extractors:
@@ -145,7 +145,7 @@ widgets:
     - row-delivery-country:
         factory: div
         props:
-            class: "row"
+            class: "row row-cols-lg-auto g-3 align-items-center mb-3"
             structural: True
         widgets:
         - country:

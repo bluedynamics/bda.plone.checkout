@@ -10,7 +10,7 @@ widgets:
 - row-street:
     factory: div
     props:
-        class: "row"
+        class: "row row-cols-lg-auto g-3 align-items-center mb-3"
         structural: True
     widgets:
     - street:
@@ -20,12 +20,12 @@ widgets:
             label: i18n:label_street:Street
             required: i18n:street_is_required:Street is required
             display_proxy: True
-            field.class_add: "col-sm-8"
+            field.class_add: "col-auto"
         mode: expr:context.mode
 - row-city:
     factory: div
     props:
-        class: "row"
+        class: "row row-cols-lg-auto g-3 align-items-center mb-3"
         structural: True
     widgets:
     - zip:
@@ -35,7 +35,8 @@ widgets:
             label: i18n:label_zip:ZIP
             required: i18n:zip_is_required:ZIP is required
             display_proxy: True
-            field.class_add: "col-sm-2"
+            field.class_add: "col-auto"
+            size: 6
         mode: expr:context.mode
     - city:
         factory: "#field:text"
@@ -44,12 +45,12 @@ widgets:
             label: i18n:label_city:City
             required: i18n:city_is_required:City is required
             display_proxy: True
-            field.class_add: "col-sm-6"
+            field.class_add: "col-auto"
         mode: expr:context.mode
 - row-country:
     factory: div
     props:
-        class: "row"
+        class: "row row-cols-lg-auto g-3 align-items-center mb-3"
         structural: True
     widgets:
     - country:
@@ -60,6 +61,6 @@ widgets:
             required: i18n:country_is_required:Country is required
             display_proxy: True
             vocabulary: expr:context.country_vocabulary
-            field.class_add: "col-auto"
-            select.class_add: "col-auto form-select"
+            field.class_add: ""
+            select.class_add: " form-select"
         mode: expr:context.mode

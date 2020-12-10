@@ -7,24 +7,25 @@
         class="cart_execution_context">checkout</span>
 
   <div id="cart_item_template" style="display: none;">
-    <div class="cart_item cart_overview media">
-      <div class="cart_item_image_wrapper mr-3">
+    <div class="cart_item cart_overview row g-3">
+      <div class="cart_item_image_wrapper col-auto">
         <img class="cart_item_preview_image" src="" />
       </div>
-      <div class="media-body">
+      <div class="col">
         <h3 class="cart_item_title">Title</h3>
         <div class="cart_item_alert" style="display: none;">Alert</div>
         <p class="cart_item_description">Description</p>
       </div>
 
-      <div class="cart_item_content form-inline justify-content-end">
+      <div class="cart_item_content col-auto d-flex align-items-end">
         <p class="cart_item_comment_wrapper">
           <strong i18n:translate="comment">Comment</strong>:
           <span class="cart_item_comment">comment</span>
         </p>
       </div>
 
-      <div class="cart_item_update form-inline justify-content-end">
+      <div class="cart_item_update col-auto">
+        <div class="row row-cols-lg-auto gx-0 align-items-center">
 
         <div class="cart_item_count_wrapper ml-3">
           <span class="cart_item_count">0</span>
@@ -43,6 +44,7 @@
           <span class="cart_item_price value">Price</span>
         </div>
 
+        </div>
       </div>
     </div>
   </div>

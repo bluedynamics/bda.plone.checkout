@@ -11,7 +11,7 @@ widgets:
 - row-shipping:
     factory: div
     props:
-        class: "row"
+        class: "row row-cols-lg-auto g-3 align-items-center mb-3"
         structural: True
     widgets:
     - comment:
