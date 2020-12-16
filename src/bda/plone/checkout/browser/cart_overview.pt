@@ -27,20 +27,20 @@
       <div class="cart_item_update col-auto">
         <div class="row row-cols-lg-auto gx-0 align-items-center">
 
-        <div class="cart_item_count_wrapper ml-3">
+        <div class="cart_item_count_wrapper ms-3">
           <span class="cart_item_count">0</span>
           <span class="cart_item_quantity_unit">Quantity</span>
         </div>
 
-        <div class="cart_item_discount_wrapper ml-3">
+        <div class="cart_item_discount_wrapper ms-3">
           <span class="discount">
             <span i18n:translate="discount">Discount:</span>
             <span class="cart_item_discount">Discount</span>
           </span>
         </div>
 
-        <div class="price ml-3">
-          <span class="label currency mr-1" tal:content="view/currency">EUR</span>
+        <div class="price ms-3">
+          <span class="label currency me-1" tal:content="view/currency">EUR</span>
           <span class="cart_item_price value">Price</span>
         </div>
 
