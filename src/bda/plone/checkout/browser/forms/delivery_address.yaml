@@ -11,13 +11,13 @@ widgets:
 - row-alternate-delivery:
     factory: div
     props:
-        class: "row row-cols-lg-auto g-3 align-items-center mb-3"
+        class: "row row-cols-lg-auto gx-3 align-items-center mb-3"
         structural: True
     widgets:
     - row-alternate-delivery:
         factory: div
         props:
-            class: "mb-3 col-auto"
+            class: "col-auto"
             structural: True
         widgets:
         - alternative_delivery:
@@ -44,7 +44,7 @@ widgets:
     - row-delivery-name:
         factory: div
         props:
-            class: "row row-cols-lg-auto g-3 align-items-center mb-3"
+            class: "row row-cols-lg-auto gx-3 align-items-center mb-3"
             structural: True
         widgets:
         - firstname:
@@ -78,7 +78,7 @@ widgets:
     - row-delivery-company:
         factory: div
         props:
-            class: "row row-cols-lg-auto g-3 align-items-center mb-3"
+            class: "row row-cols-lg-auto gx-3 align-items-center mb-3"
             structural: True
         widgets:
         - company:
@@ -92,7 +92,7 @@ widgets:
     - row-delivery-street:
         factory: div
         props:
-            class: "row row-cols-lg-auto g-3 align-items-center mb-3"
+            class: "row row-cols-lg-auto gx-3 align-items-center mb-3"
             structural: True
         widgets:
         - street:
@@ -112,7 +112,7 @@ widgets:
     - row-delivery-city:
         factory: div
         props:
-            class: "row row-cols-lg-auto g-3 align-items-center mb-3"
+            class: "row row-cols-lg-auto gx-3 align-items-center mb-3"
             structural: True
         widgets:
         - zip:
@@ -146,7 +146,7 @@ widgets:
     - row-delivery-country:
         factory: div
         props:
-            class: "row row-cols-lg-auto g-3 align-items-center mb-3"
+            class: "row row-cols-lg-auto gx-3 align-items-center mb-3"
             structural: True
         widgets:
         - country:
@@ -166,3 +166,10 @@ widgets:
                     extractors:
                         - context.conditional_required
             mode: expr:context.mode
+- divider:
+    factory: tag
+    props:
+        tag: hr
+        text: ""
+        class_add: "bg-transparent"
+        structural: True
