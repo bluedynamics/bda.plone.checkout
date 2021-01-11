@@ -25,7 +25,7 @@ widgets:
             value: context.get_value
             props:
                 label: expr:context.accept_label
-                label.class: form-check-label
+                label.class: form-check-label required
                 label.position: after
                 div.class: form-check
                 position: expr:context.mode == 'display' and 'before' or 'after'
