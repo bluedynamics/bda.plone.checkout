@@ -7,6 +7,7 @@ widgets:
         tag: h2
         text: i18n:heading_billing_address:Billing Address
         class_add: "mt-2 mb-2"
+        structural: True
 - row-street:
     factory: div
     props:

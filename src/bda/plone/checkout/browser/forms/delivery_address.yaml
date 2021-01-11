@@ -7,6 +7,7 @@ widgets:
         tag: h2
         text: i18n:heading_delivery_address:Delivery Address
         class_add: expr:context.hidden_class + " mt-2 mb-2"
+        structural: True
 - row-alternate-delivery:
     factory: div
     props:
