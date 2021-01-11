@@ -30,7 +30,7 @@ widgets:
                 div.class: form-check
                 position: expr:context.mode == 'display' and 'before' or 'after'
                 format: bool
-                field.class_add: "col-auto"
+                field.class: "form-check"
                 display_proxy: True
             custom:
                 validate_accept:
