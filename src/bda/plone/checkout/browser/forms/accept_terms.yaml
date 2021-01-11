@@ -7,18 +7,17 @@ widgets:
         tag: h2
         text: i18n:heading_accept_terms:Accept Terms and Conditions
         class_add: "mt-2 mb-2"
-        structural: True
     mode: expr:context.mode
 - row-accept-conditions:
     factory: div
     props:
-        class: "row row-cols-lg-auto g-3 align-items-center mb-3"
+        class: "row row-cols-lg-auto gx-3 align-items-center mb-3"
         structural: True
     widgets:
     - group-accept-conditions:
         factory: div
         props:
-            class: "mb-3 col-auto"
+            class: "col-auto"
             structural: True
         widgets:
         - accept:

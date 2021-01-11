@@ -11,7 +11,7 @@ widgets:
 - row-gender:
     factory: div
     props:
-        class: "row row-cols-lg-auto g-3 align-items-center mb-3"
+        class: "row row-cols-lg-auto gx-3 align-items-center mb-3"
         structural: True
     widgets:
     - gender:
@@ -27,7 +27,7 @@ widgets:
 - row-name:
     factory: div
     props:
-        class: "row row-cols-lg-auto g-3 align-items-center mb-3"
+        class: "row row-cols-lg-auto gx-3 align-items-center mb-3"
         structural: True
     widgets:
     - firstname:
@@ -51,7 +51,7 @@ widgets:
 - row-contact:
     factory: div
     props:
-        class: "row row-cols-lg-auto g-3 align-items-center mb-3"
+        class: "row row-cols-lg-auto gx-3 align-items-center mb-3"
         structural: True
     widgets:
     - email:
@@ -75,7 +75,7 @@ widgets:
 - row-company:
     factory: div
     props:
-        class: "row row-cols-lg-auto g-3 align-items-center mb-3"
+        class: "row row-cols-lg-auto gx-3 align-items-center mb-3"
         structural: True
     widgets:
     - company:
@@ -86,3 +86,10 @@ widgets:
             label: i18n:label_company:Company
             display_proxy: True
         mode: expr:context.mode
+- divider:
+    factory: tag
+    props:
+        tag: hr
+        text: ""
+        class_add: "bg-transparent"
+        structural: True

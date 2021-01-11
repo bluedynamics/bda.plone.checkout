@@ -11,7 +11,7 @@ widgets:
 - row-payment:
     factory: div
     props:
-        class: "row row-cols-lg-auto g-3 align-items-center mb-3"
+        class: "row row-cols-lg-auto gx-3 align-items-center mb-3"
         structural: True
     widgets:
     - payment:
@@ -23,3 +23,10 @@ widgets:
             field.class_add: "col-auto"
             display_proxy: True
         mode: expr:context.mode
+- divider:
+    factory: tag
+    props:
+        tag: hr
+        text: ""
+        class_add: "bg-transparent"
+        structural: True
