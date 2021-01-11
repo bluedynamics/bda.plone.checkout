@@ -21,13 +21,13 @@ widgets:
             structural: True
         widgets:
         - alternative_delivery:
-            factory: 'div:help:label:checkbox'
+            factory: '#field:checkbox'
             value: context.get_value
             props:
                 label: i18n:label_alternative_delivery:Delivery address differs from billing address?
                 label.class: form-check-label
                 label.position: after
-                div.class: form-check
+                div.class_add: form-check
                 position: expr:context.mode == 'display' and 'before' or 'after'
                 vocabulary: expr:context.alternative_delivery_vocab
                 format: bool
