@@ -11,7 +11,7 @@ widgets:
 - row-street:
     factory: div
     props:
-        class: "row row-cols-lg-auto gx-3 align-items-center mb-3"
+        class: "row row-cols-lg-auto g-3 align-items-center mb-3"
         structural: True
     widgets:
     - street:
@@ -26,7 +26,7 @@ widgets:
 - row-city:
     factory: div
     props:
-        class: "row row-cols-lg-auto gx-3 align-items-center mb-3"
+        class: "row row-cols-lg-auto g-3 align-items-center mb-3"
         structural: True
     widgets:
     - zip:
@@ -51,7 +51,7 @@ widgets:
 - row-country:
     factory: div
     props:
-        class: "row row-cols-lg-auto gx-3 align-items-center mb-3"
+        class: "row row-cols-lg-auto g-3 align-items-center mb-3"
         structural: True
     widgets:
     - country:
@@ -62,7 +62,7 @@ widgets:
             required: i18n:country_is_required:Country is required
             display_proxy: True
             vocabulary: expr:context.country_vocabulary
-            field.class_add: ""
+            field.class_add: "col-auto"
             select.class_add: " form-select"
         mode: expr:context.mode
 - divider:
