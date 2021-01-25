@@ -10,26 +10,26 @@ module.exports = function (grunt) {
                     sourceMap: true,
                     outputSourceFiles: true,
                     sourceMapURL: '++resource++bda.plone.checkout.css.map',
-                    sourceMapFilename: 'src/bda/plone/checkout/browser/checkout_p5.css.map',
+                    sourceMapFilename: 'src/bda/plone/checkout/browser/checkout.css.map',
                     modifyVars: {
                         "isPlone": "false"
                     }
                 },
                 files: {
-                    'src/bda/plone/checkout/browser/checkout_p5.css': 'src/bda/plone/checkout/browser/checkout_p5.less',
+                    'src/bda/plone/checkout/browser/checkout.css': 'src/bda/plone/checkout/browser/checkout.less',
                 }
             }
         },
         sed: {
             sed0: {
-                path: 'src/bda/plone/checkout/browser/checkout_p5.css.map',
-                pattern: 'src/bda/plone/checkout/browser/checkout_p5.less',
+                path: 'src/bda/plone/checkout/browser/checkout.css.map',
+                pattern: 'src/bda/plone/checkout/browser/checkout.less',
                 replacement: '++resource++bda.plone.checkout.less',
             }
         },
         watch: {
             scripts: {
-                files: ['src/bda/plone/checkout/browser/checkout_p5.less'],
+                files: ['src/bda/plone/checkout/browser/checkout.less'],
                 tasks: ['less', 'sed']
             }
         }
