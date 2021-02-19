@@ -5,6 +5,9 @@ Changelog
 2.0.dev0 (unreleased)
 ---------------------
 
+- Consider ``IPayment.clear_session`` in checkout form.
+  [rnix]
+
 - At end of checkout post form to activate plone.protect CSRF authenticator.
   [jensens]
 

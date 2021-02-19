@@ -448,14 +448,16 @@ class CheckoutForm(Form, FormContext):
         except CheckoutError:
             transaction.abort()
             self.checkout_back(self.request)
-        checkout_adapter.clear_session()
         checkout_settings = ICheckoutSettings(self.context)
         if checkout_settings.skip_payment(uid):
+            checkout_adapter.clear_session()
             self.finish_redirect_url = checkout_settings.skip_payment_redirect_url(uid)
         else:
             p_name = data.fetch("checkout.payment_selection.payment").extracted
             payments = Payments(self.context)
             payment = payments.get(p_name)
+            if payment.clear_session:
+                checkout_adapter.clear_session()
             self.finish_redirect_url = payment.init_url(str(uid))
         event = CheckoutDone(self.context, self.request, uid)
         notify(event)
