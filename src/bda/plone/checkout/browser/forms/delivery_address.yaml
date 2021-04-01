@@ -27,11 +27,10 @@ widgets:
                 label: i18n:label_alternative_delivery:Delivery address differs from billing address?
                 label.class: form-check-label
                 label.position: after
-                field.class_add: form-check col-auto
+                field.class_add: expr:context.hidden_class + " form-check col-auto"
                 position: expr:context.mode == 'display' and 'before' or 'after'
                 vocabulary: expr:context.alternative_delivery_vocab
                 format: bool
-                class_add: expr:context.hidden_class
                 display_proxy: True
             mode: expr:context.mode
 - container:

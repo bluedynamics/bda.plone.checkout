@@ -45,15 +45,15 @@
       float:left;
       margin-right: 0.5em;
     }
-  label {
-      display: none;
+    .form-label {
+      font-size:@plone-font-size-small;
+    }
+    label.required:after {
+      content:"";
     }
     .field {
       margin-bottom: 0.35em;
       margin-right: 0.5em;
-    }
-    #field-checkout-accept_terms_and_conditions-accept label {
-      display: unset;
     }
     ul.cart_item_content li {
         display:inline-block;
