@@ -320,11 +320,71 @@ class AcceptTermsAndConditions(FieldsProvider):
 provider_registry.add(AcceptTermsAndConditions)
 
 
+checkout_button_factories = list()
+
+
+def default_checkout_button_factory(view):
+    view.form["checkout_back"] = factory(
+        "submit",
+        props={
+            "label": _("back", "Back"),
+            "action": "checkout_back",
+            "class_add": "standalone",
+            "handler": None,
+            "next": view.checkout_back,
+            "skip": True,
+        },
+    )
+    view.form["next"] = factory(
+        "submit",
+        props={
+            "label": _("next", "Next"),
+            "action": "next",
+            "class_add": "context",
+            "handler": None,
+            "next": view.checkout_summary,
+        },
+    )
+
+
+checkout_button_factories.append(default_checkout_button_factory)
+
+
+confirmation_button_factories = list()
+
+
+def default_confirmation_button_factory(view):
+    view.form["confirm_back"] = factory(
+        "submit",
+        props={
+            "label": _("back", "Back"),
+            "action": "confirm_back",
+            "handler": None,
+            "next": view.confirm_back,
+        },
+    )
+    view.form["finish"] = factory(
+        "submit",
+        props={
+            "class": "prevent_if_no_longer_available context",
+            "label": _("finish", "Order now"),
+            "action": "finish",
+            "handler": view.finish,
+            "next": view.checkout_done,
+        },
+    )
+
+
+confirmation_button_factories.append(default_confirmation_button_factory)
+
+
 class CheckoutForm(Form, FormContext):
     action_resource = "@@checkout"
     # in order to provide your own registry, subclass CheckoutForm and and
     # override ``provider_registry``
     provider_registry = provider_registry
+    checkout_button_factories = checkout_button_factories
+    confirmation_button_factories = confirmation_button_factories
 
     def prepare(self):
         if not cookie.read(self.request):
@@ -347,48 +407,12 @@ class CheckoutForm(Form, FormContext):
             fields_factory(self.context, self.request).extend(self.form)
         # checkout data input
         if checkout:
-            self.form["checkout_back"] = factory(
-                "submit",
-                props={
-                    "label": _("back", "Back"),
-                    "action": "checkout_back",
-                    "class_add": "standalone",
-                    "handler": None,
-                    "next": self.checkout_back,
-                    "skip": True,
-                },
-            )
-            self.form["next"] = factory(
-                "submit",
-                props={
-                    "label": _("next", "Next"),
-                    "action": "next",
-                    "class_add": "context",
-                    "handler": None,
-                    "next": self.checkout_summary,
-                },
-            )
+            for button_factory in self.checkout_button_factories:
+                button_factory(self)
         # checkout confirmation
         else:
-            self.form["confirm_back"] = factory(
-                "submit",
-                props={
-                    "label": _("back", "Back"),
-                    "action": "confirm_back",
-                    "handler": None,
-                    "next": self.confirm_back,
-                },
-            )
-            self.form["finish"] = factory(
-                "submit",
-                props={
-                    "class": "prevent_if_no_longer_available context",
-                    "label": _("finish", "Order now"),
-                    "action": "finish",
-                    "handler": self.finish,
-                    "next": self.checkout_done,
-                },
-            )
+            for button_factory in self.confirmation_button_factories:
+                button_factory(self)
 
     def checkout_back(self, request):
         raise Redirect("%s/@@cart" % self.context.absolute_url())
