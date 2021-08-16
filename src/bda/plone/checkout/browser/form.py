@@ -338,11 +338,78 @@ class AcceptTermsAndConditions(FieldsProvider):
 provider_registry.add(AcceptTermsAndConditions)
 
 
+checkout_button_factories = list()
+
+
+def default_checkout_button_factory(view):
+    view.form["form-controls"]["checkout_back"] = factory(
+        "button",
+        props={
+            "type": "submit",
+            "text": _("back", "${icon} Back", mapping={"icon": SVG_PREV}),
+            "action": "checkout_back",
+            "class": "btn btn-secondary me-3",
+            "handler": None,
+            "next": view.checkout_back,
+            "skip": True,
+        },
+    )
+    view.form["form-controls"]["next"] = factory(
+        "button",
+        props={
+            "type": "submit",
+            "text": _("next", "Next ${icon}", mapping={"icon": SVG_NEXT}),
+            "action": "next",
+            "class": "btn btn-primary",
+            "handler": None,
+            "next": view.checkout_summary,
+        },
+    )
+
+
+checkout_button_factories.append(default_checkout_button_factory)
+
+
+confirmation_button_factories = list()
+
+
+def default_confirmation_button_factory(view):
+    view.form["form-controls"]["confirm_back"] = factory(
+        "button",
+        props={
+            "type": "submit",
+            "text": _("back", "${icon} Back", mapping={"icon": SVG_PREV}),
+            "action": "confirm_back",
+            "class": "btn btn-secondary me-3",
+            "handler": None,
+            "next": view.confirm_back,
+        },
+    )
+    view.form["form-controls"]["finish"] = factory(
+        "button",
+        props={
+            "type": "submit",
+            "text": _("finish", "Order now ${icon}", mapping={"icon": SVG_FINISH}),
+            "class": "prevent_if_no_longer_available btn btn-primary",
+            "action": "finish",
+            "handler": view.finish,
+            "next": view.checkout_done,
+        },
+    )
+
+
+confirmation_button_factories.append(default_confirmation_button_factory)
+
+
+
+
 class CheckoutForm(Form, FormContext):
     action_resource = "@@checkout"
     # in order to provide your own registry, subclass CheckoutForm and and
     # override ``provider_registry``
     provider_registry = provider_registry
+    checkout_button_factories = checkout_button_factories
+    confirmation_button_factories = confirmation_button_factories
 
     def prepare(self):
         if not cookie.read(self.request):
@@ -372,53 +439,12 @@ class CheckoutForm(Form, FormContext):
             }
         )
         if checkout:
-            self.form["form-controls"]["checkout_back"] = factory(
-                "button",
-                props={
-                    "type": "submit",
-                    "text": _("back", "${icon} Back", mapping={"icon": SVG_PREV}),
-                    "action": "checkout_back",
-                    "class": "btn btn-secondary me-3",
-                    "handler": None,
-                    "next": self.checkout_back,
-                    "skip": True,
-                },
-            )
-            self.form["form-controls"]["next"] = factory(
-                "button",
-                props={
-                    "type": "submit",
-                    "text": _("next", "Next ${icon}", mapping={"icon": SVG_NEXT}),
-                    "action": "next",
-                    "class": "btn btn-primary",
-                    "handler": None,
-                    "next": self.checkout_summary,
-                },
-            )
+            for button_factory in self.checkout_button_factories:
+                button_factory(self)
         # checkout confirmation
         else:
-            self.form["form-controls"]["confirm_back"] = factory(
-                "button",
-                props={
-                    "type": "submit",
-                    "text": _("back", "${icon} Back", mapping={"icon": SVG_PREV}),
-                    "action": "confirm_back",
-                    "class": "btn btn-secondary me-3",
-                    "handler": None,
-                    "next": self.confirm_back,
-                },
-            )
-            self.form["form-controls"]["finish"] = factory(
-                "button",
-                props={
-                    "type": "submit",
-                    "text": _("finish", "Order now ${icon}", mapping={"icon": SVG_FINISH}),
-                    "class": "prevent_if_no_longer_available btn btn-primary",
-                    "action": "finish",
-                    "handler": self.finish,
-                    "next": self.checkout_done,
-                },
-            )
+            for button_factory in self.confirmation_button_factories:
+                button_factory(self)
 
     def checkout_back(self, request):
         raise Redirect("%s/@@cart" % self.context.absolute_url())

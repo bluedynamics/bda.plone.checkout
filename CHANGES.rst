@@ -5,6 +5,9 @@ Changelog
 2.0.dev0 (unreleased)
 ---------------------
 
+- Introduce ``checkout_button_factories`` and ``confirmation_button_factories``.
+  [rnix, jensens]
+
 - Consider ``IPayment.clear_session`` in checkout form.
   [rnix]
 
