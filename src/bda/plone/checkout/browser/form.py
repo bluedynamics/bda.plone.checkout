@@ -130,6 +130,7 @@ class CartSummary(FieldsProvider):
             "tag",
             props={
                 "structural": True,
+                "class": "cart_overview heading_cart_summary",
                 "tag": "h2",
                 "text": _("heading_cart_summary", "Cart"),
             },
@@ -435,6 +436,7 @@ class CheckoutForm(Form, FormContext):
             "div",
             props={
                 "structural": True,
+                "id": "checkout-form-controls",
                 "class_add": "mb-3 d-flex"
             }
         )
