@@ -224,7 +224,7 @@ class ShippingSelection(FieldsProvider):
             if sh.description:
                 label = translate(sh.label, context=self.request)
                 desc = translate(sh.description, context=self.request)
-                title = "%s (%s)" % (label, desc)
+                title = "%s %s" % (label, desc)
             else:
                 title = translate(sh.label, context=self.request)
             vocab.append((sh.sid, title))
