@@ -6,7 +6,7 @@ widgets:
     props:
         tag: h2
         text: i18n:heading_personal_data:Personal Data
-        class_add: "mb-2"
+        class_add: "mb-2 personal-data-heading"
         structural: True
 - row-gender:
     factory: div

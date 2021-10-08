@@ -6,7 +6,7 @@ widgets:
     props:
         tag: h2
         text: i18n:heading_order_comment:Additional information
-        class_add: expr:context.hidden_class + " mt-2 mb-2"
+        class_add: expr:context.hidden_class + " mt-2 mb-2 order-comment-heading"
         structural: True
 - row-shipping:
     factory: div
