@@ -402,8 +402,6 @@ def default_confirmation_button_factory(view):
 confirmation_button_factories.append(default_confirmation_button_factory)
 
 
-
-
 class CheckoutForm(Form, FormContext):
     action_resource = "@@checkout"
     # in order to provide your own registry, subclass CheckoutForm and and
