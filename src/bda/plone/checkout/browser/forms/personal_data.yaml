@@ -11,7 +11,7 @@ widgets:
 - row-gender:
     factory: div
     props:
-        class: "row row-cols-lg-auto g-3 align-items-center mb-3"
+        class: "row"
         structural: True
     widgets:
     - gender:
@@ -21,13 +21,13 @@ widgets:
             label: i18n:label_gender:Gender
             vocabulary: expr:context.gender_vocabulary
             display_proxy: True
-            field.class_add: "col-auto"
+            field.class_add: "col-6 col-lg-4 mb-3"
             select.class_add: "form-select"
         mode: expr:context.mode
 - row-name:
     factory: div
     props:
-        class: "row row-cols-lg-auto g-3 align-items-center mb-3"
+        class: "row"
         structural: True
     widgets:
     - firstname:
@@ -37,7 +37,7 @@ widgets:
             label: i18n:label_firstname:First Name
             required: i18n:firstname_is_required:First Name is required
             display_proxy: True
-            field.class_add: "col-auto"
+            field.class_add: "col-lg-6 mb-3"
         mode: expr:context.mode
     - lastname:
         factory: "#field:text"
@@ -46,12 +46,12 @@ widgets:
             label: i18n:label_lastname:Name
             required: i18n:lastname_is_required:Last Name is required
             display_proxy: True
-            field.class_add: "col-auto"
+            field.class_add: "col-lg-6 mb-3"
         mode: expr:context.mode
 - row-contact:
     factory: div
     props:
-        class: "row row-cols-lg-auto g-3 align-items-center mb-3"
+        class: "row"
         structural: True
     widgets:
     - email:
@@ -61,7 +61,7 @@ widgets:
             label: i18n:label_email:Email
             required: i18n:email_is_required:Email is required
             display_proxy: True
-            field.class_add: "col-auto"
+            field.class_add: "col-lg-6 mb-3"
         mode: expr:context.mode
     - phone:
         factory: "#field:text"
@@ -70,19 +70,19 @@ widgets:
             label: i18n:label_phone:Phone
             required: i18n:phone_is_required:Phone is required
             display_proxy: True
-            field.class_add: "col-auto"
+            field.class_add: "col-lg-6 mb-3"
         mode: expr:context.mode
 - row-company:
     factory: div
     props:
-        class: "row row-cols-lg-auto g-3 align-items-center mb-3"
+        class: "row"
         structural: True
     widgets:
     - company:
         factory: "#field:text"
         value: context.get_value
         props:
-            field.class_add: "col-auto"
+            field.class_add: "col-lg-6 mb-3"
             label: i18n:label_company:Company
             display_proxy: True
         mode: expr:context.mode
@@ -91,5 +91,4 @@ widgets:
     props:
         tag: hr
         text: ""
-        class_add: "bg-transparent"
         structural: True

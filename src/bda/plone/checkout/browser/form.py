@@ -435,7 +435,7 @@ class CheckoutForm(Form, FormContext):
             props={
                 "structural": True,
                 "id": "checkout-form-controls",
-                "class_add": "mb-3 d-flex"
+                "class_add": "mb-3 d-flex justify-content-between"
             }
         )
         if checkout:

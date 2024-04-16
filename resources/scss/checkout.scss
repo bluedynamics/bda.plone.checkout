@@ -1,55 +1,12 @@
 
 .template-checkout {
 
-  .field input[type="text"],
-  .field input[type="email"],
-  .field select {
-    width: unset;
-  }
-
-  .field input[type="radio"],
-  .field input[type="checkbox"] {
-    margin-right: 0.5em;
-  }
-
-  #field-checkout-personal_data-firstname,
-  #field-checkout-personal_data-email,
-  #field-checkout-billing_address-zip,
-  #field-checkout-delivery_address-firstname,
-  #field-checkout-delivery_address-zip {
-    float: left;
-    margin-right: 1em;
-  }
-
   .mode_display {
     .checkout_cart_overview {
       border: var(--bs-border-style) var(--bs-border-width) var(--bs-border-color);
       margin-bottom: 20px;
       border-radius: var(--bs-border-radius);
-      padding: 0 1.5em;
-      background: var(--bs-secondary-bg-subtle);
-    }
-
-    #field-checkout-personal_data-firstname,
-    #field-checkout-personal_data-email,
-    #field-checkout-billing_address-zip,
-    #field-checkout-delivery_address-firstname,
-    #field-checkout-delivery_address-zip {
-      float: left;
-      margin-right: 0.5em;
-    }
-
-    .form-label {
-      font-size: calc(var(--bs-body-font-size) * .75);
-    }
-
-    label.required:after {
-      content: "";
-    }
-
-    .field {
-      margin-bottom: 0.35em;
-      margin-right: 0.5em;
+      padding: 1rem;
     }
 
     ul.cart_item_content li {
@@ -57,19 +14,4 @@
       margin-left: 1em;
     }
   }
-
-  .plone-modal-footer {
-    display: none !important;
-  }
-}
-
-#input-checkout-checkout_back,
-#input-checkout-confirm_back {
-  margin-top: 1em;
-}
-
-#input-checkout-next,
-#input-checkout-finish {
-  float: right;
-  margin-top: 1em;
 }

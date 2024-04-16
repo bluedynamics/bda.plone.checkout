@@ -11,7 +11,7 @@ widgets:
 - row-shipping:
     factory: div
     props:
-        class: "row row-cols-lg-auto g-3 align-items-center mb-3"
+        class: "row"
         structural: True
     widgets:
     - comment:
@@ -23,7 +23,7 @@ widgets:
             columns: 20
             display_proxy: True
             class_add: expr:context.hidden_class
-            field.class_add: "col-auto"
+            field.class_add: "col"
         mode: expr:context.mode
 - divider:
     factory: tag

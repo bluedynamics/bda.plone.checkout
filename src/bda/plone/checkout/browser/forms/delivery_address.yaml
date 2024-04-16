@@ -11,7 +11,7 @@ widgets:
 - row-alternate-delivery:
     factory: div
     props:
-        class: "row row-cols-lg-auto g-3 align-items-center mb-3"
+        class: "row"
         structural: True
     widgets:
     - row-alternate-delivery:
@@ -27,7 +27,7 @@ widgets:
                 label: i18n:label_alternative_delivery:Delivery address differs from billing address?
                 label.class: form-check-label
                 label.position: after
-                field.class_add: expr:context.hidden_class + " form-check col-auto"
+                field.class_add: expr:context.hidden_class + " form-check col"
                 position: expr:context.mode == 'display' and 'before' or 'after'
                 vocabulary: expr:context.alternative_delivery_vocab
                 format: bool
@@ -42,7 +42,7 @@ widgets:
     - row-delivery-name:
         factory: div
         props:
-            class: "row row-cols-lg-auto g-3 align-items-center mb-3"
+            class: "row"
             structural: True
         widgets:
         - firstname:
@@ -53,7 +53,7 @@ widgets:
                 conditional_required: i18n:firstname_is_required:First Name is required
                 required_bullet_trigger: conditional_required
                 display_proxy: True
-                field.class_add: "col-auto"
+                field.class_add: "col-lg-6 mb-3"
             custom:
                 conditional_required:
                     extractors:
@@ -67,7 +67,7 @@ widgets:
                 conditional_required: i18n:lastname_is_required:Last Name is required
                 required_bullet_trigger: conditional_required
                 display_proxy: True
-                field.class_add: "col-auto"
+                field.class_add: "col-lg-6 mb-3"
             custom:
                 conditional_required:
                     extractors:
@@ -76,7 +76,7 @@ widgets:
     - row-delivery-company:
         factory: div
         props:
-            class: "row row-cols-lg-auto g-3 align-items-center mb-3"
+            class: "row"
             structural: True
         widgets:
         - company:
@@ -85,12 +85,12 @@ widgets:
             props:
                 label: i18n:label_company:Company
                 display_proxy: True
-                field.class_add: "col-auto"
+                field.class_add: "col-lg-6 mb-3"
             mode: expr:context.mode
     - row-delivery-street:
         factory: div
         props:
-            class: "row row-cols-lg-auto g-3 align-items-center mb-3"
+            class: "row"
             structural: True
         widgets:
         - street:
@@ -101,7 +101,7 @@ widgets:
                 conditional_required: i18n:street_is_required:Street is required
                 required_bullet_trigger: conditional_required
                 display_proxy: True
-                field.class_add: "col-auto"
+                field.class_add: "col-12 mb-3"
             custom:
                 conditional_required:
                     extractors:
@@ -110,7 +110,7 @@ widgets:
     - row-delivery-city:
         factory: div
         props:
-            class: "row row-cols-lg-auto g-3 align-items-center mb-3"
+            class: "row"
             structural: True
         widgets:
         - zip:
@@ -121,7 +121,7 @@ widgets:
                 conditional_required: i18n:zip_is_required:ZIP is required
                 required_bullet_trigger: conditional_required
                 display_proxy: True
-                field.class_add: "col-auto"
+                field.class_add: "col-4 col-lg-2 mb-3"
             custom:
                 conditional_required:
                     extractors:
@@ -135,18 +135,12 @@ widgets:
                 conditional_required: i18n:city_is_required:City is required
                 required_bullet_trigger: conditional_required
                 display_proxy: True
-                field.class_add: "col-auto"
+                field.class_add: "col-8 col-lg-4 mb-3"
             custom:
                 conditional_required:
                     extractors:
                         - context.conditional_required
             mode: expr:context.mode
-    - row-delivery-country:
-        factory: div
-        props:
-            class: "row row-cols-lg-auto g-3 align-items-center mb-3"
-            structural: True
-        widgets:
         - country:
             factory: "#field:*conditional_required:select"
             value: context.get_value
@@ -156,7 +150,7 @@ widgets:
                 required_bullet_trigger: conditional_required
                 display_proxy: True
                 vocabulary: expr:context.country_vocabulary
-                field.class_add: "col-auto"
+                field.class_add: "col-12 col-lg-6 mb-3"
                 select.class_add: "form-select"
 
             custom:
@@ -164,6 +158,7 @@ widgets:
                     extractors:
                         - context.conditional_required
             mode: expr:context.mode
+
 - divider:
     factory: tag
     props:

@@ -4,8 +4,7 @@ from zope.i18nmessageid import MessageFactory
 
 import pycountry
 
-
-_c = MessageFactory("iso3166")
+_c = MessageFactory("iso3166-1")
 
 
 def gender_vocabulary():

@@ -11,7 +11,7 @@ widgets:
 - row-payment:
     factory: div
     props:
-        class: "row row-cols-lg-auto g-3 align-items-center mb-3"
+        class: "row"
         structural: True
     widgets:
     - payment:
@@ -20,7 +20,7 @@ widgets:
         props:
             format: radio
             vocabulary: expr:context.payment_vocabulary
-            field.class_add: "col-auto"
+            field.class_add: "col mb-3"
             display_proxy: True
         mode: expr:context.mode
 - divider:

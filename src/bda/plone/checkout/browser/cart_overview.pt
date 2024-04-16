@@ -7,7 +7,8 @@
         class="cart_execution_context">checkout</span>
 
   <div id="cart_item_template" style="display: none;">
-    <div class="cart_item cart_overview row g-3">
+
+    <div class="cart_item summary_item cart_overview row g-3">
       <div class="cart_item_image_wrapper col-auto">
         <img class="cart_item_preview_image" src="" />
       </div>

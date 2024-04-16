@@ -18,8 +18,7 @@ setup(
     long_description=longdesc,
     classifiers=[
         "Framework :: Plone",
-        "Framework :: Plone :: 5.1",
-        "Framework :: Plone :: 5.2",
+        "Framework :: Plone :: 6.0",
         "Programming Language :: Python",
         "Topic :: Software Development :: Libraries :: Python Modules",
         "License :: OSI Approved :: GNU General Public License (GPL)",
