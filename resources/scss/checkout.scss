@@ -1,67 +1,65 @@
-// Plone 5 Styles
-
-// get Plone variables
-@import url("https://raw.githubusercontent.com/plone/plone.staticresources/master/src/plone/staticresources/static/components/mockup/mockup/patterns/toolbar/variables.less");
-@import url("https://raw.githubusercontent.com/plone/plonetheme.barceloneta/2.x/plonetheme/barceloneta/theme/less/variables.plone.less");
-
-// icon fonts from bda.plone.cart for now
 
 .template-checkout {
-  h2 {
-    font-size: @plone-font-size-h3;
-  }
+
   .field input[type="text"],
   .field input[type="email"],
   .field select {
     width: unset;
   }
+
   .field input[type="radio"],
   .field input[type="checkbox"] {
     margin-right: 0.5em;
   }
+
   #field-checkout-personal_data-firstname,
   #field-checkout-personal_data-email,
   #field-checkout-billing_address-zip,
   #field-checkout-delivery_address-firstname,
   #field-checkout-delivery_address-zip {
-    float:left;
+    float: left;
     margin-right: 1em;
   }
 
   .mode_display {
     .checkout_cart_overview {
-      border: @plone-portlet-border;
+      border: var(--bs-border-style) var(--bs-border-width) var(--bs-border-color);
       margin-bottom: 20px;
-      border-radius: @plone-border-radius-base;
-      box-shadow:  0 1px 3px rgba(0,0,0,.05);
+      border-radius: var(--bs-border-radius);
       padding: 0 1.5em;
-      background: @plone-input-bg;
+      background: var(--bs-secondary-bg-subtle);
     }
+
     #field-checkout-personal_data-firstname,
     #field-checkout-personal_data-email,
     #field-checkout-billing_address-zip,
     #field-checkout-delivery_address-firstname,
     #field-checkout-delivery_address-zip {
-      float:left;
+      float: left;
       margin-right: 0.5em;
     }
+
     .form-label {
-      font-size:@plone-font-size-small;
+      font-size: calc(var(--bs-body-font-size) * .75);
     }
+
     label.required:after {
-      content:"";
+      content: "";
     }
+
     .field {
       margin-bottom: 0.35em;
       margin-right: 0.5em;
     }
+
     ul.cart_item_content li {
-        display:inline-block;
-        margin-left: 1em;
+      display: inline-block;
+      margin-left: 1em;
     }
   }
+
   .plone-modal-footer {
-    display: none!important;
+    display: none !important;
   }
 }
 
@@ -75,4 +73,3 @@
   float: right;
   margin-top: 1em;
 }
-

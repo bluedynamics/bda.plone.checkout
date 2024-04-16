@@ -5,6 +5,9 @@ Changelog
 2.0.dev0 (unreleased)
 ---------------------
 
+- rewrite CSS resources to SCSS
+  [petschki]
+
 - Introduce ``checkout_button_factories`` and ``confirmation_button_factories``.
   [rnix, jensens]
 
@@ -14,10 +17,10 @@ Changelog
 - At end of checkout post form to activate plone.protect CSRF authenticator.
   [jensens]
 
-- No longer support for z3c.autoinclude. 
+- No longer support for z3c.autoinclude.
   [jensens]
 
-- More CSS classes on cart. 
+- More CSS classes on cart.
   [jensens]
 
 - Reflect latest changes in cart/shipping.
