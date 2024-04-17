@@ -2,8 +2,8 @@
 Changelog
 =========
 
-2.0.dev0 (unreleased)
----------------------
+2.0b1 (unreleased)
+------------------
 
 - rewrite CSS resources to SCSS
   [petschki]
