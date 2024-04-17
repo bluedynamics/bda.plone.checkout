@@ -308,9 +308,9 @@ class AcceptTermsAndConditions(FieldsProvider):
         tac_label = _("terms_and_conditions", "Terms and conditions")
         tac_label = translate(tac_label, context=self.request)
         tac_link = (
-            u'<a href="{}"'
+            u'<a href="{}?ajax_load=1"'
             u'   class="terms_and_conditions pat-plone-modal"'
-            u'   data-pat-plone-modal="width: 75%;">{}</a>'
+            u'   data-pat-plone-modal="modalSizeClass: modal-xl">{}</a>'
         ).format(tac_url, tac_label)
         tac_text = _(
             "terms_and_conditions_text",
