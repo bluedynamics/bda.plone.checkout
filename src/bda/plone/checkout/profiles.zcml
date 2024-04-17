@@ -13,9 +13,15 @@
     description="bda.plone.checkout"
     provides="Products.GenericSetup.interfaces.EXTENSION" />
 
+  <genericsetup:registerProfile
+    name="uninstall"
+    title="bda.plone.checkout (uninstall profile)"
+    directory="profiles/uninstall"
+    description="Uninstall bda.plone.checkout"
+    provides="Products.GenericSetup.interfaces.EXTENSION" />
+
 
   <!-- Hide profiles/products from Quick Installer -->
   <utility factory=".setuphandlers.HiddenProfiles" name="bda.plone.checkout" />
-  <utility factory=".setuphandlers.HiddenProducts" name="bda.plone.checkout" />
 
 </configure>

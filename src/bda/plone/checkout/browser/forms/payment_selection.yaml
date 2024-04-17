@@ -6,11 +6,27 @@ widgets:
     props:
         tag: h2
         text: i18n:heading_payment_selection:Payment
-- payment:
-    factory: "field:error:select"
-    value: context.get_payment
+        class_add: "mt-2 mb-2 payment-selection-heading"
+        structural: True
+- row-payment:
+    factory: div
     props:
-        format: radio
-        vocabulary: expr:context.payment_vocabulary
-        display_proxy: True
-    mode: expr:context.mode
+        class: "row"
+        structural: True
+    widgets:
+    - payment:
+        factory: "field:error:select"
+        value: context.get_payment
+        props:
+            format: radio
+            vocabulary: expr:context.payment_vocabulary
+            field.class_add: "col mb-3"
+            display_proxy: True
+        mode: expr:context.mode
+- divider:
+    factory: tag
+    props:
+        tag: hr
+        text: ""
+        class_add: "bg-transparent"
+        structural: True

@@ -46,14 +46,37 @@ provider_registry = ProviderRegistry()
 CHECKOUT = 0
 CONFIRM = 1
 
+# SVG for buttons
+SVG_PREV = """\
+<svg class="bi bi-chevron-left" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+</svg>
+"""
+
+SVG_NEXT = """\
+<svg class="bi bi-chevron-right" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http: // www.w3.org/2000/svg">
+  <path fill-rule = "evenodd" d = "M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+</svg >
+"""
+
+SVG_FINISH = """\
+<svg class="bi bi-credit-card" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M14 3H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2z"/>
+  <rect width="3" height="3" x="2" y="9" rx="1"/>
+  <path d="M1 5h14v2H1z"/>
+</svg>
+"""
+
 
 class FormContext(object):
     @property
     def form_context(self):
-        confirm = self.request.get("checkout_confirm") or self.request.get(
-            "action.checkout.finish"
-        )
-        return confirm and CONFIRM or CHECKOUT
+        if (
+            self.request.get("checkout_confirm") is not None
+            or self.request.get("action.checkout.finish") is not None
+        ):
+            return CONFIRM
+        return CHECKOUT
 
     @property
     def mode(self):
@@ -112,6 +135,7 @@ class CartSummary(FieldsProvider):
             "tag",
             props={
                 "structural": True,
+                "class": "cart_overview heading_cart_summary",
                 "tag": "h2",
                 "text": _("heading_cart_summary", "Cart"),
             },
@@ -206,7 +230,7 @@ class ShippingSelection(FieldsProvider):
             if sh.description:
                 label = translate(sh.label, context=self.request)
                 desc = translate(sh.description, context=self.request)
-                title = "%s (%s)" % (label, desc)
+                title = "%s %s" % (label, desc)
             else:
                 title = translate(sh.label, context=self.request)
             vocab.append((sh.sid, title))
@@ -289,9 +313,9 @@ class AcceptTermsAndConditions(FieldsProvider):
         tac_label = _("terms_and_conditions", "Terms and conditions")
         tac_label = translate(tac_label, context=self.request)
         tac_link = (
-            u'<a href="{}"'
+            u'<a href="{}?ajax_load=1"'
             u'   class="terms_and_conditions pat-plone-modal"'
-            u'   data-pat-plone-modal="width: 75%;">{}</a>'
+            u'   data-pat-plone-modal="modalSizeClass: modal-xl">{}</a>'
         ).format(tac_url, tac_label)
         tac_text = _(
             "terms_and_conditions_text",
@@ -324,23 +348,25 @@ checkout_button_factories = list()
 
 
 def default_checkout_button_factory(view):
-    view.form["checkout_back"] = factory(
-        "submit",
+    view.form["form-controls"]["checkout_back"] = factory(
+        "button",
         props={
-            "label": _("back", "Back"),
+            "type": "submit",
+            "text": _("back", "${icon} Back", mapping={"icon": SVG_PREV}),
             "action": "checkout_back",
-            "class_add": "standalone",
+            "class": "btn btn-secondary me-3",
             "handler": None,
             "next": view.checkout_back,
             "skip": True,
         },
     )
-    view.form["next"] = factory(
-        "submit",
+    view.form["form-controls"]["next"] = factory(
+        "button",
         props={
-            "label": _("next", "Next"),
+            "type": "submit",
+            "text": _("next", "Next ${icon}", mapping={"icon": SVG_NEXT}),
             "action": "next",
-            "class_add": "context",
+            "class": "btn btn-primary",
             "handler": None,
             "next": view.checkout_summary,
         },
@@ -354,20 +380,23 @@ confirmation_button_factories = list()
 
 
 def default_confirmation_button_factory(view):
-    view.form["confirm_back"] = factory(
-        "submit",
+    view.form["form-controls"]["confirm_back"] = factory(
+        "button",
         props={
-            "label": _("back", "Back"),
+            "type": "submit",
+            "text": _("back", "${icon} Back", mapping={"icon": SVG_PREV}),
             "action": "confirm_back",
+            "class": "btn btn-secondary me-3",
             "handler": None,
             "next": view.confirm_back,
         },
     )
-    view.form["finish"] = factory(
-        "submit",
+    view.form["form-controls"]["finish"] = factory(
+        "button",
         props={
-            "class": "prevent_if_no_longer_available context",
-            "label": _("finish", "Order now"),
+            "type": "submit",
+            "text": _("finish", "Order now ${icon}", mapping={"icon": SVG_FINISH}),
+            "class": "prevent_if_no_longer_available btn btn-primary",
             "action": "finish",
             "handler": view.finish,
             "next": view.checkout_done,
@@ -391,7 +420,7 @@ class CheckoutForm(Form, FormContext):
             raise Redirect(self.context.absolute_url())
         checkout = self.form_context is CHECKOUT
         if checkout:
-            form_method, form_class = "get", "mode_edit"
+            form_method, form_class = "post", "mode_edit"
         else:
             form_method, form_class = "post", "mode_display"
         self.form = factory(
@@ -406,6 +435,14 @@ class CheckoutForm(Form, FormContext):
         for fields_factory in self.provider_registry:
             fields_factory(self.context, self.request).extend(self.form)
         # checkout data input
+        self.form["form-controls"] = factory(
+            "div",
+            props={
+                "structural": True,
+                "id": "checkout-form-controls",
+                "class_add": "mb-3 d-flex justify-content-between"
+            }
+        )
         if checkout:
             for button_factory in self.checkout_button_factories:
                 button_factory(self)

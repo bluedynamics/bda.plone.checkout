@@ -4,7 +4,7 @@
     "use strict";
 
     $(document).ready(function() {
-        var delivery_address = $('div.delivery_address');
+        var delivery_address = $('#form-checkout div.delivery_address');
         var toggle = function(input) {
             if (input.attr('type') === 'hidden') {
                 delivery_address.show();

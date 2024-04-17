@@ -1,11 +1,10 @@
 from bda.plone.checkout import message_factory as _
-from Products.CMFPlone.utils import safe_unicode
+from plone.base.utils import safe_text
 from zope.i18nmessageid import MessageFactory
 
 import pycountry
 
-
-_c = MessageFactory("iso3166")
+_c = MessageFactory("iso3166-1")
 
 
 def gender_vocabulary():
@@ -16,7 +15,7 @@ def gender_vocabulary():
 
 
 AVAILABLE_COUNTRIES = [
-    (country.numeric, safe_unicode(_c(country.name))) for country in pycountry.countries
+    (country.numeric, safe_text(_c(country.name))) for country in pycountry.countries
 ]
 # patch this list to modify available countries
 ENABLED_COUNTRIES = [
@@ -34,7 +33,7 @@ def country_vocabulary():
     ret = list()
     for country in ENABLED_COUNTRIES:
         if country in countries_numeric:
-            ret.append((country, safe_unicode(_c(countries_numeric[country].name))))
+            ret.append((country, safe_text(_c(countries_numeric[country].name))))
     return ret
 
 

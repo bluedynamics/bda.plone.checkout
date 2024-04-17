@@ -6,15 +6,34 @@ widgets:
     props:
         tag: h2
         text: i18n:heading_accept_terms:Accept Terms and Conditions
+        class_add: "mt-2 mb-2 accept-terms-heading"
     mode: expr:context.mode
-- accept:
-    factory: '#field:*validate_accept:checkbox'
+- row-accept-conditions:
+    factory: div
     props:
-        label: expr:context.accept_label
-        position: 'after'
-        format: bool
-    custom:
-        validate_accept:
-            extractors:
-                - context.validate_accept
-    mode: expr:context.mode
+        class: "row mb-3"
+        structural: True
+    widgets:
+    - group-accept-conditions:
+        factory: div
+        props:
+            class: "col-auto"
+            structural: True
+        widgets:
+        - accept:
+            factory: 'div:help:error:*validate_accept:label:checkbox'
+            value: context.get_value
+            props:
+                label: expr:context.accept_label
+                label.class: form-check-label required
+                label.position: after
+                div.class: form-check
+                position: expr:context.mode == 'display' and 'before' or 'after'
+                format: bool
+                field.class: "form-check"
+                display_proxy: True
+            custom:
+                validate_accept:
+                    extractors:
+                        - context.validate_accept
+            mode: expr:context.mode

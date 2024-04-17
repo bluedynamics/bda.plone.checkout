@@ -6,14 +6,29 @@ widgets:
     props:
         tag: h2
         text: i18n:heading_order_comment:Additional information
-        class_add: expr:context.hidden_class
-- comment:
-    factory: "#field:textarea"
-    value: context.get_value
+        class_add: expr:context.hidden_class + " mt-2 mb-2 order-comment-heading"
+        structural: True
+- row-shipping:
+    factory: div
     props:
-        label: i18n:label_comment:Comment
-        rows: 8
-        columns: 20
-        display_proxy: True
-        class_add: expr:context.hidden_class
-    mode: expr:context.mode
+        class: "row"
+        structural: True
+    widgets:
+    - comment:
+        factory: "#field:textarea"
+        value: context.get_value
+        props:
+            label: i18n:label_comment:Comment
+            rows: 8
+            columns: 20
+            display_proxy: True
+            class_add: expr:context.hidden_class
+            field.class_add: "col"
+        mode: expr:context.mode
+- divider:
+    factory: tag
+    props:
+        tag: hr
+        text: ""
+        class_add: "bg-transparent"
+        structural: True
