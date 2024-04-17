@@ -2,7 +2,7 @@
 Changelog
 =========
 
-2.0b1 (unreleased)
+2.0b1 (2024-04-17)
 ------------------
 
 - rewrite CSS resources to SCSS
