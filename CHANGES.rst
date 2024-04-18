@@ -1,6 +1,5 @@
-
-Changelog
-=========
+Changes
+=======
 
 2.0b2 (unreleased)
 ------------------
@@ -39,8 +38,8 @@ Changelog
   [agitator]
 
 
-1.0a1 (unreleased)
-------------------
+1.0a1
+-----
 
 - Use sort order of ENABLED_COUNTRIES
   [agitator]

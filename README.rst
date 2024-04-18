@@ -1,12 +1,7 @@
-==================
 bda.plone.checkout
 ==================
 
-Checkout process and forms for ``bda.plone.shop``.
-
-
-Installation
-============
+Shop checkout process and forms.
 
 This package is part of the ``bda.plone.shop`` stack. Please refer to
 `bda.plone.shop <https://github.com/bluedynamics/bda.plone.shop>`_ for
@@ -14,7 +9,7 @@ installation instructions.
 
 
 Customizing the checkout form
-=============================
+-----------------------------
 
 To customize the checkout form you'll typically start off with your own
 form having a custom ``provider_registry``.
@@ -109,10 +104,10 @@ for your browserlayer or skinlayer:
 
 
 Permissions
-===========
+-----------
 
 bda.plone.checkout.PerformCheckout
-----------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This permission controls whether a user can actually perform the checkout
 process. Checkout related views are bound to this permission, thus, a visitor
@@ -130,7 +125,7 @@ edit ``rolemap.xml`` in your integration package as needed.
 
 
 Create translations
-===================
+-------------------
 
 ::
 
@@ -139,7 +134,7 @@ Create translations
 
 
 Contributors
-============
+------------
 
 - Robert Niederreiter (Author)
 - Peter Holzer
